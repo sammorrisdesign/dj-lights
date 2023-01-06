@@ -1,0 +1,24 @@
+{
+  "name": "dj-lights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "run": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammorrisdesign/dj-lights.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammorrisdesign/dj-lights/issues"
+  },
+  "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
+  "dependencies": {
+    "johnny-five": "^2.1.0",
+    "pi-camera": "^1.7.0",
+    "node-pixel": "^0.11.0"
+  }
+}

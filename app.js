@@ -1,8 +1,8 @@
-const pixel = require("node-pixel");
+// const pixel = require("node-pixel");
 const PiCamera = require('pi-camera');
 const five = require("johnny-five");
  
-let board = new five.Board(opts);
+let board = new five.Board();
 let strip = null;
 
 const camera = new PiCamera({
@@ -24,22 +24,22 @@ const updateLights = () => {
     .catch((error) => {
        // Handle your error
     });
-  
+
   // run again
   setTimeout(updateLights, 1000);
 };
  
 board.on("ready", function() {
-  strip = new pixel.Strip({
-    board: this,
-    controller: "FIRMATA",
-    strips: [ {pin: 6, length: 4}, ], // this is preferred form for definition
-    gamma: 2.8, // set to a gamma that works nicely for WS2812
-  });
- 
-  strip.on("ready", function() {
-    strip.color("rgb(0, 255, 0)"); // sets strip to a blue-green color using a named colour
-    strip.show(); 
-    updateLights();  
-  });
+  // strip = new pixel.Strip({
+  //   board: this,
+  //   controller: "FIRMATA",
+  //   strips: [ {pin: 6, length: 4}, ], // this is preferred form for definition
+  //   gamma: 2.8, // set to a gamma that works nicely for WS2812
+  // });
+
+  // strip.on("ready", function() {
+  //   strip.color("rgb(0, 255, 0)"); // sets strip to a blue-green color using a named colour
+  //   strip.show(); 
+  //   updateLights();  
+  // });
 });
