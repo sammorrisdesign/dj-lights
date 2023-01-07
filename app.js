@@ -9,6 +9,7 @@ const lights = ws281x(lightCount, {
   brightness: 20
 });
 
+
 // camera config
 const camera = new Raspistill({
   outputDir: './',
@@ -20,25 +21,20 @@ const camera = new Raspistill({
 });
 
 const setLights = color => {
-  console.log('setting lights to', color);
   const colorArray = lights.array;
 
   for (let i = 0; i < lights.count; i++) {
-    colorArray[i] = 0xff0000 // use color value here instead
+    colorArray[i] = Number("0x" + color.replace('#', ''));
   }
 
   ws281x.render();
 
-  
-
   setTimeout(() => {
-    ws281x.reset();
-    ws281x.finalize();
-  //  takePhoto();
+    // ws281x.reset();
+    // ws281x.finalize();
+    takePhoto();
   }, 5000);
 }
-
-setLights('#ffbb00');
 
 const takePhoto = () => {
   camera.takePhoto('latest')
