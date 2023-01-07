@@ -19,7 +19,6 @@ const setLights = color => {
 const PiCamera = require('pi-camera');
 const myCamera = new PiCamera({
   mode: 'photo',
-  output: `~/test.jpg`,
   width: 640,
   height: 480,
   nopreview: true,
@@ -27,7 +26,7 @@ const myCamera = new PiCamera({
 
 myCamera.snap()
   .then((result) => {
-    console.log('captured');
+    console.log(result);
     // Your picture was captured
   })
   .catch((error) => {
