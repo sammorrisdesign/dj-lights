@@ -1,8 +1,12 @@
 const pixel = require("node-pixel");
 const PiCamera = require('pi-camera');
 const five = require("johnny-five");
- 
-let board = new five.Board(opts);
+const Raspi = require("raspi-io").RaspiIO; 
+
+let board = new five.Board({
+  debug: true,
+  io: new Raspi()
+});
 let strip = null;
 
 const camera = new PiCamera({
@@ -28,8 +32,13 @@ const updateLights = () => {
   // run again
   setTimeout(updateLights, 1000);
 };
+
+console.log('starting');
  
 board.on("ready", function() {
+
+console.log('ready');
+
   strip = new pixel.Strip({
     board: this,
     controller: "FIRMATA",
