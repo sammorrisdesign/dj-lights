@@ -1,6 +1,5 @@
 const ws281x = require('rpi-ws281x-native');
-const FastAverageColor = require('fast-average-color').FastAverageColor;
-const fac = new FastAverageColor();
+const getColors = require('get-image-colors');
 
 const lightCount = 50;
 const channel = ws281x(lightCount, { stripType: 'ws2812' });
@@ -16,8 +15,6 @@ const setLights = color => {
   ws281x.render();
 }
 
-// setLights('red');
-
 const PiCamera = require('pi-camera');
 const myCamera = new PiCamera({
   mode: 'photo',
@@ -28,14 +25,22 @@ const myCamera = new PiCamera({
 
 myCamera.snapDataUrl()
   .then((result) => {
-    console.log('photo taken');
+    getColors(result, 'image/jpg').then(colors => {
+      const colorsAsHSL = colors.map(color => color.hsl());
 
-    fac.getColorAsync(result)
-      .then(color => {
-        console.log(color);
-      }).catch(e => {
-        console.log(e);
-      })
+      let highSaturationIndex = null;
+
+      colorsAsHSL.forEach((color, i) => {
+        if (color[1] && !highSaturationIndex) {
+          highSaturationIndex = i;
+        }
+      });
+
+      const colorsAsHex = colors.map(color => color.hex());
+      const colorToSet = highSaturationIndex ? colorsAsHex[highSaturationIndex] : colorsAsHex[0];
+
+      setLights(colorToSet);
+    })
   })
   .catch((error) => {
     console.log(error);
