@@ -50,7 +50,7 @@ const takePhoto = () => {
           }
         });
 
-        let colorToSet = highSaturationIndex ? colorsAsHex[highSaturationIndex] : colorsAsHex[0];
+        let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
 
         colorToSet = colorToSet.saturate(3);
 
