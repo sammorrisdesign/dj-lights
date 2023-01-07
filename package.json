@@ -4,11 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-<<<<<<< HEAD
     "run": "node app.js"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> c2e74cc78b52946758dda4f07fffa45d9feb6654
   },
   "repository": {
     "type": "git",
@@ -22,14 +18,9 @@
   "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
   "dependencies": {
     "johnny-five": "^2.1.0",
-<<<<<<< HEAD
-    "pi-camera": "^1.7.0",
-    "node-pixel": "^0.11.0"
-=======
     "node-pixel": "^0.11.0",
     "pi-camera": "^1.7.0",
     "raspi-io": "^11.0.0",
     "rpi-ws281x-native": "^1.0.4"
->>>>>>> c2e74cc78b52946758dda4f07fffa45d9feb6654
   }
 }
