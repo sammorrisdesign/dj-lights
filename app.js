@@ -25,6 +25,8 @@ const lights = ws281x(lightCount, { stripType: 'ws2812' });
 // });
 
 const camera = new Raspistill({
+//  noFileSave: true,
+  outputDir: './',
   width: 640,
   height: 480,
   saturation: 10,
@@ -48,12 +50,14 @@ const setLights = color => {
 }
 
 const takePhoto = () => {
-  camera.takePhoto()
+  camera.takePhoto('latest')
     .then((result) => {
-      if (config.saveImages) {
-        const image = result.replace(/^data:image\/jpg;base64,/, '');
-        fs.writeFileSync('image.jpg', image, 'base64');
-      }
+      // result = new Buffer(result).toString('base64');
+
+      // if (config.saveImages) {
+      //   const image = result.replace(/^data:image\/jpg;base64,/, '');
+      //   fs.writeFileSync('image.jpg', image, 'base64');
+      // }
 
       getColors(result, 'image/jpg').then(colors => {
         const colorsAsHSL = colors.map(color => color.hsl());
