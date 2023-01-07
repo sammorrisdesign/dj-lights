@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
   "dependencies": {
+    "fast-average-color": "^9.3.0",
     "pi-camera": "^1.7.0",
     "rpi-ws281x-native": "^1.0.4"
   }
