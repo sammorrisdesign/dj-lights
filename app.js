@@ -50,10 +50,11 @@ const takePhoto = () => {
           }
         });
 
-        const colorsAsHex = colors.map(color => color.hex());
-        const colorToSet = highSaturationIndex ? colorsAsHex[highSaturationIndex] : colorsAsHex[0];
+        let colorToSet = highSaturationIndex ? colorsAsHex[highSaturationIndex] : colorsAsHex[0];
 
-        setLights(colorToSet);
+        colorToSet = colorToSet.saturate(3);
+
+        setLights(colorToSet.hex());
       }).catch((error) => {
         console.log(error);
       })
