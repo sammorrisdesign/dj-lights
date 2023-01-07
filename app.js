@@ -80,3 +80,8 @@ const takePhoto = () => {
 }
 
 takePhoto();
+
+process.on('exit',() => {
+  ws281x.finalize();
+  console.log("process.exit() method is fired");
+})
