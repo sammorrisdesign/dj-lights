@@ -24,7 +24,7 @@ const myCamera = new PiCamera({
   nopreview: true,
 });
 
-myCamera.snap()
+myCamera.snapDataUrl()
   .then((result) => {
     console.log('photo taken');
     console.log(typeof result);
