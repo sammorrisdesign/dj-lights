@@ -9,7 +9,6 @@ const lights = ws281x(lightCount, {
   brightness: 20
 });
 
-
 // camera config
 const camera = new Raspistill({
   outputDir: './',
@@ -33,8 +32,6 @@ const setLights = color => {
   ws281x.render();
 
   setTimeout(() => {
-    // ws281x.reset();
-    // ws281x.finalize();
     takePhoto();
   }, 5000);
 }
@@ -68,7 +65,11 @@ const takePhoto = () => {
 
 takePhoto();
 
-process.on('exit',() => {
+process.on('SIGINT', () => {
+  ws281x.reset();
   ws281x.finalize();
-  console.log("process.exit() method is fired");
-})
+
+  process.nextTick(() => {
+    process.exit(0);
+  });
+});
