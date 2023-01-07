@@ -23,6 +23,10 @@ const setLights = color => {
   }
 
   ws281x.render();
+
+  setTimeout(() => {
+    takePhoto();
+  }, 5000);
 }
 
 const takePhoto = () => {
@@ -50,11 +54,6 @@ const takePhoto = () => {
     .catch((error) => {
       console.log(error);
     });
-
-  console.log('done photoing');
-  setTimeout(() => {
-    takePhoto();
-  }, 500);
 }
 
 takePhoto();
