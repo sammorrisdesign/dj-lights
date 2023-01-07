@@ -1,4 +1,6 @@
 const ws281x = require('rpi-ws281x-native');
+const PiCamera = require('pi-camera');
+const Raspistill = require('node-raspistill').Raspistill;
 const getColors = require('get-image-colors');
 const fs = require('fs');
 
@@ -11,16 +13,23 @@ const lightCount = 50;
 const lights = ws281x(lightCount, { stripType: 'ws2812' });
 
 // camera config
-const PiCamera = require('pi-camera');
-const camera = new PiCamera({
-  mode: 'photo',
+// const camera = new PiCamera({
+//   mode: 'photo',
+//   width: 640,
+//   height: 480,
+//   nopreview: true,
+//   saturation: 10,
+//   quality: 100,
+//   drc: 'high',
+//   metering: 'spot'
+// });
+
+const camera = new Raspistill({
   width: 640,
   height: 480,
-  nopreview: true,
   saturation: 10,
   quality: 100,
-  drc: 'high',
-  metering: 'spot'
+  drc: 'high'
 });
 
 const setLights = color => {
@@ -39,7 +48,7 @@ const setLights = color => {
 }
 
 const takePhoto = () => {
-  camera.snapDataUrl()
+  camera.takePhoto()
     .then((result) => {
       if (config.saveImages) {
         const image = result.replace(/^data:image\/jpg;base64,/, '');
