@@ -42,8 +42,7 @@ const takePhoto = () => {
   camera.snapDataUrl()
     .then((result) => {
       if (config.saveImages) {
-        const image = result.replace(/^data:image\/png;base64,/, '');
-        console.log(image);
+        const image = result.replace(/^data:image\/jpg;base64,/, '');
         fs.writeFileSync('image.jpg', image, 'base64');
       }
 
