@@ -26,9 +26,12 @@ const myCamera = new PiCamera({
 
 myCamera.snap()
   .then((result) => {
+    console.log('photo taken');
+    console.log(typeof result);
     console.log(result);
     // Your picture was captured
   })
   .catch((error) => {
+    console.log(error);
      // Handle your error
   });
