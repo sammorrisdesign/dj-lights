@@ -1,5 +1,10 @@
 const ws281x = require('rpi-ws281x-native');
 const getColors = require('get-image-colors');
+const fs = require('fs');
+
+const config = {
+  saveImages: true
+}
 
 // light config
 const lightCount = 50;
@@ -32,6 +37,11 @@ const setLights = color => {
 const takePhoto = () => {
   camera.snapDataUrl()
     .then((result) => {
+      if (config.saveImages) {
+        const image = result.replace(/^data:image\/png;base64,/, '');
+        fs.writeFileSync('image.jpg', image, 'base64');
+      }
+
       getColors(result, 'image/jpg').then(colors => {
         const colorsAsHSL = colors.map(color => color.hsl());
 
