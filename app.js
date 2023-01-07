@@ -1,6 +1,7 @@
 const ws281x = require('rpi-ws281x-native');
 const Raspistill = require('node-raspistill').Raspistill;
 const getColors = require('get-image-colors');
+const fs = require('fs');
 
 // light config
 const lightCount = 150;
@@ -36,28 +37,44 @@ const setLights = color => {
   }, 5000);
 }
 
+const getColorFromImage = image => {
+  image = fs.readFileSync('./latest.jpg');
+
+  getColors(image, {
+    count: 5,
+    type: 'image/jpg'
+  }).then(colors => {
+    // const hexes = colors.map(color => color.hex());
+    // console.log(hexes);
+
+    const colorsAsHSL = colors.map(color => color.hsl());
+
+    let highSaturationIndex = null;
+
+    colorsAsHSL.forEach((color, i) => {
+      if (color[1] > 0.5 && !highSaturationIndex) {
+        highSaturationIndex = i;
+      }
+    });
+
+    let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
+
+    if (colorToSet.hsl()[2] < 0.3) {
+      colorToSet = colorToSet.brighten();
+    }
+
+    colorToSet = colorToSet.saturate(3);
+
+    setLights(colorToSet.hex());
+  }).catch((error) => {
+    console.log(error);
+  })
+}
+
 const takePhoto = () => {
   camera.takePhoto('latest')
     .then((result) => {
-      getColors(result, 'image/jpg').then(colors => {
-        const colorsAsHSL = colors.map(color => color.hsl());
-
-        let highSaturationIndex = null;
-
-        colorsAsHSL.forEach((color, i) => {
-          if (color[1] && !highSaturationIndex) {
-            highSaturationIndex = i;
-          }
-        });
-
-        let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
-
-        colorToSet = colorToSet.saturate(3);
-
-        setLights(colorToSet.hex());
-      }).catch((error) => {
-        console.log(error);
-      })
+      getColorFromImage(result);
     })
     .catch((error) => {
       console.log(error);
