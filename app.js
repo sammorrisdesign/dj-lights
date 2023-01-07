@@ -17,6 +17,10 @@ const camera = new PiCamera({
   width: 640,
   height: 480,
   nopreview: true,
+  saturation: 10,
+  quality: 100,
+  drc: 'high',
+  metering: 'spot'
 });
 
 const setLights = color => {
