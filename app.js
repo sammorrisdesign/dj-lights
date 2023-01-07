@@ -1,4 +1,6 @@
 const ws281x = require('rpi-ws281x-native');
+const FastAverageColor = require('fast-average-color').FastAverageColor;
+const fac = new FastAverageColor();
 
 const lightCount = 50;
 const channel = ws281x(lightCount, { stripType: 'ws2812' });
@@ -27,11 +29,14 @@ const myCamera = new PiCamera({
 myCamera.snapDataUrl()
   .then((result) => {
     console.log('photo taken');
-    console.log(typeof result);
-    console.log(result);
-    // Your picture was captured
+
+    fac.getColorAsync(result)
+      .then(color => {
+        console.log(color);
+      }).catch(e => {
+        console.log(e);
+      })
   })
   .catch((error) => {
     console.log(error);
-     // Handle your error
   });
