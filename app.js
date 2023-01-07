@@ -1,31 +1,13 @@
 const ws281x = require('rpi-ws281x-native');
-const PiCamera = require('pi-camera');
 const Raspistill = require('node-raspistill').Raspistill;
 const getColors = require('get-image-colors');
-const fs = require('fs');
-
-const config = {
-  saveImages: true
-}
 
 // light config
-const lightCount = 50;
+const lightCount = 150;
 const lights = ws281x(lightCount, { stripType: 'ws2812' });
 
 // camera config
-// const camera = new PiCamera({
-//   mode: 'photo',
-//   width: 640,
-//   height: 480,
-//   nopreview: true,
-//   saturation: 10,
-//   quality: 100,
-//   drc: 'high',
-//   metering: 'spot'
-// });
-
 const camera = new Raspistill({
-//  noFileSave: true,
   outputDir: './',
   width: 640,
   height: 480,
@@ -45,20 +27,15 @@ const setLights = color => {
   ws281x.render();
 
   setTimeout(() => {
-    takePhoto();
+  //  takePhoto();
   }, 5000);
 }
+
+setLights('#ffbb00');
 
 const takePhoto = () => {
   camera.takePhoto('latest')
     .then((result) => {
-      // result = new Buffer(result).toString('base64');
-
-      // if (config.saveImages) {
-      //   const image = result.replace(/^data:image\/jpg;base64,/, '');
-      //   fs.writeFileSync('image.jpg', image, 'base64');
-      // }
-
       getColors(result, 'image/jpg').then(colors => {
         const colorsAsHSL = colors.map(color => color.hsl());
 
@@ -83,4 +60,4 @@ const takePhoto = () => {
     });
 }
 
-takePhoto();
+// takePhoto();
