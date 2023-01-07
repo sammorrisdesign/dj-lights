@@ -21,10 +21,13 @@ const camera = new Raspistill({
 });
 
 const setLights = color => {
+  console.log('setting lights to', color);
   const colorArray = lights.array;
+  color = Number("0x" + color.replace('#', ''));
+  console.log(color);
 
   for (let i = 0; i < lights.count; i++) {
-    colorArray[i] = Number("0x" + color.replace('#', ''));
+    colorArray[i] = color;
   }
 
   ws281x.render();
