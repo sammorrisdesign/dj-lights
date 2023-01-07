@@ -39,6 +39,7 @@ const takePhoto = () => {
     .then((result) => {
       if (config.saveImages) {
         const image = result.replace(/^data:image\/png;base64,/, '');
+        console.log(image);
         fs.writeFileSync('image.jpg', image, 'base64');
       }
 
