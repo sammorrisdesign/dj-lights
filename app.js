@@ -1,7 +1,6 @@
 const ws281x = require('rpi-ws281x-native');
 const Raspistill = require('node-raspistill').Raspistill;
 const getColors = require('get-image-colors');
-const fs = require('fs');
 
 // light config
 const lightCount = 150;
@@ -17,7 +16,10 @@ const camera = new Raspistill({
   height: 480,
   saturation: 10,
   quality: 100,
-  drc: 'high'
+  drc: 'high',
+  iso: 800,
+  awb: 'auto',
+  exposure: 'verylong'
 });
 
 const setLights = color => {
@@ -37,9 +39,6 @@ const setLights = color => {
 }
 
 const getColorFromImage = image => {
-  // console.log()
-  // image = fs.readFileSync('./latest.jpg');
-
   console.log('getting color from photo');
 
   getColors(image, {
