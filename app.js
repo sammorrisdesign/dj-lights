@@ -52,7 +52,7 @@ const getColorFromImage = image => {
     const filteredColors = colors.filter(color => color.hsl()[1] > 0.3);
     console.log(filteredColors);
 
-    const colorToSet = filteredColors[0].saturation(2);
+    const colorToSet = filteredColors[0].saturate(2);
 
     setLights(colorToSet.hex());
   }).catch((error) => {
