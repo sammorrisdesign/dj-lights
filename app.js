@@ -49,23 +49,20 @@ const getColorFromImage = image => {
     const colorsAsHSL = colors.map(color => color.hsl());
     console.log(colorsAsHSL);
 
-    let highSaturationIndex = null;
+    filteredColors = colorsAsHSL.map(color => color[1] > 0.3);
 
-    // colorsAsHSL.forEach((color, i) => {
-    //   if (color[1] > 0.5 && !highSaturationIndex) {
-    //     highSaturationIndex = i;
-    //   }
-    // });
+    console.log(filteredColors);
 
-    let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
+    const colorToSet = colorsAsHSL[0].saturation(2);
 
-    console.log('picking', colorToSet.hex());
 
-    if (colorToSet.hsl()[2] < 0.3) {
-      colorToSet = colorToSet.brighten();
-    }
+    // console.log('picking', colorToSet.hex());
 
-    colorToSet = colorToSet.set('lch.c', '*2');
+    // if (colorToSet.hsl()[2] < 0.3) {
+    //   colorToSet = colorToSet.brighten();
+    // }
+
+    // colorToSet = colorToSet.saturation(2);
 
     setLights(colorToSet.hex());
   }).catch((error) => {
