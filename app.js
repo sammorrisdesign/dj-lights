@@ -16,6 +16,7 @@ const camera = new Raspistill({
   height: 480,
   saturation: 10,
   quality: 100,
+  shutterspeed: 3000,
   drc: 'high',
   iso: 800,
   awb: 'auto',
