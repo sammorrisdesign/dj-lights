@@ -15,9 +15,8 @@ const camera = new Raspistill({
   width: 640,
   height: 480,
   quality: 100,
-  saturation: 10,
   time: 1000,
-  awb: 'shade',
+  awb: 'tungsten',
   exposure: 'auto'
 });
 
