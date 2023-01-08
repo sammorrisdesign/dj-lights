@@ -47,14 +47,15 @@ const getColorFromImage = image => {
     console.log(hexes);
 
     const colorsAsHSL = colors.map(color => color.hsl());
+    console.log(colorsAsHSL);
 
     let highSaturationIndex = null;
 
-    colorsAsHSL.forEach((color, i) => {
-      if (color[1] > 0.5 && !highSaturationIndex) {
-        highSaturationIndex = i;
-      }
-    });
+    // colorsAsHSL.forEach((color, i) => {
+    //   if (color[1] > 0.5 && !highSaturationIndex) {
+    //     highSaturationIndex = i;
+    //   }
+    // });
 
     let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
 
