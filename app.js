@@ -49,7 +49,7 @@ const getColorFromImage = image => {
     const colorsAsHSL = colors.map(color => color.hsl());
     console.log(colorsAsHSL);
 
-    filteredColors = colorsAsHSL.map(color => color[1] > 0.3);
+    filteredColors = colorsAsHSL.filter(color => color[1] > 0.3);
 
     console.log(filteredColors);
 
