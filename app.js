@@ -85,6 +85,8 @@ const takePhoto = () => {
     });
 }
 
+console.log('starting script');
+
 takePhoto();
 
 process.on('SIGINT', () => {
