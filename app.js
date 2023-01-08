@@ -16,7 +16,7 @@ const camera = new Raspistill({
   height: 480,
   quality: 100,
   time: 1000,
-  awb: 'auto',
+  awb: 'sun',
   exposure: 'auto'
 });
 
