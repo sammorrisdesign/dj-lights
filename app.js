@@ -17,7 +17,7 @@ const camera = new Raspistill({
   quality: 100,
   awb: 'auto',
   exposure: 'auto',
-  drc: 'high'
+  saturation: 20
 });
 
 const setLights = color => {
