@@ -50,9 +50,9 @@ const getColorFromImage = image => {
     console.log(colorsAsHSL);
 
     const filteredColors = colors.filter(color => color.hsl()[1] > 0.3);
-    console.log('chosen', filteredColors[0].hex());
 
     if (filteredColors) {
+      console.log('chosen', filteredColors[0].hex());
       const colorToSet = filteredColors[0].saturate(3);
       setLights(colorToSet.hex());
     } else {
