@@ -6,12 +6,14 @@ const getColors = require('get-image-colors');
 const lightCount = 150;
 const lights = ws281x(lightCount, {
   stripType: 'ws2812',
-  brightness: 20
+  brightness: 40
 });
 
 // camera config
 const camera = new Raspistill({
   outputDir: './',
+  width: 640,
+  height: 480,
   quality: 100,
   awb: 'auto',
   exposure: 'auto',
