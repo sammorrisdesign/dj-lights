@@ -18,7 +18,7 @@ const camera = new Raspistill({
   time: 1000,
   awb: 'auto',
   exposure: 'auto',
-  imageEffect: 'posterise'
+  imageEffect: 'colourbalance'
 });
 
 const setLights = color => {
