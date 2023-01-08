@@ -14,13 +14,11 @@ const camera = new Raspistill({
   outputDir: './',
   width: 640,
   height: 480,
-  saturation: 10,
   quality: 100,
-  shutterspeed: 3000,
-  drc: 'high',
-  iso: 800,
-  awb: 'auto',
-  exposure: 'verylong'
+  saturation: 10,
+  time: 1000,
+  awb: 'sun',
+  exposure: 'auto'
 });
 
 const setLights = color => {
