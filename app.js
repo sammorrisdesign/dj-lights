@@ -65,7 +65,7 @@ const getColorFromImage = image => {
       colorToSet = colorToSet.brighten();
     }
 
-    colorToSet = colorToSet.saturate(3);
+    colorToSet = colorToSet.set('lch.c', '*2');
 
     setLights(colorToSet.hex());
   }).catch((error) => {
