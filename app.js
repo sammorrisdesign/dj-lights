@@ -16,7 +16,7 @@ const camera = new Raspistill({
   height: 480,
   quality: 100,
   time: 1000,
-  awb: 'flash',
+  awb: 'horizion',
   exposure: 'auto'
 });
 
@@ -43,8 +43,8 @@ const getColorFromImage = image => {
     count: 5,
     type: 'image/jpg'
   }).then(colors => {
-    // const hexes = colors.map(color => color.hex());
-    // console.log(hexes);
+    const hexes = colors.map(color => color.hex());
+    console.log(hexes);
 
     const colorsAsHSL = colors.map(color => color.hsl());
 
@@ -57,6 +57,8 @@ const getColorFromImage = image => {
     });
 
     let colorToSet = highSaturationIndex ? colors[highSaturationIndex] : colors[0];
+
+    console.log('picking', colorToSet.hex());
 
     if (colorToSet.hsl()[2] < 0.3) {
       colorToSet = colorToSet.brighten();
