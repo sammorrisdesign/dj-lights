@@ -24,7 +24,6 @@ const setLights = color => {
   console.log('setting lights to', color);
   const colorArray = lights.array;
   color = Number("0x" + color.replace('#', ''));
-  console.log(color);
 
   for (let i = 0; i < lights.count; i++) {
     colorArray[i] = color;
@@ -38,7 +37,10 @@ const setLights = color => {
 }
 
 const getColorFromImage = image => {
-  image = fs.readFileSync('./latest.jpg');
+  // console.log()
+  // image = fs.readFileSync('./latest.jpg');
+
+  console.log('getting color from photo');
 
   getColors(image, {
     count: 5,
@@ -72,6 +74,7 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
+  console.log('taking photo');
   camera.takePhoto('latest')
     .then((result) => {
       getColorFromImage(result);
