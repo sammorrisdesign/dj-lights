@@ -16,7 +16,8 @@ const camera = new Raspistill({
   height: 480,
   quality: 100,
   time: 1000,
-  awb: 'auto',
+  saturation: 20,
+  awb: 'shade',
   exposure: 'auto',
   imageEffect: 'colourbalance'
 });
