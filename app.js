@@ -14,10 +14,6 @@ const lights = ws281x(lightCount, {
   brightness: 40
 });
 
-setLights("#11CBF9");
-
-console.log(lights);
-
 const setLights = color => {
   console.log('setting lights to', color);
   const colorArray = lights.array;
@@ -37,6 +33,8 @@ const setLights = color => {
     takePhoto();
   }, 5000);
 }
+
+setLights("#11CBF9");
 
 const getColorFromImage = image => {
   console.log('getting color from photo');
