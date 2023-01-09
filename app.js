@@ -75,7 +75,7 @@ const takePhoto = () => {
   console.log('taking photo');
 
   libcamera.still({
-    output: 'output.jpg', // output file path
+    output: './output.jpg', // output file path
     timeout: 2000, // timeout before taking the picture
     width: 640, // image width
     height: 480, // image height
