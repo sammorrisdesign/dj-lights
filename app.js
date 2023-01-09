@@ -1,6 +1,4 @@
 const ws281x = require('rpi-ws281x-native');
-// const Raspistill = require('node-raspistill').Raspistill;
-const libcamera = require('node-libcamera')
 const getColors = require('get-image-colors');
 const shell = require('shelljs');
 const fs = require('fs');
@@ -12,22 +10,7 @@ const lights = ws281x(lightCount, {
   brightness: 40
 });
 
-// camera config
-// const naturalLight = {
-//   awb: 'auto',
-//   exposure: 'auto',
-//   saturation: 20
-// }
-
-// const camera = new Raspistill({
-//   outputDir: './',
-//   width: 640,
-//   height: 480,
-//   quality: 100,
-//   awb: 'auto',
-//   exposure: 'auto',
-//   saturation: 20
-// });
+console.log(lights);
 
 const setLights = color => {
   console.log('setting lights to', color);
