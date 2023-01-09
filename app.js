@@ -2,7 +2,8 @@ const ws281x = require('rpi-ws281x-native');
 // const Raspistill = require('node-raspistill').Raspistill;
 const libcamera = require('node-libcamera')
 const getColors = require('get-image-colors');
-
+const shell = require('shelljs');
+const fs = require('fs');
 
 // light config
 const lightCount = 150;
@@ -72,22 +73,12 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
-  console.log('taking photo');
 
-  libcamera.still({
-    width: 640, // image width
-    height: 480, // image height
-    nopreview: true,
-    verbose: 0
-  })
-    .then((result) => {
-      console.log(result);
-      getColorFromImage(result);
-    })
-    .catch((error) => {
-      console.log('an error is happening');
-      console.log(error);
-    })
+  shell.exec('libcamera-still --output test.jpg --width 640 --height 480 --verbose 1');
+
+  const image = fs.readFileSync('test.jpg');
+
+  console.log(image);
 }
 
 console.log('starting script');
