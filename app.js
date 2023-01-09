@@ -30,8 +30,6 @@ const setLights = color => {
   }, 5000);
 }
 
-setLights("#ffffff");
-
 const getColorFromImage = image => {
   console.log('getting color from photo');
 
@@ -60,9 +58,7 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
-
-  shell.exec('libcamera-still --output test.jpg --width 640 --height 480 --verbose 1');
-
+  shell.exec('libcamera-jpeg --output test.jpg --width 640 --height 480 --verbose 0 --awb auto --metering average --ev 0.5');
   const image = fs.readFileSync('test.jpg');
 
   getColorFromImage(image);
@@ -70,7 +66,7 @@ const takePhoto = () => {
 
 console.log('starting script');
 
-// takePhoto();
+takePhoto();
 
 process.on('SIGINT', () => {
   ws281x.reset();
