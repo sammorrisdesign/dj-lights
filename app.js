@@ -43,7 +43,7 @@ const getColorFromImage = image => {
     const colorsAsHSL = colors.map(color => color.hsl());
     console.log(colorsAsHSL);
 
-    const filteredColors = colors.filter(color => color.hsl()[1] > 0.15);
+    const filteredColors = colors.filter(color => color.hsl()[1] > 0.25);
 
     if (filteredColors) {
       console.log('chosen', filteredColors[0].hex());
