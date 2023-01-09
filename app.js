@@ -17,11 +17,15 @@ const setLights = color => {
   const colorArray = lights.array;
   color = Number("0x" + color.replace('#', ''));
 
+  console.log(color);
+
   for (let i = 0; i < lights.count; i++) {
     colorArray[i] = color;
   }
 
   ws281x.render();
+
+  console.log(ws281x);
 
   setTimeout(() => {
     takePhoto();
