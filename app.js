@@ -79,6 +79,7 @@ const takePhoto = () => {
     timeout: 2000, // timeout before taking the picture
     width: 640, // image width
     height: 480, // image height
+    nopreview: true
   })
     .then((result) => {
       console.log(result);
