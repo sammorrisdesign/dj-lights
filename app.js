@@ -1,6 +1,8 @@
 const ws281x = require('rpi-ws281x-native');
-const Raspistill = require('node-raspistill').Raspistill;
+// const Raspistill = require('node-raspistill').Raspistill;
+const libcamera = require('libcamera').libcamera;
 const getColors = require('get-image-colors');
+
 
 // light config
 const lightCount = 150;
@@ -10,15 +12,21 @@ const lights = ws281x(lightCount, {
 });
 
 // camera config
-const camera = new Raspistill({
-  outputDir: './',
-  width: 640,
-  height: 480,
-  quality: 100,
-  awb: 'flash',
-  exposure: 'auto',
-  saturation: 20
-});
+// const naturalLight = {
+//   awb: 'auto',
+//   exposure: 'auto',
+//   saturation: 20
+// }
+
+// const camera = new Raspistill({
+//   outputDir: './',
+//   width: 640,
+//   height: 480,
+//   quality: 100,
+//   awb: 'auto',
+//   exposure: 'auto',
+//   saturation: 20
+// });
 
 const setLights = color => {
   console.log('setting lights to', color);
@@ -65,13 +73,18 @@ const getColorFromImage = image => {
 
 const takePhoto = () => {
   console.log('taking photo');
-  camera.takePhoto('latest')
-    .then((result) => {
-      getColorFromImage(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+
+  libcamera.still({
+    config: {
+      output: 'test.jpg'
+    }
+  }).then((result) => {
+    console.log(result);
+    getColorFromImage(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 }
 
 console.log('starting script');
