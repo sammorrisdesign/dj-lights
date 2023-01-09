@@ -78,6 +78,7 @@ const takePhoto = () => {
     width: 640, // image width
     height: 480, // image height
     nopreview: true,
+    verbose: 0
   })
     .then((result) => {
       console.log(result);
