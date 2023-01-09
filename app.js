@@ -6,7 +6,11 @@ const fs = require('fs');
 // light config
 const lightCount = 150;
 const lights = ws281x(lightCount, {
-  stripType: 'ws2812',
+  dma: 10,
+  freq: 800000,
+  gpio: 18,
+  invert: false,
+  stripType: ws281x.stripType.WS2812,
   brightness: 40
 });
 
