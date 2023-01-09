@@ -19,7 +19,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "get-image-colors": "^4.0.1",
-    "libcamera": "^1.0.6",
+    "node-libcamera": "^1.0.6",
     "node-raspistill": "^2.0.1",
     "pi-camera": "^1.7.0",
     "rgb-hex": "^4.0.0",
