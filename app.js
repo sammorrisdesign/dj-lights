@@ -8,7 +8,7 @@ const lightCount = 150;
 const lights = ws281x(lightCount, {
   dma: 10,
   freq: 800000,
-  gpio: 18,
+  gpio: 21,
   invert: false,
   stripType: ws281x.stripType.WS2812,
   brightness: 40
@@ -19,15 +19,11 @@ const setLights = color => {
   const colorArray = lights.array;
   color = Number("0x" + color.replace('#', ''));
 
-  console.log(color);
-
   for (let i = 0; i < lights.count; i++) {
     colorArray[i] = color;
   }
 
   ws281x.render();
-
-  console.log(ws281x);
 
   setTimeout(() => {
     takePhoto();
