@@ -78,7 +78,7 @@ const takePhoto = () => {
 
   const image = fs.readFileSync('test.jpg');
 
-  console.log(image);
+  getColorFromImage(image);
 }
 
 console.log('starting script');
