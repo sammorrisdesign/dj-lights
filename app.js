@@ -86,6 +86,7 @@ const takePhoto = () => {
       getColorFromImage(result);
     })
     .catch((error) => {
+      console.log('an error is happening');
       console.log(error);
     })
 }
