@@ -45,7 +45,7 @@ const getColorFromImage = image => {
 
     const filteredColors = colors.filter(color => color.hsl()[1] > 0.25);
 
-    if (filteredColors) {
+    if (filteredColors.length) {
       console.log('chosen', filteredColors[0].hex());
       const colorToSet = filteredColors[0].saturate(3);
       setLights(colorToSet.hex());
