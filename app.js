@@ -14,6 +14,8 @@ const lights = ws281x(lightCount, {
   brightness: 40
 });
 
+setLights("#11CBF9");
+
 console.log(lights);
 
 const setLights = color => {
@@ -74,7 +76,7 @@ const takePhoto = () => {
 
 console.log('starting script');
 
-takePhoto();
+// takePhoto();
 
 process.on('SIGINT', () => {
   ws281x.reset();
