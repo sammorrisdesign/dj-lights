@@ -77,7 +77,8 @@ const takePhoto = () => {
   libcamera.still({
     config: {
       output: 'test.jpg',
-      nopreview: true
+      nopreview: true,
+      'qt-preview': true
     }
   }).then((result) => {
     console.log(result);
