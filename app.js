@@ -34,7 +34,7 @@ const setLights = color => {
   }, 5000);
 }
 
-setLights("#11CBF9");
+setLights("#ffffff");
 
 const getColorFromImage = image => {
   console.log('getting color from photo');
