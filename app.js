@@ -11,7 +11,7 @@ const lights = ws281x(lightCount, {
   gpio: 21,
   invert: false,
   stripType: ws281x.stripType.WS2812,
-  brightness: 40
+  brightness: 80
 });
 
 const setLights = color => {
