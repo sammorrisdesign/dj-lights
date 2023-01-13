@@ -74,7 +74,7 @@ const getColorFromImage = image => {
 
       // shift pinker reds towards red
       if (colorToSet.hsl()[0] > 350) {
-        colorToSet = colorToSet.set('hsl.h', 5);
+        colorToSet = colorToSet.set('hsl.h', 10);
       }
 
       // don't oversaturate colors if we already have
