@@ -72,7 +72,9 @@ const getColorFromImage = image => {
 
       let colorToSet = filteredColors[0];
 
-      if (colorToSet.hsl()[1] > 0.5) {
+      if (colorToSet.hsl()[0] > 350) {
+        colorToSet = 'red'
+      } else if (colorToSet.hsl()[1] > 0.5) {
         colorToSet = filteredColors[0].saturate(1);
       } else {
         colorToSet = filteredColors[0].saturate(2);
