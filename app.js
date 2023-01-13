@@ -79,6 +79,11 @@ const getColorFromImage = image => {
         console.log(colorToSet.hsl());
       }
 
+      // minimum brightness
+      if (colorToSet.hsl()[2] < 0.5) {
+        colorToSet = colorToSet.set('hsl.l', 0.5);
+      }
+
       // don't oversaturate colors if we already have
       if (colorToSet.hsl()[1] > 0.5) {
         colorToSet = colorToSet.saturate(1);
