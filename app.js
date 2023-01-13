@@ -58,7 +58,7 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
-  shell.exec('libcamera-jpeg --output test.jpg --hdr --roi 0.25,0.2,0.5,0.8 --width 2000 --height 1800 --saturation 1.2 -q 100 --autofocus-range macro');
+  shell.exec('libcamera-jpeg --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 --saturation 1.2 -q 100 --autofocus-range macro');
   const image = fs.readFileSync('test.jpg');
 
   getColorFromImage(image);
