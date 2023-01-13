@@ -16,10 +16,16 @@ const lights = ws281x(lightCount, {
   brightness: 80
 });
 
+const rgb2Int = (rgb) => {
+  return ((rgb[0] & 0xff) << 16) + ((rgb[1] & 0xff) << 8) + (rgb[2] & 0xff);
+}
+
 const setLights = color => {
   console.log('setting lights to', color);
   const colorArray = lights.array;
-  color = Number("0x" + color.replace('#', ''));
+  console.log(color);
+  color = rgb2Int(color);
+  console.log(color);
 
   for (let i = 0; i < lights.count; i++) {
     colorArray[i] = color;
@@ -73,10 +79,10 @@ const getColorFromImage = image => {
       let colorToSet = filteredColors[0];
 
       // shift pinker reds towards red
-      if (colorToSet.hsl()[0] > 350) {
+      if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
         console.log(colorToSet.hsl());
-        colorToSet = colorToSet.set('hsl.h', 0);
-        console.log(colorToSet.hsl());
+        colorToSet = colorToSet.set('rgb.b', 0);
+        colorToSet = colorToSet.set('rgb.g', 0);
       }
 
       // minimum brightness
@@ -91,9 +97,10 @@ const getColorFromImage = image => {
         colorToSet = colorToSet.saturate(2);
       }
 
-      setLights('#F0000D');
+      console.log('setting lights to', colorToSet.hex());
+      setLights(colorToSet.rgb());
     } else {
-      setLights('#ffffff');
+      setLights([255,255,255]);
     }
   }).catch((error) => {
     console.log(error);
