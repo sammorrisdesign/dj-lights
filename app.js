@@ -16,16 +16,10 @@ const lights = ws281x(lightCount, {
   brightness: 80
 });
 
-const rgb2Int = (rgb) => {
-  return ((rgb[0] & 0xff) << 16) + ((rgb[1] & 0xff) << 8) + (rgb[2] & 0xff);
-}
-
 const setLights = color => {
   console.log('setting lights to', color);
   const colorArray = lights.array;
-  console.log(color);
-  color = rgb2Int(color);
-  console.log(color);
+  color = Number("0x" + color.replace('#', ''));
 
   for (let i = 0; i < lights.count; i++) {
     colorArray[i] = color;
@@ -71,36 +65,35 @@ const getColorFromImage = image => {
     const colorsAsHSL = colors.map(color => color.hsl());
     console.log(colorsAsHSL);
 
-    const filteredColors = colors.filter(color => color.hsl()[1] > 0.25);
-
+    const filteredColors = colors.filter(color => color.hsl()[1] > 0.15 && color.hsl()[2] > 0.35 || color.hsl()[1] > 0.3);
+e
     if (filteredColors.length) {
       console.log('chosen', filteredColors[0].hex());
 
       let colorToSet = filteredColors[0];
 
-      // shift pinker reds towards red
-      // if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
-      //   console.log(colorToSet.hsl());
-      //   colorToSet = colorToSet.set('rgb.b', 0);
-      //   colorToSet = colorToSet.set('rgb.g', 0);
+      // minimum brightness
+      // if (colorToSet.hsl()[2] < 0.5) {
+      //   colorToSet = colorToSet.set('hsl.l', 0.5);
       // }
 
-      // minimum brightness
-      if (colorToSet.hsl()[2] < 0.5) {
-        colorToSet = colorToSet.set('hsl.l', 0.5);
-      }
-
-      // don't oversaturate colors if we already have
       // if (colorToSet.hsl()[1] > 0.5) {
       //   colorToSet = colorToSet.saturate(1);
       // } else {
       //   colorToSet = colorToSet.saturate(2);
       // }
 
+      // shift pinker reds towards red
+      if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
+        console.log(colorToSet.hsl());
+        colorToSet = colorToSet.set('rgb.b', 0);
+        colorToSet = colorToSet.set('rgb.g', 0);
+      }
+
       console.log('setting lights to', colorToSet.hex());
-      setLights(colorToSet.rgb());
+      setLights(colorToSet.hex());
     } else {
-      setLights([255,255,255]);
+      setLights('#FFFFFF');
     }
   }).catch((error) => {
     console.log(error);
