@@ -47,7 +47,7 @@ const cleanImage = async() => {
 
   const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
 
-  fs.writeFileSync('test-a.jpg', savedImage);
+  fs.writeFileSync('test.jpg', savedImage);
 
   getColorFromImage(savedImage);
 }
@@ -80,6 +80,7 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
+  // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
   shell.exec('libcamera-jpeg --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb tungsten');
 
   cleanImage();
