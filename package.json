@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
   "dependencies": {
+    "canvas": "^2.11.0",
     "fs": "^0.0.1-security",
     "get-image-colors": "^4.0.1",
     "node-libcamera": "^1.0.6",

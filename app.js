@@ -1,7 +1,9 @@
 const ws281x = require('rpi-ws281x-native');
 const getColors = require('get-image-colors');
 const shell = require('shelljs');
+const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
+
 
 // light config
 const lightCount = 150;
@@ -28,6 +30,26 @@ const setLights = color => {
   setTimeout(() => {
     takePhoto();
   }, 5000);
+}
+
+const cleanImage = async() => {
+  console.log('cleaning image');
+
+  const canvas = createCanvas(1920, 2160)
+  const ctx = canvas.getContext('2d');
+
+  const image = await loadImage('./test.jpg');
+  ctx.drawImage(image, 0, 0, 1920, 2160);
+
+  ctx.rect(50, 800, 150, 250);
+  ctx.rect(1050, 800, 250, 250);
+  ctx.fill();
+
+  const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
+
+  fs.writeFileSync('test-a.jpg', savedImage);
+
+  getColorFromImage(savedImage);
 }
 
 const getColorFromImage = image => {
@@ -58,10 +80,9 @@ const getColorFromImage = image => {
 }
 
 const takePhoto = () => {
-  shell.exec('libcamera-jpeg --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 --saturation 1.2 -q 100 --autofocus-range macro');
-  const image = fs.readFileSync('test.jpg');
+  shell.exec('libcamera-jpeg --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb tungsten');
 
-  getColorFromImage(image);
+  cleanImage();
 }
 
 console.log('starting script');
