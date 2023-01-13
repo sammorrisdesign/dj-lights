@@ -79,11 +79,11 @@ const getColorFromImage = image => {
       let colorToSet = filteredColors[0];
 
       // shift pinker reds towards red
-      if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
-        console.log(colorToSet.hsl());
-        colorToSet = colorToSet.set('rgb.b', 0);
-        colorToSet = colorToSet.set('rgb.g', 0);
-      }
+      // if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
+      //   console.log(colorToSet.hsl());
+      //   colorToSet = colorToSet.set('rgb.b', 0);
+      //   colorToSet = colorToSet.set('rgb.g', 0);
+      // }
 
       // minimum brightness
       if (colorToSet.hsl()[2] < 0.5) {
@@ -91,11 +91,11 @@ const getColorFromImage = image => {
       }
 
       // don't oversaturate colors if we already have
-      if (colorToSet.hsl()[1] > 0.5) {
-        colorToSet = colorToSet.saturate(1);
-      } else {
-        colorToSet = colorToSet.saturate(2);
-      }
+      // if (colorToSet.hsl()[1] > 0.5) {
+      //   colorToSet = colorToSet.saturate(1);
+      // } else {
+      //   colorToSet = colorToSet.saturate(2);
+      // }
 
       console.log('setting lights to', colorToSet.hex());
       setLights(colorToSet.rgb());
@@ -115,7 +115,6 @@ const takePhoto = () => {
 }
 
 console.log('starting script');
-
 takePhoto();
 
 process.on('SIGINT', () => {
