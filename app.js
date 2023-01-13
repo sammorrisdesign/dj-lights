@@ -91,7 +91,7 @@ const getColorFromImage = image => {
         colorToSet = colorToSet.saturate(2);
       }
 
-      setLights(colorToSet.hex());
+      setLights('#F0000D');
     } else {
       setLights('#ffffff');
     }
