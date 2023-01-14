@@ -59,6 +59,8 @@ const getColorFromImage = image => {
   Vibrant.from(image).getPalette()
     .then(palette => {
       console.log(palette);
+      const hexes = Object.keys(palette).map(color => color.getHex());
+      console.log(hexes);
     });
 
   
