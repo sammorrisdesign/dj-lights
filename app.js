@@ -38,19 +38,19 @@ const getColorFromImage = image => {
       const sortedPalette = Object.keys(palette).map(swatch => {
         return {
           type: swatch,
-          hex: palette[swatch].hex,
+          color: chroma(palette[swatch].hex),
           population: palette[swatch].population
         }
       }).sort((a, b) => b.population - a.population);
 
-      let color = sortedPalette[0];
+      let swatch = sortedPalette[0];
 
       // boost saturation
-      if (color.type !== 'vibrant') {
-        color.hex = chroma(color.hex).saturate(2).hex();
+      if (swatch.type !== 'vibrant') {
+        swatch.hex = swatch.hex.saturate(2).hex();
       }
 
-      setLights(sortedPalette[0].hex);
+      setLights(swatch.color.hex());
     });
 }
 
