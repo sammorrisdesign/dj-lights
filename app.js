@@ -50,13 +50,13 @@ const getColorFromImage = image => {
 
       // boost saturation
       if (swatch.type !== 'Vibrant') {
-        console.log('boosting saturation on non-vibrant swatch');
+        console.log(`boosting saturation on non-vibrant, ${swatch.type} swatch`);
         swatch.color = swatch.color.saturate(2);
       }
 
       // tilt red to prevent reds looking pink
-      if (swatch.color.hsl()[0] >= 350 || swatch.color.hsl() < 5) {
-        console.log('tilting color to red to avoid pink output');
+      if (swatch.color.hsl()[0] >= 345 || swatch.color.hsl() < 5) {
+        console.log(`tilting color to red (${swatch.color.hsl()}) to avoid pink output`);
         swatch.color = chroma('rgb(255, 0, 0)');
       }
 
