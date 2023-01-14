@@ -18,9 +18,8 @@
   "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
   "dependencies": {
     "canvas": "^2.11.0",
+    "chroma-js": "^2.4.2",
     "fs": "^0.0.1-security",
-    "get-image-colors": "^4.0.1",
-    "node-libcamera": "^1.0.6",
     "node-vibrant": "^3.2.1-alpha.1",
     "rpi-ws281x-native": "^1.0.4",
     "shelljs": "^0.8.5"
