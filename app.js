@@ -43,12 +43,13 @@ const getColorFromImage = image => {
         }
       }).sort((a, b) => b.population - a.population);
 
+      console.log(sortedPalette);
+
       let swatch = sortedPalette[0];
 
       // boost saturation
       if (swatch.type !== 'vibrant') {
         console.log('boosting saturation on non-vibrant swatch');
-        // console.log(swatch.color.hex())
         swatch.color = swatch.color.saturate(2);
       }
 
