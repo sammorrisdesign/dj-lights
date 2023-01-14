@@ -3,7 +3,7 @@ const getColors = require('get-image-colors');
 const shell = require('shelljs');
 const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
-var Vibrant = require('node-vibrant')
+var Vibrant = require('node-vibrant');
 
 
 // light config
@@ -56,58 +56,67 @@ const cleanImage = async() => {
 const getColorFromImage = image => {
   console.log('getting color from photo');
 
-  Vibrant.from(image).getPalette()
+  Vibrant.from(image)
+    .quality(1)
+    .maxColorCount(10)
+    .getPalette()
     .then(palette => {
-      console.log(palette);
-      const hexes = Object.keys(palette).map(color => color.getHex());
-      console.log(hexes);
+      const sortedPalette = Object.keys(palette).map(swatch => {
+        return {
+          type: swatch,
+          hex: palette[swatch].hex,
+          population: palette[swatch].population
+        }
+      }).sort((a, b) => b.population - a.population);
+
+      setLights(sortedPalette[0].hex);
     });
 
   
 
-  getColors(image, {
-    count: 5,
-    type: 'image/jpg'
-  }).then(colors => {
-    const hexes = colors.map(color => color.hex());
-    console.log(hexes);
+  // getColors(image, {
+  //   count: 5,
+  //   type: 'image/jpg'
+  // }).then(colors => {
+  //   const hexes = colors.map(color => color.hex());
+  //   console.log(hexes);
 
-    const colorsAsHSL = colors.map(color => color.hsl());
-    console.log(colorsAsHSL);
+  //   const colorsAsHSL = colors.map(color => color.hsl());
+  //   console.log(colorsAsHSL);
 
-    const filteredColors = colors.filter(color => color.hsl()[1] > 0.15 && color.hsl()[2] > 0.35 || color.hsl()[1] > 0.3);
+  //   const filteredColors = colors.filter(color => color.hsl()[1] > 0.15 && color.hsl()[2] > 0.35 || color.hsl()[1] > 0.3);
 
-    if (filteredColors.length) {
-      console.log('chosen', filteredColors[0].hex());
+  //   if (filteredColors.length) {
+  //     console.log('chosen', filteredColors[0].hex());
 
-      let colorToSet = filteredColors[0];
+  //     let colorToSet = filteredColors[0];
 
-      // minimum brightness
-      // if (colorToSet.hsl()[2] < 0.5) {
-      //   colorToSet = colorToSet.set('hsl.l', 0.5);
-      // }
+  //     // minimum brightness
+  //     // if (colorToSet.hsl()[2] < 0.5) {
+  //     //   colorToSet = colorToSet.set('hsl.l', 0.5);
+  //     // }
 
-      // if (colorToSet.hsl()[1] > 0.5) {
-      //   colorToSet = colorToSet.saturate(1);
-      // } else {
-      //   colorToSet = colorToSet.saturate(2);
-      // }
+  //     // if (colorToSet.hsl()[1] > 0.5) {
+  //     //   colorToSet = colorToSet.saturate(1);
+  //     // } else {
+  //     //   colorToSet = colorToSet.saturate(2);
+  //     // }
 
-      // shift pinker reds towards red
-      if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
-        console.log(colorToSet.hsl());
-        colorToSet = colorToSet.set('rgb.b', 0);
-        colorToSet = colorToSet.set('rgb.g', 0);
-      }
+  //     // shift pinker reds towards red
+  //     if (colorToSet.hsl()[0] > 340 || colorToSet.hsl()[0] < 5) {
+  //       console.log(colorToSet.hsl());
+  //       colorToSet = colorToSet.set('rgb.b', 0);
+  //       colorToSet = colorToSet.set('rgb.g', 0);
+  //     }
 
-      console.log('setting lights to', colorToSet.hex());
-      setLights(colorToSet.hex());
-    } else {
-      setLights('#FFFFFF');
-    }
-  }).catch((error) => {
-    console.log(error);
-  })
+  //     console.log('setting lights to', colorToSet.hex());
+  //     setLights(colorToSet.hex());
+  //   } else {
+  //     setLights('#FFFFFF');
+  //   }
+  // }).catch((error) => {
+  //   console.log(error);
+  // })
 }
 
 const takePhoto = () => {
@@ -117,8 +126,10 @@ const takePhoto = () => {
   cleanImage();
 }
 
+getColorFromImage(fs.readFileSync('./action.jpg'));
+
 console.log('starting script');
-takePhoto();
+// takePhoto();
 
 process.on('SIGINT', () => {
   ws281x.reset();
