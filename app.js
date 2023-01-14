@@ -39,6 +39,7 @@ const getColorFromImage = image => {
         return {
           type: swatch,
           color: chroma(palette[swatch].hex),
+          hex: palette[swatch].hex,
           population: palette[swatch].population
         }
       }).sort((a, b) => b.population - a.population);
