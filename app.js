@@ -3,6 +3,7 @@ const getColors = require('get-image-colors');
 const shell = require('shelljs');
 const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
+var Vibrant = require('node-vibrant')
 
 
 // light config
@@ -54,6 +55,13 @@ const cleanImage = async() => {
 
 const getColorFromImage = image => {
   console.log('getting color from photo');
+
+  Vibrant.from(image).getPalette()
+    .then(palette => {
+      console.log(palette);
+    });
+
+  
 
   getColors(image, {
     count: 5,
