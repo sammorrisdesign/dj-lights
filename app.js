@@ -54,6 +54,12 @@ const getColorFromImage = image => {
         swatch.color = swatch.color.saturate(2);
       }
 
+      // tilt red to prevent reds looking pink
+      if (swatch.color.hsl()[0] > 350 || swatch.color.hsl() < 5) {
+        console.log('tilting color to red to avoid pink output');
+        swatch.color = chroma('rgb(255, 0, 0)');
+      }
+
       setLights(swatch.color.hex());
     });
 }
