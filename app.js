@@ -30,29 +30,8 @@ const setLights = color => {
 
   setTimeout(() => {
     takePhoto();
-  }, 5000);
+  }, 2000);
 }
-
-const cleanImage = async() => {
-  console.log('cleaning image');
-
-  const canvas = createCanvas(1920, 2160)
-  const ctx = canvas.getContext('2d');
-
-  const image = await loadImage('./test.jpg');
-  ctx.drawImage(image, 0, 0, 1920, 2160);
-
-  ctx.rect(50, 800, 150, 250);
-  ctx.rect(1050, 800, 250, 250);
-  ctx.fill();
-
-  const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
-
-  fs.writeFileSync('test.jpg', savedImage);
-
-  getColorFromImage(savedImage);
-}
-
 const getColorFromImage = image => {
   console.log('getting color from photo');
 
@@ -119,6 +98,26 @@ const getColorFromImage = image => {
   // })
 }
 
+const cleanImage = async() => {
+  console.log('cleaning image');
+
+  const canvas = createCanvas(1920, 2160)
+  const ctx = canvas.getContext('2d');
+
+  const image = await loadImage('./test.jpg');
+  ctx.drawImage(image, 0, 0, 1920, 2160);
+
+  ctx.rect(50, 800, 150, 250);
+  ctx.rect(1050, 800, 250, 250);
+  ctx.fill();
+
+  const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
+
+  fs.writeFileSync('test.jpg', savedImage);
+
+  getColorFromImage(savedImage);
+}
+
 const takePhoto = () => {
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
   shell.exec('libcamera-jpeg --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb tungsten');
@@ -126,10 +125,8 @@ const takePhoto = () => {
   cleanImage();
 }
 
-getColorFromImage(fs.readFileSync('./action.jpg'));
-
 console.log('starting script');
-// takePhoto();
+takePhoto();
 
 process.on('SIGINT', () => {
   ws281x.reset();
