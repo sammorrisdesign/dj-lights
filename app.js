@@ -57,7 +57,7 @@ const getColorFromImage = image => {
 
       // boost saturation
       if (swatch.type !== 'Vibrant') {
-        console.log(`boosting saturation on non-vibrant, ${swatch.type} swatch`);
+        console.log(`boosting saturation on ${swatch.type} swatch (${swatch.hex})`);
         swatch.color = swatch.color.saturate(2);
       }
 
