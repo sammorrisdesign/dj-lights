@@ -51,6 +51,8 @@ const setLights = (color, isRepeating = true) => {
 const getColorFromImage = image => {
   console.log('getting color from photo');
 
+  console.time('getting color');
+
   Vibrant.from(image)
     .quality(3)
     .getPalette()
@@ -98,6 +100,8 @@ const getColorFromImage = image => {
         swatch.color = chroma('rgb(255, 0, 0)');
       }
 
+      console.timeEnd('getting color');
+
       setLights(swatch.color.hex());
     });
 }
@@ -137,9 +141,12 @@ const getAWBBasedOnTimeOfDay = () => {
 
 const takePhoto = () => {
   console.log('taking photo');
+  console.time('taking photo');
   const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
   shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80 --autofocus-range macro --awb ${awb} --denoise cdn_hq --output capture.jpg`);
+
+  console.timeEnd('taking photo');
 
   cleanImage();
 }
