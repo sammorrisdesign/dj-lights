@@ -83,10 +83,35 @@ const cleanImage = async() => {
   getColorFromImage(savedImage);
 }
 
+const getAWBBasedOnTimeOfDay = () => {
+  const d = new Date();
+  let hour = d.getHours();
+
+  if (hour > 18) {
+    return 'tungsten'
+  } else {
+    return 'flourescent'
+  }
+}
+
 const takePhoto = () => {
+  const awb = getAWBBasedOnTimeOfDay();
+  console.log(awb);
   console.log('taking photo');
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec('libcamera-jpeg --nopreview --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb indoor --denoise cdn_hq');
+  shell.exec(`libcamera-jpeg
+    --nopreview
+    --hdr
+    --verbose 0
+    --roi 0.25,0,0.5,1
+    --width 1920
+    --height 2160
+    -q 80
+    --autofocus-range macro
+    --awb ${awb}
+    --denoise cdn_hq
+    --output test.jpg
+  `);
 
   cleanImage();
 }
