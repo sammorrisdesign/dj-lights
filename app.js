@@ -23,7 +23,7 @@ const updateLights = color => {
 const setLights = color => {
   console.log('setting lights to', color);
 
-  updateLights();
+  updateLights(color);
 
   ws281x.render();
 
