@@ -68,7 +68,7 @@ const getColorFromImage = image => {
       let swatch = sortedPalette[0];
 
       // pick vibrant unless another swatch has larger population
-      if (swatch.coverage < 60 && swatch.type !== 'Vibrant') {
+      if (swatch.coverage < 50 && swatch.type !== 'Vibrant') {
         const vibrantSwatch = sortedPalette.filter(swatch => swatch.type == 'Vibrant')[0];
         if (vibrantSwatch && vibrantSwatch.coverage > 5) {
           console.log(`prominent ${swatch.type} swatch (${swatch.color.hex()}) lacks coverage at ${Math.round(swatch.coverage)}%. Switching to Vibrant swatch (${vibrantSwatch.color.hex()})`);
@@ -143,7 +143,7 @@ const takePhoto = () => {
   console.time('taking photo');
   const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 800 --height 900 -q 80 --autofocus-range macro --rawfull --awb ${awb} --denoise cdn_hq --output capture.jpg`);
+  shell.exec(`libcamera-jpeg --immediate --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 800 --height 900 -q 80 --autofocus-range macro --rawfull --awb ${awb} --denoise cdn_hq --output capture.jpg`);
 
   console.timeEnd('taking photo');
 
