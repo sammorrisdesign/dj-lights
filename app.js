@@ -54,7 +54,6 @@ const getColorFromImage = image => {
   console.time('getting color');
 
   Vibrant.from(image)
-    .quality(3)
     .getPalette()
     .then(palette => {
       const totalPopulation = Object.keys(palette).map(swatch => palette[swatch].population).reduce((a, b) => a + b, 0);
