@@ -64,9 +64,17 @@ const getColorFromImage = image => {
         swatch.color = swatch.color.saturate(2);
       }
 
+      // if greenish hue push more towards green
+      if (swatch.color.hsl()[0] > 140 && swatch.color.hsl()[0] < 160) {
+        console.log(`tilting swatch (${swatch.hex}) to green to avoid turquoise output`);
+
+        swatch.color = swatch.set('rgb.b', '*0.25');
+        swatch.color = swatch.set('rgb.g', '*1.5');
+      }
+
       // tilt red to prevent reds looking pink
       if (swatch.color.hsl()[0] >= 345 || swatch.color.hsl()[0] < 13) {
-        console.log(`tilting color to red (${swatch.color.hsl()[0]} degrees of hue found) to avoid pink output`);
+        console.log(`tilting swatch (${swatch.hex}) to red (${swatch.color.hsl()[0]} degrees of hue found) to avoid pink output`);
         swatch.color = chroma('rgb(255, 0, 0)');
       }
 
