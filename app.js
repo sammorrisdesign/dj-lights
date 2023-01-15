@@ -59,9 +59,9 @@ const getColorFromImage = image => {
       if (swatch.type !== 'Vibrant') {
         console.log(`boosting saturation on ${swatch.type} swatch (${swatch.hex})`);
         swatch.color = swatch.color.saturate(2);
-      } else if (swatch.color.hsl()[1]) {
-        console.log(`boosting saturating on Vibrant swatch (${swatch.hex})`);
-        swatch.color = swatch.color.saturate(1);
+      } else if (swatch.color.hsl()[1] < 40) {
+        console.log(`boosting saturation on Vibrant swatch (${swatch.hex}) as it is low`);
+        swatch.color = swatch.color.saturate(2);
       }
 
       // tilt red to prevent reds looking pink
