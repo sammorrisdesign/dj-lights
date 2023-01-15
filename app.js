@@ -66,6 +66,8 @@ const getColorFromImage = image => {
         }
       }).sort((a, b) => b.coverage - a.coverage);
 
+      console.time('post-sort processsing');
+
       let swatch = sortedPalette[0];
 
       // pick vibrant unless another swatch has larger population
@@ -101,6 +103,7 @@ const getColorFromImage = image => {
       }
 
       console.timeEnd('getting color');
+      console.timeEnd('post-sort processsing');
 
       setLights(swatch.color.hex());
     });
