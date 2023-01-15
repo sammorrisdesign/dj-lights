@@ -144,7 +144,7 @@ const takePhoto = () => {
   console.time('taking photo');
   const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1000 --height 1125 -q 80 --autofocus-range macro --rawfull --awb ${awb} --denoise cdn_hq --output capture.jpg`);
+  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 800 --height 900 -q 80 --autofocus-range macro --rawfull --awb ${awb} --denoise cdn_hq --output capture.jpg`);
 
   console.timeEnd('taking photo');
 
