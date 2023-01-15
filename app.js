@@ -44,15 +44,15 @@ const getColorFromImage = image => {
         }
       }).sort((a, b) => b.coverage - a.coverage);
 
-      console.log(sortedPalette);
-
       let swatch = sortedPalette[0];
 
       // pick vibrant unless another swatch has larger population
       if (swatch.coverage < 60 && swatch.type !== 'Vibrant') {
         const vibrantSwatch = sortedPalette.filter(swatch => swatch.type == 'Vibrant')[0];
-        console.log(`prominent ${swatch.type} swatch (${swatch.hex}) lacks coverage at ${swatch.coverage}%. Switching to Vibrant swatch (${vibrantSwatch.hex})`);
-        swatch = vibrantSwatch;
+        if (vibrantSwatch && vibrantSwatch.coverage > 5) {
+          console.log(`prominent ${swatch.type} swatch (${swatch.hex}) lacks coverage at ${Math.round(swatch.coverage)}%. Switching to Vibrant swatch (${vibrantSwatch.hex})`);
+          swatch = vibrantSwatch;
+        }
       }
 
       // boost saturation
