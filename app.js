@@ -31,9 +31,12 @@ const setLights = color => {
   if (existingColor) {
     const colors = new Rainbow();
     colors.setSpectrum(existingColor, color);
+    let tick = 0;
 
-    console.log(colors);
-
+    while (tick < 101) {
+      updateLights(colors.colourAt(tick));
+      tick++;
+    } 
 
   } else {
     updateLights(color);
