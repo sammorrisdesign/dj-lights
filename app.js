@@ -67,6 +67,8 @@ const getColorFromImage = image => {
 
       let swatch = sortedPalette[0];
 
+      console.log(sortedPalette);
+
       // pick vibrant unless another swatch has larger population
       if (swatch.coverage < 50 && swatch.type !== 'Vibrant') {
         const vibrantSwatch = sortedPalette.filter(swatch => swatch.type == 'Vibrant')[0];
