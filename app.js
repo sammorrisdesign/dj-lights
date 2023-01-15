@@ -131,7 +131,7 @@ const getAWBBasedOnTimeOfDay = () => {
   const d = new Date();
   let hour = d.getHours();
 
-  if (hour > 18) {
+  if (hour > 14) {
     return 'tungsten'
   } else {
     return 'fluorescent'
