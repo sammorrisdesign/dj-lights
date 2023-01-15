@@ -25,28 +25,28 @@ const updateLights = color => {
   ws281x.render();
 }
 
-const setLights = color => {
+const setLights = (color, isRepeating = true) => {
   console.log('setting lights to', color);
 
-  // if (existingColor) {
-    const colors = new Rainbow();
-    colors.setSpectrum(existingColor, color);
-    let tick = 0;
+  const colors = new Rainbow();
+  colors.setSpectrum(existingColor, color);
+  let tick = 0;
 
-    while (tick < 101) {
-      updateLights(colors.colourAt(tick));
-      tick++;
-    } 
-
-  // } else {
-  //   updateLights(color);
-  // }
+  while (tick < 101) {
+    updateLights(colors.colourAt(tick));
+    tick++;
+  }
 
   existingColor = color;
 
-  setTimeout(() => {
-    takePhoto();
-  }, 2000);
+  if (isRepeating) {
+    setTimeout(() => {
+      takePhoto();
+    }, 2000);
+  } else {
+    ws281x.reset();
+    ws281x.finalize();
+  }
 }
 const getColorFromImage = image => {
   console.log('getting color from photo');
@@ -149,8 +149,9 @@ console.log('starting script');
 takePhoto();
 
 process.on('SIGINT', () => {
-  ws281x.reset();
-  ws281x.finalize();
+  console.log('stopping script');
+  setLights('#000000');
+  console.log('post-fade');
 
   process.nextTick(() => {
     process.exit(0);
