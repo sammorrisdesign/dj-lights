@@ -66,8 +66,6 @@ const getColorFromImage = image => {
         }
       }).sort((a, b) => b.coverage - a.coverage);
 
-      console.time('post-sort processsing');
-
       let swatch = sortedPalette[0];
 
       // pick vibrant unless another swatch has larger population
@@ -103,7 +101,6 @@ const getColorFromImage = image => {
       }
 
       console.timeEnd('getting color');
-      console.timeEnd('post-sort processsing');
 
       setLights(swatch.color.hex());
     });
@@ -147,7 +144,7 @@ const takePhoto = () => {
   console.time('taking photo');
   const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80 --autofocus-range macro --awb ${awb} --output capture.jpg`);
+  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80  --awb ${awb} --denoise cdn_hq --output capture.jpg`);
 
   console.timeEnd('taking photo');
 
