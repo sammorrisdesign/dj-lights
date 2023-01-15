@@ -34,18 +34,22 @@ const getColorFromImage = image => {
     .quality(3)
     .getPalette()
     .then(palette => {
+      const totalPopulation = Object.keys(palette).map(swatch => palette[swatch].population).reduce((a, b) => a + b, 0);
       const sortedPalette = Object.keys(palette).map(swatch => {
         return {
           type: swatch,
           color: chroma(palette[swatch].hex),
           hex: palette[swatch].hex,
-          population: palette[swatch].population
+          coverage: (palette[swatch].population / totalPopulation) * 100
         }
       }).sort((a, b) => b.population - a.population);
 
       console.log(sortedPalette);
 
       let swatch = sortedPalette[0];
+
+      // pick vibrant unless another swatch has larger population
+
 
       // boost saturation
       if (swatch.type !== 'Vibrant') {
@@ -84,6 +88,8 @@ const cleanImage = async() => {
 }
 
 const getAWBBasedOnTimeOfDay = () => {
+  // ToDo: Can we get this in a better way? Maybe use the wall as a "gray card" to adjust outside of libcamera.
+  // https://forums.raspberrypi.com/viewtopic.php?t=327943
   const d = new Date();
   let hour = d.getHours();
 
@@ -95,9 +101,8 @@ const getAWBBasedOnTimeOfDay = () => {
 }
 
 const takePhoto = () => {
-  const awb = getAWBBasedOnTimeOfDay();
-  console.log(awb);
   console.log('taking photo');
+  const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
   shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80 --autofocus-range macro --awb ${awb} --denoise cdn_hq --output test.jpg`);
 
