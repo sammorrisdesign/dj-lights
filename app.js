@@ -13,7 +13,7 @@ const lights = ws281x(lightCount, {
   brightness: 120
 });
 
-let existingColor;
+let existingColor = '#000000';
 
 const updateLights = color => {
   color = Number("0x" + color.replace('#', ''));
@@ -28,7 +28,7 @@ const updateLights = color => {
 const setLights = color => {
   console.log('setting lights to', color);
 
-  if (existingColor) {
+  // if (existingColor) {
     const colors = new Rainbow();
     colors.setSpectrum(existingColor, color);
     let tick = 0;
@@ -38,9 +38,9 @@ const setLights = color => {
       tick++;
     } 
 
-  } else {
-    updateLights(color);
-  }
+  // } else {
+  //   updateLights(color);
+  // }
 
   existingColor = color;
 
