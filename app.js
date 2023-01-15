@@ -68,8 +68,8 @@ const getColorFromImage = image => {
       if (swatch.color.hsl()[0] > 140 && swatch.color.hsl()[0] < 160) {
         console.log(`tilting swatch (${swatch.hex}) to green to avoid turquoise output`);
 
-        swatch.color = swatch.set('rgb.b', '*0.25');
-        swatch.color = swatch.set('rgb.g', '*1.5');
+        swatch.color = swatch.color.set('rgb.b', '*0.25');
+        swatch.color = swatch.color.set('rgb.g', '*1.5');
       }
 
       // tilt red to prevent reds looking pink
