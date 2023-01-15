@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "run": "node app.js"
+    "run": "sudo node app.js"
   },
   "repository": {
     "type": "git",
