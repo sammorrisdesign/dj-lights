@@ -86,7 +86,7 @@ const cleanImage = async() => {
 const takePhoto = () => {
   console.log('taking photo');
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec('libcamera-jpeg --nopreview --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb tungsten --denoise cdn_hq');
+  shell.exec('libcamera-jpeg --nopreview --output test.jpg --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 100 --autofocus-range macro --awb indoor --denoise cdn_hq');
 
   cleanImage();
 }
