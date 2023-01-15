@@ -90,7 +90,7 @@ const getAWBBasedOnTimeOfDay = () => {
   if (hour > 18) {
     return 'tungsten'
   } else {
-    return 'flourescent'
+    return 'fluorescent'
   }
 }
 
