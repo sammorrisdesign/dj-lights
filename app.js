@@ -12,14 +12,18 @@ const lights = ws281x(lightCount, {
   brightness: 120
 });
 
-const setLights = color => {
-  console.log('setting lights to', color);
-  const colorArray = lights.array;
+const updateLights = color => {
   color = Number("0x" + color.replace('#', ''));
 
   for (let i = 0; i < lights.count; i++) {
-    colorArray[i] = color;
+    lights.array[i] = color;
   }
+}
+
+const setLights = color => {
+  console.log('setting lights to', color);
+
+  updateLights();
 
   ws281x.render();
 
