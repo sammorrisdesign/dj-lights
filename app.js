@@ -1,9 +1,10 @@
 const { createCanvas, loadImage } = require('canvas');
 const ws281x = require('rpi-ws281x-native');
 const shell = require('shelljs');
+const chroma = require('chroma-js');
 const fs = require('fs');
 const Vibrant = require('node-vibrant');
-const chroma = require('chroma-js');
+const Rainbow = require('rainbowvis.js');
 
 // light config
 const lightCount = 150;
@@ -12,20 +13,33 @@ const lights = ws281x(lightCount, {
   brightness: 120
 });
 
+let existingColor;
+
 const updateLights = color => {
   color = Number("0x" + color.replace('#', ''));
 
   for (let i = 0; i < lights.count; i++) {
     lights.array[i] = color;
   }
+
+  ws281x.render();
 }
 
 const setLights = color => {
   console.log('setting lights to', color);
 
-  updateLights(color);
+  if (existingColor) {
+    const colors = new Rainbow();
+    colors.setSpectrum(existingColor, color);
 
-  ws281x.render();
+    console.log(colors);
+
+
+  } else {
+    updateLights(color);
+  }
+
+  existingColor = color;
 
   setTimeout(() => {
     takePhoto();

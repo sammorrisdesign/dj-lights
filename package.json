@@ -21,6 +21,7 @@
     "chroma-js": "^2.4.2",
     "fs": "^0.0.1-security",
     "node-vibrant": "^3.2.1-alpha.1",
+    "rainbowvis.js": "^1.1.1",
     "rpi-ws281x-native": "^1.0.4",
     "shelljs": "^0.8.5"
   }
