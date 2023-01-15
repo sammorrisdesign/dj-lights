@@ -109,7 +109,7 @@ const cleanImage = async() => {
   const canvas = createCanvas(1920, 2160)
   const ctx = canvas.getContext('2d');
 
-  const image = await loadImage('./test.jpg');
+  const image = await loadImage('./capture.jpg');
   ctx.drawImage(image, 0, 0, 1920, 2160);
 
   ctx.rect(50, 800, 150, 250);
@@ -118,7 +118,7 @@ const cleanImage = async() => {
 
   const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
 
-  fs.writeFileSync('test.jpg', savedImage);
+  fs.writeFileSync('capture.jpg', savedImage);
 
   getColorFromImage(savedImage);
 }
@@ -140,7 +140,7 @@ const takePhoto = () => {
   console.log('taking photo');
   const awb = getAWBBasedOnTimeOfDay();
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80 --autofocus-range macro --awb ${awb} --denoise cdn_hq --output test.jpg`);
+  shell.exec(`libcamera-jpeg --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 --width 1920 --height 2160 -q 80 --autofocus-range macro --awb ${awb} --denoise cdn_hq --output capture.jpg`);
 
   cleanImage();
 }
@@ -151,7 +151,6 @@ takePhoto();
 process.on('SIGINT', () => {
   console.log('stopping script');
   setLights('#000000');
-  console.log('post-fade');
 
   process.nextTick(() => {
     process.exit(0);
