@@ -96,7 +96,10 @@ const getColorFromImage = image => {
       // tilt red to prevent reds looking pink
       if (swatch.color.hsl()[0] >= 345 || swatch.color.hsl()[0] < 13) {
         console.log(`tilting swatch (${swatch.color.hex()}) to red (${swatch.color.hsl()[0]} degrees of hue found) to avoid pink output`);
-        swatch.color = chroma('rgb(255, 0, 0)');
+
+        swatch.color = swatch.color.set('rgb.r', '*2');
+        swatch.color = swatch.color.set('rgb.b', '*0.25');
+        swatch.color = swatch.color.set('rgb.g', '*0.25');
       }
 
       console.timeEnd('getting color');
