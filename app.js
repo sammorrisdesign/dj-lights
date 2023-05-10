@@ -68,7 +68,7 @@ const getColorFromImage = image => {
       let swatch = sortedPalette[0];
 
       // pick vibrant unless another swatch has larger population
-      if (swatch.coverage < 60 && swatch.type !== 'Vibrant') {
+      if (swatch.coverage < 80 && swatch.type !== 'Vibrant') {
         const vibrantSwatch = sortedPalette.filter(swatch => swatch.type == 'Vibrant')[0];
         if (vibrantSwatch && vibrantSwatch.coverage > 5) {
           console.log(`prominent ${swatch.type} swatch (${swatch.color.hex()}) lacks coverage at ${Math.round(swatch.coverage)}%. Switching to Vibrant swatch (${vibrantSwatch.color.hex()})`);
@@ -133,6 +133,8 @@ const getAWBBasedOnTimeOfDay = () => {
   // https://forums.raspberrypi.com/viewtopic.php?t=327943
   const d = new Date();
   let hour = d.getHours();
+
+  return 'auto';
 
   if (hour > 14) {
     return 'tungsten'
