@@ -155,7 +155,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb incandescent --rawfull --output capture.jpg`)
+  shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb fluorescent --rawfull --output capture.jpg`)
   console.timeEnd('taking photo');
 
   cleanImage();
