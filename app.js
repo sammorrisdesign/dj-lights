@@ -15,7 +15,7 @@ const lights = ws281x(lightCount, {
 
 // const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
-const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1";
+const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
 let awb;
 let existingColor = '#000000';
@@ -139,14 +139,24 @@ const getAWBBasedOnTimeOfDay = () => {
   // ToDo: Can we get this in a better way? Maybe use the wall as a "gray card" to adjust outside of libcamera.
   // https://forums.raspberrypi.com/viewtopic.php?t=327943
 
-  let redgain = 1;
-  let bluegain = 1;
+  const awbs = [
+    'auto',
+    'incandescent',
+    'tungsten',
+    'fluorescent',
+    'indoor',
+    'daylight',
+    'cloudy'
+  ];
 
-  console.time('calibrating awb');
-  shell.exec(`libcamera-jpeg ${cameraCommands} --width 160 --height 180 --awbgains ${redgain},${bluegain} --output test.jpg`);
-  console.timeEnd('calibrating awb');
+  for (let awb of awbs) {
+    console.time(`calibrating ${awb}`);
+    shell.exec(`libcamera-jpeg ${cameraCommands} --width 160 --height 180 --awb ${awb} --output test-${awb}.jpg`);
+    console.timeEnd(`calibrating ${awb}`);
+  }
 
-  takePhoto();
+
+  // takePhoto();
 }
 
 const takePhoto = () => {
