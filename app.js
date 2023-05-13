@@ -15,7 +15,7 @@ const lights = ws281x(lightCount, {
 
 // const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
-const cameraCommands = "--immediate --timeout 500 --nopreview --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
+const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1";
 
 let awb;
 let existingColor = '#000000';
