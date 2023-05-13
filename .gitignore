@@ -1,5 +1,5 @@
 # Project Specific
-*.jpg
+capture.jpg
 .DS_Store
 
 # Logs
