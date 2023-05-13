@@ -151,7 +151,7 @@ const getAWBBasedOnTimeOfDay = () => {
 
   for (let awb of awbs) {
     console.time(`calibrating ${awb}`);
-    shell.exec(`libcamera-jpeg ${cameraCommands} --width 160 --height 180 --awb ${awb} --output test-${awb}.jpg`);
+    shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${awb} --output test-${awb}.jpg`);
     console.timeEnd(`calibrating ${awb}`);
   }
 
