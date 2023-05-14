@@ -163,6 +163,8 @@ const takePhoto = () => {
 
 console.log('starting script');
 
+testAWB();
+
 takePhoto();
 
 process.on('SIGINT', () => {
