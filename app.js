@@ -132,6 +132,19 @@ const cleanImage = async() => {
   getColorFromImage(savedImage);
 }
 
+const getAWBBasedOnTimeOfDay = () => {
+  // ToDo: Loop through all awbs (like testAWB) measure the colours in the top and adjust from there
+  const d = new Date();
+  let hour = d.getHours();
+
+  if (hour > 14) {
+    return 'tungsten'
+  } else {
+    return 'fluorescent'
+  }
+}
+
+
 const testAWB = () => {
   const awbs = [
     'auto',
@@ -145,7 +158,7 @@ const testAWB = () => {
 
   for (let awb of awbs) {
     console.time(`calibrating ${awb}`);
-    shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${awb} --output test-${awb}.jpg`);
+    shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --output test-${awb}.jpg`);
     console.timeEnd(`calibrating ${awb}`);
   }
 }
@@ -155,7 +168,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb auto --rawfull --output capture.jpg`)
+  shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --rawfull --output capture.jpg`)
   console.timeEnd('taking photo');
 
   cleanImage();
@@ -163,7 +176,7 @@ const takePhoto = () => {
 
 console.log('starting script');
 
-testAWB();
+// testAWB();
 
 takePhoto();
 
