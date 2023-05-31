@@ -7,23 +7,19 @@ const Vibrant = require('node-vibrant');
 const Rainbow = require('rainbowvis.js');
 const InputEvent = require('input-event');
 
-// light config
-const lightCount = 150;
-const lights = ws281x(lightCount, {
-  gpio: 21,
+const config = require('./config.json');
+
+const lights = ws281x(config.lights.count, {
+  gpio: config.lights.gpio,
   brightness: 120
 });
 
 // check for keypresses
-const input = new InputEvent('/dev/input/event4');
-
+const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
-// keyboard.on('keyup', console.log);
-// keyboard.on('keydown', console.log);
 keyboard.on('keypress', e => {
-  console.log(e);
-  if (e.code == 113) {
+  if (e.code == config.input.mapping.capture) {
     takePhoto();
   }
 });
@@ -71,9 +67,13 @@ const getColorFromImage = image => {
 
   console.time('getting color');
 
+  console.time('vibrant from');
+
   Vibrant.from(image)
     .getPalette()
     .then(palette => {
+      console.timeEnd('vibrant from');
+
       const totalPopulation = Object.keys(palette).map(swatch => palette[swatch].population).reduce((a, b) => a + b, 0);
       const sortedPalette = Object.keys(palette).map(swatch => {
         return {

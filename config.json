@@ -1,0 +1,22 @@
+{
+  "lights": {
+    "gpio": 21,
+    "count": 150
+  },
+
+  "input": {
+    "device": "/dev/input/event4",
+    "mapping": {
+      "hue": {
+        "up": 115,
+        "down": 114
+      },
+      "brightness": {
+        "up": 163,
+        "down": 165
+      },
+      "lights": 164,
+      "capture": 144
+    }
+  }
+}
