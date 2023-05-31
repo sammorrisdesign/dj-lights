@@ -23,6 +23,9 @@ const keyboard = new InputEvent.Keyboard(input);
 // keyboard.on('keydown', console.log);
 keyboard.on('keypress', e => {
   console.log(e);
+  if (e.code == 113) {
+    takePhoto();
+  }
 });
 
 // camera loop
@@ -193,11 +196,11 @@ console.log('starting script');
 
 // takePhoto();
 
-process.on('SIGINT', () => {
-  console.log('stopping script');
-  setLights('#000000');
+// process.on('SIGINT', () => {
+//   console.log('stopping script');
+//   setLights('#000000');
 
-  process.nextTick(() => {
-    process.exit(0);
-  });
-});
+//   process.nextTick(() => {
+//     process.exit(0);
+//   });
+// });
