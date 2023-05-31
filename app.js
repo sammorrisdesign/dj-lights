@@ -189,7 +189,7 @@ console.log('starting script');
 
 // testAWB();
 
-takePhoto();
+// takePhoto();
 
 process.on('SIGINT', () => {
   console.log('stopping script');
