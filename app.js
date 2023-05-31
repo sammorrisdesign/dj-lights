@@ -14,6 +14,15 @@ const lights = ws281x(lightCount, {
   brightness: 120
 });
 
+// check for keypresses
+process.stdin.on('keypress', (ch, key) => {
+  console.log(key);
+});
+
+process.stdin.setRawMode(true);
+process.stdin.resume();
+
+// camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
 let existingColor = '#000000';
@@ -188,9 +197,4 @@ process.on('SIGINT', () => {
   process.nextTick(() => {
     process.exit(0);
   });
-});
-
-// check for keypresses
-process.stdin.on('keypress', (ch, key) => {
-  console.log(key);
 });
