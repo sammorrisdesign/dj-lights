@@ -24,6 +24,21 @@ keyboard.on('keypress', e => {
   }
 });
 
+shell.exec('libcamera-vid -t 0 --inline --listen -o tcp://0.0.0.0:5000 --roi 0.25,0,0.5,1 --hdr --autofocus-range macro --awb auto');
+
+const net = require('net');
+
+const camera = new Socket();
+camera.connect(5000, '127.0.0.1', () => {
+  console.log('connected');
+});
+
+camera.on('data', data => {
+  console.log(data);
+})
+
+
+
 // camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
@@ -160,7 +175,6 @@ const getAWBBasedOnTimeOfDay = () => {
   }
 }
 
-
 const testAWB = () => {
   const awbs = [
     'auto',
@@ -180,7 +194,7 @@ const testAWB = () => {
 }
 
 const takePhoto = () => {
-  console.log('taking photo using');
+  console.log('taking photo');
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
@@ -191,16 +205,3 @@ const takePhoto = () => {
 }
 
 console.log('starting script');
-
-// testAWB();
-
-// takePhoto();
-
-// process.on('SIGINT', () => {
-//   console.log('stopping script');
-//   setLights('#000000');
-
-//   process.nextTick(() => {
-//     process.exit(0);
-//   });
-// });
