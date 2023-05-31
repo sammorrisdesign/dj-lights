@@ -5,6 +5,7 @@ const chroma = require('chroma-js');
 const fs = require('fs');
 const Vibrant = require('node-vibrant');
 const Rainbow = require('rainbowvis.js');
+const keypress = require('keypress');
 
 // light config
 const lightCount = 150;
@@ -187,4 +188,9 @@ process.on('SIGINT', () => {
   process.nextTick(() => {
     process.exit(0);
   });
+});
+
+// check for keypresses
+process.stdin.on('keypress', (ch, key) => {
+  console.log(key);
 });
