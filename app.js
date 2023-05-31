@@ -22,26 +22,17 @@ keyboard.on('keypress', e => {
   if (e.code == config.input.mapping.capture) {
     takePhoto();
   }
+
+  if (e.code == config.input.mapping.hue.up) {
+    const color = chroma.set('hsl.h', '+20').hex();
+    setLights(color)
+  }
+
+  if (e.code == config.input.mapping.hue.down) {
+    const color = chroma.set('hsl.h', '-20').hex();
+    setLights(color)
+  }
 });
-
-// console.log('about to exec');
-
-// shell.exec('libcamera-vid -t 0 --inline --listen -o tcp://0.0.0.0:5000 --roi 0.25,0,0.5,1 --hdr --autofocus-range macro --awb auto');
-
-// console.log('post exec');
-
-const net = require('net');
-
-const camera = new net.Socket();
-camera.connect(5000, '127.0.0.1', () => {
-  console.log('connected');
-});
-
-camera.on('data', data => {
-  console.log(data.toString('base64'));
-})
-
-
 
 // camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
