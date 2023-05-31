@@ -38,7 +38,7 @@ camera.connect(5000, '127.0.0.1', () => {
 });
 
 camera.on('data', data => {
-  console.log(data);
+  console.log(data.toString('base64'));
 })
 
 
