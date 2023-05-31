@@ -24,12 +24,12 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    const color = chroma.set('hsl.h', '+20').hex();
+    const color = chroma(existingColor).set('hsl.h', '+20').hex();
     setLights(color)
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    const color = chroma.set('hsl.h', '-20').hex();
+    const color = chroma(existingColor).set('hsl.h', '-20').hex();
     setLights(color)
   }
 });
