@@ -19,9 +19,11 @@ const input = new InputEvent('/dev/input/event4');
 
 const keyboard = new InputEvent.Keyboard(input);
 
-keyboard.on('keyup', console.log);
-keyboard.on('keydown', console.log);
-keyboard.on('keypress', console.log);
+// keyboard.on('keyup', console.log);
+// keyboard.on('keydown', console.log);
+keyboard.on('keypress', e => {
+  console.log(e);
+});
 
 // camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
@@ -53,9 +55,9 @@ const setLights = (color, isRepeating = true) => {
   existingColor = color;
 
   if (isRepeating) {
-    setTimeout(() => {
-      takePhoto();
-    }, 2000);
+    // setTimeout(() => {
+    //   takePhoto();
+    // }, 2000);
   } else {
     ws281x.reset();
     ws281x.finalize();
