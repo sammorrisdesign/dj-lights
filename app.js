@@ -24,11 +24,11 @@ keyboard.on('keypress', e => {
   }
 });
 
-console.log('about to exec');
+// console.log('about to exec');
 
-shell.exec('libcamera-vid -t 0 --inline --listen -o tcp://0.0.0.0:5000 --roi 0.25,0,0.5,1 --hdr --autofocus-range macro --awb auto');
+// shell.exec('libcamera-vid -t 0 --inline --listen -o tcp://0.0.0.0:5000 --roi 0.25,0,0.5,1 --hdr --autofocus-range macro --awb auto');
 
-console.log('post exec');
+// console.log('post exec');
 
 const net = require('net');
 
