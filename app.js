@@ -15,7 +15,7 @@ const lights = ws281x(lightCount, {
 });
 
 // check for keypresses
-const input = new InputEvent('/dev/input/event5');
+const input = new InputEvent('/dev/input/event4');
 
 const keyboard = new InputEvent.Keyboard(input);
 
