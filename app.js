@@ -5,7 +5,7 @@ const chroma = require('chroma-js');
 const fs = require('fs');
 const Vibrant = require('node-vibrant');
 const Rainbow = require('rainbowvis.js');
-const keypress = require('keypress');
+const InputEvent = require('input-event');
 
 // light config
 const lightCount = 150;
@@ -15,12 +15,13 @@ const lights = ws281x(lightCount, {
 });
 
 // check for keypresses
-process.stdin.on('keypress', (ch, key) => {
-  console.log(key);
-});
+const input = new InputEvent('/dev/input/event5');
 
-process.stdin.setRawMode(true);
-process.stdin.resume();
+const keyboard = new InputEvent.Keyboard(input);
+
+keyboard.on('keyup', console.log);
+keyboard.on('keydown', console.log);
+keyboard.on('keypress', console.log);
 
 // camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";

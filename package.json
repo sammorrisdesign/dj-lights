@@ -20,7 +20,7 @@
     "canvas": "^2.11.0",
     "chroma-js": "^2.4.2",
     "fs": "^0.0.1-security",
-    "keypress": "^0.2.1",
+    "input-event": "^1.2.6",
     "node-vibrant": "^3.2.1-alpha.1",
     "rainbowvis.js": "^1.1.1",
     "rpi-ws281x-native": "^1.0.4",
