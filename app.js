@@ -35,10 +35,10 @@ keyboard.on('keypress', e => {
 
   if (e.code == config.input.mapping.lights) {
     if (isOn) {
-      setLights('#000000');
+      updateLights('#000000');
       isOn = false;
     } else {
-      setLights(existingColor);
+      updateLights(existingColor);
       isOn = true;
     }
   }
