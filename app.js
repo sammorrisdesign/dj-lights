@@ -53,10 +53,11 @@ const setLights = (color, isRepeating = true) => {
   console.log('setting lights to', color);
 
   const colors = new Rainbow();
+  colors.setNumberRange(0, 20);
   colors.setSpectrum(existingColor, color);
   let tick = 0;
 
-  while (tick < 101) {
+  while (tick < 21) {
     updateLights(colors.colourAt(tick));
     tick++;
   }
