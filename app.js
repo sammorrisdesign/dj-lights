@@ -34,12 +34,12 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.brightness.up) {
-    existingColor = chroma(existingColor).set('hsl.s', '+10').hex();
+    existingColor = chroma(existingColor).set('hsl.s', '+0.1').hex();
     updateLights(existingColor);
   }
 
   if (e.code == config.input.mapping.brightness.down) {
-    existingColor = chroma(existingColor).set('hsl.s', '-10').hex();
+    existingColor = chroma(existingColor).set('hsl.s', '-0.1').hex();
     updateLights(existingColor);
   }
 
