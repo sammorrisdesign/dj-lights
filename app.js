@@ -33,6 +33,16 @@ keyboard.on('keypress', e => {
     updateLights(existingColor);
   }
 
+  if (e.code == config.input.mapping.brightness.up) {
+    existingColor = chroma(existingColor).set('hsl.s', '+10').hex();
+    updateLights(existingColor);
+  }
+
+  if (e.code == config.input.mapping.brightness.down) {
+    existingColor = chroma(existingColor).set('hsl.s', '-10').hex();
+    updateLights(existingColor);
+  }
+
   if (e.code == config.input.mapping.lights) {
     if (isOn) {
       updateLights('#000000');
