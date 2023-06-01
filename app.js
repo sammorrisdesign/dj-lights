@@ -32,15 +32,28 @@ keyboard.on('keypress', e => {
     existingColor = chroma(existingColor).set('hsl.h', '-10').hex();
     updateLights(existingColor);
   }
+
+  if (e.code == config.input.mapping.lights) {
+    if (isOn) {
+      setLights('#000000');
+      isOn = false;
+    } else {
+      setLights(existingColor);
+      isOn = true;
+    }
+  }
 });
 
 // camera loop
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
 let existingColor = '#000000';
+let isOn = false;
 
 const updateLights = color => {
   color = Number("0x" + color.replace('#', ''));
+
+  isOn = true;
 
   for (let i = 0; i < lights.count; i++) {
     lights.array[i] = color;
