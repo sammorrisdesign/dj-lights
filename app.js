@@ -24,13 +24,13 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    const color = chroma(existingColor).set('hsl.h', '+20').hex();
-    setLights(color)
+    existingColor = chroma(existingColor).set('hsl.h', '+10').hex();
+    updateLights(existingColor);
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    const color = chroma(existingColor).set('hsl.h', '-20').hex();
-    setLights(color)
+    existingColor = chroma(existingColor).set('hsl.h', '-10').hex();
+    updateLights(existingColor);
   }
 });
 
