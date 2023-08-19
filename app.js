@@ -25,8 +25,6 @@ const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
 keyboard.on('keypress', e => {
-  console.log(e.code);
-
   if (e.code == config.input.mapping.capture) {
     takePhoto();
   }
@@ -52,16 +50,19 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.brightness.up) {
+    console.log('brightness up');
     existingBrightness = Math.max(0, existingBrightness - 10);
-    updateLights(existingColor)
+    updateLights(existingColor);
   }
 
   if (e.code == config.input.mapping.brightness.down) {
     existingBrightness = Math.min(200, existingBrightness + 10);
-    updateLights(existingBrightness);
+    console.log('brightness down');
+    updateLights(existingColor);
   }
 
   if (e.code == config.input.mapping.lights) {
+    console.log('turn on or off')
     if (isOn) {
       updateLights('#000000');
       isOn = false;
@@ -74,8 +75,8 @@ keyboard.on('keypress', e => {
 
 // camera loop
 const updateLights = color => {
+  console.log(colr)
   color = Number("0x" + color.replace('#', ''));
-
   isOn = true;
 
   for (let i = 0; i < lights.count; i++) {
