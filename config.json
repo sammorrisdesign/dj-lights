@@ -15,8 +15,8 @@
         "up": 8,
         "down": 6
       },
-      "lights": 2,
-      "capture": 3
+      "lights": 3,
+      "capture": 2
     }
   }
 }

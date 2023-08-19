@@ -4,7 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "sudo node app.js"
+    "start": "sudo pm2 start ~/Repos/dj-lights/app.js",
+    "logs": "sudo pm2 logs app",
+    "kill": "sudo pm2 kill",
+    "connect": "ssh pi@raspberrypi.local"
   },
   "repository": {
     "type": "git",
