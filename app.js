@@ -75,7 +75,7 @@ keyboard.on('keypress', e => {
 
 // camera loop
 const updateLights = color => {
-  console.log(colr)
+  console.log(color)
   color = Number("0x" + color.replace('#', ''));
   isOn = true;
 
