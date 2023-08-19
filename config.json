@@ -5,18 +5,18 @@
   },
 
   "input": {
-    "device": "/dev/input/event3",
+    "device": "/dev/input/event0",
     "mapping": {
       "hue": {
-        "up": 115,
-        "down": 114
+        "up": 10,
+        "down": 9
       },
       "brightness": {
-        "up": 163,
-        "down": 165
+        "up": 8,
+        "down": 6
       },
-      "lights": 164,
-      "capture": 144
+      "lights": 2,
+      "capture": 3
     }
   }
 }
