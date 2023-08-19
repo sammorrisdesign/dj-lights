@@ -19,6 +19,8 @@ const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
 keyboard.on('keypress', e => {
+  console.log(e.code);
+
   if (e.code == config.input.mapping.capture) {
     takePhoto();
   }
