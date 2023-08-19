@@ -9,10 +9,16 @@ const InputEvent = require('input-event');
 
 const config = require('./config.json');
 
+let existingColor = '#000000';
+let existingBrightness = 120;
+let isOn = false;
+
 const lights = ws281x(config.lights.count, {
   gpio: config.lights.gpio,
-  brightness: 120
+  brightness: existingBrightness
 });
+
+const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
 // check for keypresses
 const input = new InputEvent(config.input.device);
@@ -35,14 +41,24 @@ keyboard.on('keypress', e => {
     updateLights(existingColor);
   }
 
-  if (e.code == config.input.mapping.brightness.up) {
+  if (e.code == config.input.mapping.saturation.up) {
     existingColor = chroma(existingColor).set('hsl.s', '+0.1').hex();
     updateLights(existingColor);
   }
 
-  if (e.code == config.input.mapping.brightness.down) {
+  if (e.code == config.input.mapping.saturation.down) {
     existingColor = chroma(existingColor).set('hsl.s', '-0.1').hex();
     updateLights(existingColor);
+  }
+
+  if (e.code == config.input.mapping.brightness.up) {
+    existingBrightness = Math.max(0, existingBrightness - 10);
+    updateLights(existingColor)
+  }
+
+  if (e.code == config.input.mapping.brightness.down) {
+    existingBrightness = Math.min(200, existingBrightness + 10);
+    updateLights(existingBrightness);
   }
 
   if (e.code == config.input.mapping.lights) {
@@ -57,11 +73,6 @@ keyboard.on('keypress', e => {
 });
 
 // camera loop
-const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
-
-let existingColor = '#000000';
-let isOn = false;
-
 const updateLights = color => {
   color = Number("0x" + color.replace('#', ''));
 
@@ -70,6 +81,8 @@ const updateLights = color => {
   for (let i = 0; i < lights.count; i++) {
     lights.array[i] = color;
   }
+
+  lights.brightness = existingBrightness;
 
   ws281x.render();
 }

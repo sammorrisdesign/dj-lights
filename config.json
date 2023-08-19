@@ -11,12 +11,16 @@
         "up": 10,
         "down": 9
       },
-      "brightness": {
+      "saturation": {
         "up": 8,
         "down": 6
       },
-      "lights": 3,
-      "capture": 2
+      "brightness": {
+        "up": 4,
+        "down": 3
+      },
+      "lights": 2,
+      "capture": 7
     }
   }
 }
