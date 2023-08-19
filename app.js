@@ -49,20 +49,17 @@ keyboard.on('keypress', e => {
     updateLights(existingColor);
   }
 
-  if (e.code == config.input.mapping.brightness.up) {
-    console.log('brightness up');
+  if (e.code == config.input.mapping.brightness.down) {
     existingBrightness = Math.max(0, existingBrightness - 10);
     updateLights(existingColor);
   }
 
-  if (e.code == config.input.mapping.brightness.down) {
+  if (e.code == config.input.mapping.brightness.up) {
     existingBrightness = Math.min(200, existingBrightness + 10);
-    console.log('brightness down');
     updateLights(existingColor);
   }
 
   if (e.code == config.input.mapping.lights) {
-    console.log('turn on or off')
     if (isOn) {
       updateLights('#000000');
       isOn = false;
@@ -75,7 +72,6 @@ keyboard.on('keypress', e => {
 
 // camera loop
 const updateLights = color => {
-  console.log(color)
   color = Number("0x" + color.replace('#', ''));
   isOn = true;
 
