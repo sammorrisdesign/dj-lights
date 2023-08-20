@@ -96,6 +96,8 @@ const setLights = (color) => {
   const colors = new Rainbow();
   colors.setNumberRange(0, 20);
   colors.setSpectrum(state.color, color);
+  state.color = color;
+
   let tick = 0;
 
   while (tick < 21) {
@@ -103,11 +105,6 @@ const setLights = (color) => {
     updateLights(colors.colourAt(tick));
     tick++;
   }
-
-  state.color = color;
-
-  ws281x.reset();
-  ws281x.finalize();
 }
 
 // get color from an existing image. This can take ~5 seconds
