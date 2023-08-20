@@ -3,6 +3,8 @@ A node script for a Raspberry Pi that controls and sets the color of WS281B LED 
 
 ![Six images in an animated gif showing the LED lights in action with different album covers](examples/examples.gif)
 
+## Examples
+
 I would estimate that this gets an accurate color from about 90% of covers. This often depends on the design of the cover. For example, The White Stripes' Elephant, Washed Out's Mister Mellow all have a prominent color that is easily picked up.
 
 <img src="examples/example--white-stripes.jpg" style="width:320px;" alt="The White Stripes' Elephant produces a strong red" />
