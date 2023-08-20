@@ -82,6 +82,8 @@ const updateLights = (color = null) => {
     lights.array[i] = color;
   }
 
+  console.log(state);
+
   lights.brightness = state.brightness;
 
   ws281x.render();
