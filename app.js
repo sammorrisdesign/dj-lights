@@ -73,7 +73,8 @@ keyboard.on('keypress', e => {
 
 // change colour of the lights
 const updateLights = (color = null) => {
-  color = color || state.color;
+  color = color ? color : state.color;
+  console.log('updating lights to', color);
   color = Number("0x" + color.replace('#', ''));
   state.isOn = true;
 
