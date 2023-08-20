@@ -5,24 +5,24 @@ A node script for a Raspberry Pi that controls and sets the color of WS281B LED 
 
 I would estimate that this gets an accurate color from about 90% of covers. This often depends on the design of the cover. For example, The White Stripes' Elephant, Washed Out's Mister Mellow all have a prominent color that is easily picked up.
 
-<img src="examples/example--white-stripes.jpg" style="width:180px;" alt="The White Stripes' Elephant produces a strong red" />
-<img src="examples/example--washed-out.jpg" style="width:180px;" alt="Washed Out's Mister Mellow produces an orange-yellow" />
+<img src="examples/example--white-stripes.jpg" style="width:320px;" alt="The White Stripes' Elephant produces a strong red" />
+<img src="examples/example--washed-out.jpg" style="width:320px;" alt="Washed Out's Mister Mellow produces an orange-yellow" />
 
 When presented with a cover with multiple colors vibrancy and coverage will take precedence. For example, Pearl and The Oyster's Coast 2 Coast resulting in a blue.
 
-<img src="examples/example--pearl-and-the-oysters.jpg" style="width:180px;" alt="Pearl and The Oyster's Coast 2 Coast produces a blue" />
+<img src="examples/example--pearl-and-the-oysters.jpg" style="width:320px;" alt="Pearl and The Oyster's Coast 2 Coast produces a blue" />
 
 Vibrancy will beat out coverage if a majority of the cover is made up of more netural colors. For example, Madvillain will produce an orange based on the small square on the cover.
 
-<img src="examples/example--madvillain.jpg" style="width:180px;" alt="Madvillain produces an orange" />
+<img src="examples/example--madvillain.jpg" style="width:320px;" alt="Madvillain produces an orange" />
 
 However, because of changes in environemental lighting, there is a threshold where a vibrant color won't get picked up. For example, the green on Talking Heads' Fear of Music won't be detected. Here the color was tweaked using an attached HID-device to match the green we'd want to see.
 
-<img src="examples/example--talking-heads.jpg" style="width:180px;" alt="Talking Heads' Fear of Music produces a white but is tweaked to a more appropriate green" />
+<img src="examples/example--talking-heads.jpg" style="width:320px;" alt="Talking Heads' Fear of Music produces a white but is tweaked to a more appropriate green" />
 
 If there's no strong color detected in the photo, it will default to a white.
 
-<img src="examples/example--lcd-soundsystem.jpg" style="width:180px;" alt="LCD Soundsystem's 45:33 produces a white" />
+<img src="examples/example--lcd-soundsystem.jpg" style="width:320px;" alt="LCD Soundsystem's 45:33 produces a white" />
 
 ## How it Works
 ### Physical Setup
