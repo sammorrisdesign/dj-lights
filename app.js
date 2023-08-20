@@ -6,90 +6,93 @@ const fs = require('fs');
 const Vibrant = require('node-vibrant');
 const Rainbow = require('rainbowvis.js');
 const InputEvent = require('input-event');
-
 const config = require('./config.json');
 
-let existingColor = '#000000';
-let existingBrightness = 120;
-let isOn = false;
+let state = {
+  color: '#000000',
+  brightness: 120,
+  isOn: false
+}
 
 const lights = ws281x(config.lights.count, {
   gpio: config.lights.gpio,
-  brightness: existingBrightness
+  brightness: state.brightness
 });
 
 const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
 
-// check for keypresses
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
+// event listeners for keyboard controls
 keyboard.on('keypress', e => {
   if (e.code == config.input.mapping.capture) {
     takePhoto();
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    existingColor = chroma(existingColor).set('hsl.h', '+10').hex();
-    updateLights(existingColor);
+    state.color = chroma(state.color).set('hsl.h', '+5').hex();
+    updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    existingColor = chroma(existingColor).set('hsl.h', '-10').hex();
-    updateLights(existingColor);
+    state.color = chroma(state.color).set('hsl.h', '-5').hex();
+    updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
-    existingColor = chroma(existingColor).set('hsl.s', '+0.1').hex();
-    updateLights(existingColor);
+    state.color = chroma(state.color).set('hsl.s', '+0.1').hex();
+    updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
-    existingColor = chroma(existingColor).set('hsl.s', '-0.1').hex();
-    updateLights(existingColor);
+    state.color = chroma(state.color).set('hsl.s', '-0.1').hex();
+    updateLights();
   }
 
   if (e.code == config.input.mapping.brightness.down) {
-    existingBrightness = Math.max(0, existingBrightness - 10);
-    updateLights(existingColor);
+    state.brightness = Math.max(0, state.brightness - 10);
+    updateLights();
   }
 
   if (e.code == config.input.mapping.brightness.up) {
-    existingBrightness = Math.min(200, existingBrightness + 10);
-    updateLights(existingColor);
+    state.brightness = Math.min(200, state.brightness + 10);
+    updateLights();
   }
 
   if (e.code == config.input.mapping.lights) {
-    if (isOn) {
+    if (state.isOn) {
       updateLights('#000000');
-      isOn = false;
+      state.isOn = false;
     } else {
-      updateLights(existingColor);
-      isOn = true;
+      updateLights();
+      state.isOn = true;
     }
   }
 });
 
-// camera loop
-const updateLights = color => {
+// change colour of the lights
+const updateLights = (color = null) => {
+  color = color || state.color;
   color = Number("0x" + color.replace('#', ''));
-  isOn = true;
+  state.isOn = true;
 
   for (let i = 0; i < lights.count; i++) {
     lights.array[i] = color;
   }
 
-  lights.brightness = existingBrightness;
+  lights.brightness = state.brightness;
 
   ws281x.render();
 }
 
-const setLights = (color, isRepeating = true) => {
+// fade color of the lights (used only for changing color on photos, not for manual color changes)
+const setLights = (color) => {
   console.log('setting lights to', color);
 
   const colors = new Rainbow();
   colors.setNumberRange(0, 20);
-  colors.setSpectrum(existingColor, color);
+  colors.setSpectrum(state.color, color);
   let tick = 0;
 
   while (tick < 21) {
@@ -97,22 +100,16 @@ const setLights = (color, isRepeating = true) => {
     tick++;
   }
 
-  existingColor = color;
+  state.color = color;
 
-  if (isRepeating) {
-    // setTimeout(() => {
-    //   takePhoto();
-    // }, 2000);
-  } else {
-    ws281x.reset();
-    ws281x.finalize();
-  }
+  ws281x.reset();
+  ws281x.finalize();
 }
+
+// get color from an existing image. This can take ~5 seconds
 const getColorFromImage = image => {
   console.log('getting color from photo');
-
   console.time('getting color');
-
   console.time('vibrant from');
 
   Vibrant.from(image)
@@ -174,6 +171,7 @@ const getColorFromImage = image => {
     });
 }
 
+// draw blocks over image for areas where glare disort the cover
 const cleanImage = async() => {
   console.log('cleaning image');
 
@@ -194,36 +192,19 @@ const cleanImage = async() => {
   getColorFromImage(savedImage);
 }
 
+// set a different awb based on time of day (presuming lights come on a certain time)
 const getAWBBasedOnTimeOfDay = () => {
-  // ToDo: Loop through all awbs (like testAWB) measure the colours in the top and adjust from there
   const d = new Date();
   let hour = d.getHours();
 
-  if (hour > 14) {
+  if (hour > 17) {
     return 'tungsten'
   } else {
     return 'fluorescent'
   }
 }
 
-const testAWB = () => {
-  const awbs = [
-    'auto',
-    'incandescent',
-    'tungsten',
-    'fluorescent',
-    'indoor',
-    'daylight',
-    'cloudy'
-  ];
-
-  for (let awb of awbs) {
-    console.time(`calibrating ${awb}`);
-    shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --output test-${awb}.jpg`);
-    console.timeEnd(`calibrating ${awb}`);
-  }
-}
-
+// take a photo with libcamera to be analysed
 const takePhoto = () => {
   console.log('taking photo');
   console.time('taking photo');
