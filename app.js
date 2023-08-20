@@ -97,6 +97,7 @@ const setLights = (color) => {
   let tick = 0;
 
   while (tick < 21) {
+    console.log(colors.colourAt(tick));
     updateLights(colors.colourAt(tick));
     tick++;
   }
