@@ -74,15 +74,12 @@ keyboard.on('keypress', e => {
 // change colour of the lights
 const updateLights = (color = null) => {
   color = color ? color : state.color;
-  console.log('updating lights to', color);
   color = Number("0x" + color.replace('#', ''));
   state.isOn = true;
 
   for (let i = 0; i < lights.count; i++) {
     lights.array[i] = color;
   }
-
-  console.log(state);
 
   lights.brightness = state.brightness;
 
@@ -101,7 +98,6 @@ const setLights = (color) => {
   let tick = 0;
 
   while (tick < 21) {
-    console.log(colors.colourAt(tick));
     updateLights(colors.colourAt(tick));
     tick++;
   }
