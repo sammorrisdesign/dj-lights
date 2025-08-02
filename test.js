@@ -3,7 +3,8 @@ const config = require('./config.json');
 const shell = require('shelljs');
 
 // taken from https://www.raspberrypi.com/documentation/computers/camera_software.html#awb
-const awbs = ["auto", "incandescent", "tungsten", "fluorescent", "indoor", "daylight", "cloudy"];
+// const awbs = ["auto", "incandescent", "tungsten", "fluorescent", "indoor", "daylight", "cloudy"];
+const awbs = ["auto"];
 
 for (const awb of awbs) {
   console.log('taking photo for', awb);
@@ -11,3 +12,4 @@ for (const awb of awbs) {
   shell.exec(`libcamera-jpeg ${config.commands} --width 1920 --height 2160 --awb ${awb} --rawfull --output capture--${awb}.jpg`)
   console.timeEnd('taking photo');
 }
+
