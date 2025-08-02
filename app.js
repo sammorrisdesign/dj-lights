@@ -19,8 +19,6 @@ const lights = ws281x(config.lights.count, {
   brightness: state.brightness
 });
 
-const cameraCommands = "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast";
-
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
@@ -207,7 +205,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg ${cameraCommands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --rawfull --output capture.jpg`)
+  shell.exec(`libcamera-jpeg ${config.commands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --rawfull --output capture.jpg`)
   console.timeEnd('taking photo');
 
   cleanImage();

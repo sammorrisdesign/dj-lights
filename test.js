@@ -1,0 +1,13 @@
+// generates photos at different awb values you can calibrate lighting
+const config = require('./config.json');
+const shell = require('shelljs');
+
+// taken from https://www.raspberrypi.com/documentation/computers/camera_software.html#awbgains
+const awbs = ["auto", "incandescent", "tungsten", "fluorescent", "indoor", "daylight", "cloudy"];
+
+for (const awb of awbs) {
+  console.log('taking photo for', awb);
+  console.time('taking photo');
+  shell.exec(`libcamera-jpeg ${config.commands} --width 1920 --height 2160 --awb ${awb} --rawfull --output capture--${awb}.jpg`)
+  console.timeEnd('taking photo');
+}
