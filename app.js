@@ -170,11 +170,11 @@ const getColorFromImage = image => {
 const cleanImage = async() => {
   console.log('cleaning image');
 
-  const canvas = createCanvas(1920, 2160)
+  const canvas = createCanvas(config.width, config.height)
   const ctx = canvas.getContext('2d');
 
   const image = await loadImage('./capture.jpg');
-  ctx.drawImage(image, 0, 0, 1920, 2160);
+  ctx.drawImage(image, 0, 0, config.width, config.height);
 
   ctx.rect(50, 800, 150, 250);
   ctx.rect(1050, 800, 250, 250);
@@ -185,6 +185,15 @@ const cleanImage = async() => {
   fs.writeFileSync('capture.jpg', savedImage);
 
   getColorFromImage(savedImage);
+}
+
+// get the image
+const getImage = async() => {
+  const image = await loadImage('./capture.jpg');
+
+  console.log(image);
+
+  getColorFromImage(image);
 }
 
 // set a different awb based on time of day (presuming overhead lights come on a certain time)
@@ -205,10 +214,10 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
+  shell.exec(`libcamera-jpeg --width ${config.width} --height ${config.height} --mode ${config.width}:${config.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
   console.timeEnd('taking photo');
 
-  cleanImage();
+  getImage();
 }
 
 console.log('starting script');
