@@ -1,8 +1,6 @@
-const { createCanvas, loadImage } = require('canvas');
 const ws281x = require('rpi-ws281x-native');
 const shell = require('shelljs');
 const chroma = require('chroma-js');
-const fs = require('fs');
 const Vibrant = require('node-vibrant');
 const Rainbow = require('rainbowvis.js');
 const InputEvent = require('input-event');
@@ -123,7 +121,7 @@ const getColorFromImage = image => {
 
       let swatch = sortedPalette[0];
 
-      console.log(sortedPalette);
+      console.log(JSON.stringify(sortedPalette, null, 2));
 
       // pick vibrant unless another swatch has larger population
       if (swatch.coverage < 80 && swatch.type !== 'Vibrant') {
@@ -165,36 +163,6 @@ const getColorFromImage = image => {
       setLights(swatch.color.hex());
     });
 }
-
-// // draw blocks over image for areas where glare disort the cover
-// const cleanImage = async() => {
-//   console.log('cleaning image');
-
-//   const canvas = createCanvas(config.sizes.width, config.sizes.height)
-//   const ctx = canvas.getContext('2d');
-
-//   const image = await loadImage('./capture.jpg');
-//   ctx.drawImage(image, 0, 0, config.sizes.width, config.sizes.height);
-
-//   ctx.rect(50, 800, 150, 250);
-//   ctx.rect(1050, 800, 250, 250);
-//   ctx.fill();
-
-//   const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
-
-//   fs.writeFileSync('capture.jpg', savedImage);
-
-//   getColorFromImage(savedImage);
-// }
-
-// // get the image
-// const getImage = async() => {
-//   const image = await loadImage('./capture.jpg');
-
-//   console.log(image);
-
-//   getColorFromImage(image);
-// }
 
 // set a different awb based on time of day (presuming overhead lights come on a certain time)
 const getAWBBasedOnTimeOfDay = () => {
