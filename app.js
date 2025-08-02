@@ -205,7 +205,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg ${config.commands} --width 1920 --height 2160 --awb ${getAWBBasedOnTimeOfDay()} --rawfull --output capture.jpg`)
+  shell.exec(`libcamera-jpeg ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
   console.timeEnd('taking photo');
 
   cleanImage();
