@@ -2,7 +2,7 @@
 const config = require('./config.json');
 const shell = require('shelljs');
 
-// taken from https://www.raspberrypi.com/documentation/computers/camera_software.html#awbgains
+// taken from https://www.raspberrypi.com/documentation/computers/camera_software.html#awb
 const awbs = ["auto", "incandescent", "tungsten", "fluorescent", "indoor", "daylight", "cloudy"];
 
 for (const awb of awbs) {

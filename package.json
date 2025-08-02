@@ -11,7 +11,7 @@
     "connect": "ssh pi@raspberrypi.local",
     "download": "scp pi@raspberrypi.local:~/Repos/dj-lights/capture.jpg ./",
     "test": "node test.js",
-    "downloadTest": "scp pi@raspberrypi.local:~/Repos/dj-lights/capture--*' ./"
+    "downloadTest": "scp 'pi@raspberrypi.local:~/Repos/dj-lights/capture--*' ./"
   },
   "repository": {
     "type": "git",

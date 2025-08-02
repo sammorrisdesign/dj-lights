@@ -73,5 +73,10 @@ Use `npm run start` to start the script on the Pi
 
 There's also a `npm run connect` script which is just a shortcut to connect to the local Pi.
 
+You can also run `npm run download` to download the last capture from the local Pi.
+
 ### Config
 The config.json file lets you setup the light settings (number of LEDs and the GPIO it's plugged into on the Pi). It also lets you change the input device and what keys need to be pressed on the keyboard to control everything.
+
+### Colour calibration
+Color calibration on Pi cameras can be a bit of a pain. So, you can run `npm run test`, that will generate images for every available white balance setting that `libcamera` has. You can then download all generated images from the local Pi with `npm run downloadTest`. Then set the `calibration` in the config.

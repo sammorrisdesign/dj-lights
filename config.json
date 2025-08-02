@@ -24,5 +24,10 @@
     }
   },
 
-  "commands": "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast"
+  "commands": "--immediate --timeout 500 --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 80 --autofocus-range macro --autofocus-speed fast",
+
+  "calibration": {
+    "day": "auto",
+    "night": "tungsten"
+  }
 }

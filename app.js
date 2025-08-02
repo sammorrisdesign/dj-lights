@@ -187,15 +187,15 @@ const cleanImage = async() => {
   getColorFromImage(savedImage);
 }
 
-// set a different awb based on time of day (presuming lights come on a certain time)
+// set a different awb based on time of day (presuming overhead lights come on a certain time)
 const getAWBBasedOnTimeOfDay = () => {
   const d = new Date();
   let hour = d.getHours();
 
-  if (hour > 17) {
-    return 'tungsten'
+  if (hour > 18) {
+    return config.calibration.night;
   } else {
-    return 'incandescent'
+    return config.calibration.day;
   }
 }
 
