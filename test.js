@@ -9,7 +9,7 @@ const awbs = ["auto"];
 for (const awb of awbs) {
   console.log('taking photo for', awb);
   console.time('taking photo');
-  shell.exec(`libcamera-jpeg ${config.commands} --awb ${awb}--output capture--${awb}.jpg`)
+  shell.exec(`libcamera-jpeg ${config.commands} --awb ${awb} --output capture--${awb}.jpg`)
   console.timeEnd('taking photo');
 }
 
