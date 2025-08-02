@@ -107,7 +107,7 @@ const getColorFromImage = image => {
   console.time('getting color');
   console.time('vibrant from');
 
-  Vibrant.from(image)
+  Vibrant.from("./capture.jpg")
     .getPalette()
     .then(palette => {
       console.timeEnd('vibrant from');
@@ -166,35 +166,35 @@ const getColorFromImage = image => {
     });
 }
 
-// draw blocks over image for areas where glare disort the cover
-const cleanImage = async() => {
-  console.log('cleaning image');
+// // draw blocks over image for areas where glare disort the cover
+// const cleanImage = async() => {
+//   console.log('cleaning image');
 
-  const canvas = createCanvas(config.sizes.width, config.sizes.height)
-  const ctx = canvas.getContext('2d');
+//   const canvas = createCanvas(config.sizes.width, config.sizes.height)
+//   const ctx = canvas.getContext('2d');
 
-  const image = await loadImage('./capture.jpg');
-  ctx.drawImage(image, 0, 0, config.sizes.width, config.sizes.height);
+//   const image = await loadImage('./capture.jpg');
+//   ctx.drawImage(image, 0, 0, config.sizes.width, config.sizes.height);
 
-  ctx.rect(50, 800, 150, 250);
-  ctx.rect(1050, 800, 250, 250);
-  ctx.fill();
+//   ctx.rect(50, 800, 150, 250);
+//   ctx.rect(1050, 800, 250, 250);
+//   ctx.fill();
 
-  const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
+//   const savedImage = canvas.toBuffer('image/jpeg', { quality: 1 });
 
-  fs.writeFileSync('capture.jpg', savedImage);
+//   fs.writeFileSync('capture.jpg', savedImage);
 
-  getColorFromImage(savedImage);
-}
+//   getColorFromImage(savedImage);
+// }
 
-// get the image
-const getImage = async() => {
-  const image = await loadImage('./capture.jpg');
+// // get the image
+// const getImage = async() => {
+//   const image = await loadImage('./capture.jpg');
 
-  console.log(image);
+//   console.log(image);
 
-  getColorFromImage(image);
-}
+//   getColorFromImage(image);
+// }
 
 // set a different awb based on time of day (presuming overhead lights come on a certain time)
 const getAWBBasedOnTimeOfDay = () => {
@@ -217,7 +217,7 @@ const takePhoto = () => {
   shell.exec(`libcamera-jpeg --width ${config.sizes.width} --height ${config.sizes.height} --mode ${config.sizes.width}:${config.sizes.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
   console.timeEnd('taking photo');
 
-  getImage();
+  getColorFromImage();
 }
 
 console.log('starting script');
