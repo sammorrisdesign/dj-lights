@@ -195,9 +195,9 @@ const getAWBBasedOnTimeOfDay = () => {
   let hour = d.getHours();
 
   if (hour > 17) {
-    return 'fluorescent'
+    return 'tungsten'
   } else {
-    return 'cloudy'
+    return 'incandescent'
   }
 }
 

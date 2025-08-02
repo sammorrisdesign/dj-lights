@@ -7,6 +7,7 @@
     "start": "sudo pm2 start ~/Repos/dj-lights/app.js",
     "logs": "sudo pm2 logs app",
     "kill": "sudo pm2 kill",
+    "restart": "npm run kill && npm run start",
     "connect": "ssh pi@raspberrypi.local",
     "download": "scp pi@raspberrypi.local:~/Repos/dj-lights/capture.jpg ./"
   },
