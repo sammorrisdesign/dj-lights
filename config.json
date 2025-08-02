@@ -29,7 +29,7 @@
     "height": 1440
   },
 
-  "commands": "--immediate --timeout 500  --shutter 500000 --denoise auto --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 95 --autofocus-range macro --autofocus-speed fast",
+  "commands": "--immediate --timeout 500  --shutter 600000 --denoise auto --nopreview --hdr --verbose 0 --roi 0.25,0,0.5,1 -q 95 --autofocus-range macro --autofocus-speed fast",
 
   "calibration": {
     "day": "tungsten",
