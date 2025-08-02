@@ -170,11 +170,11 @@ const getColorFromImage = image => {
 const cleanImage = async() => {
   console.log('cleaning image');
 
-  const canvas = createCanvas(config.width, config.height)
+  const canvas = createCanvas(config.sizes.width, config.sizes.height)
   const ctx = canvas.getContext('2d');
 
   const image = await loadImage('./capture.jpg');
-  ctx.drawImage(image, 0, 0, config.width, config.height);
+  ctx.drawImage(image, 0, 0, config.sizes.width, config.sizes.height);
 
   ctx.rect(50, 800, 150, 250);
   ctx.rect(1050, 800, 250, 250);
@@ -214,7 +214,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --width ${config.width} --height ${config.height} --mode ${config.width}:${config.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
+  shell.exec(`libcamera-jpeg --width ${config.sizes.width} --height ${config.sizes.height} --mode ${config.sizes.width}:${config.sizes.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
   console.timeEnd('taking photo');
 
   getImage();
