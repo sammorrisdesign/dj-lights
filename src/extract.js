@@ -12,7 +12,10 @@ const extractImageData = async(release) => {
   try {
     console.log(`🛸 Extracting image data – ${release.artist}'s ${release.title}`);
 
+    // get the rawimage that we saved locally from  Discogs
     const file = await RawImage.read(`data/covers/${release.id}.jpeg`);
+
+    // extract image data embedding 
     const embedding = await extractor(file, {
       pooling: 'mean',
       normalize: true
@@ -33,6 +36,8 @@ const extractImageData = async(release) => {
   for (const release of releases) {
     const embedding = await extractImageData(release);
 
+    // if we actually got an embedding, let's push to the data array
+    // we might not have an embedding, if the image doesn't exist
     if (embedding) {
       data.push({
         ...release,
