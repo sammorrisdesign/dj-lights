@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "sudo pm2 start ~/Repos/dj-lights/app.js",
+    "start": "sudo pm2 start ~/Repos/dj-lights/src/app.js",
     "logs": "sudo pm2 logs app",
     "kill": "sudo pm2 kill",
     "restart": "npm run kill && npm run start",
