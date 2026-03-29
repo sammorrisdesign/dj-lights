@@ -1,6 +1,6 @@
 // This script loops through all covers and extracts data from them
 // It saves this in extractions json
-import { pipeline, RawImage } from '@xenova/transformers';
+import { pipeline, RawImage } from '@huggingface/transformers';
 import fs from 'fs';
 import embedding from "../data/embedding.json" with { type: 'json' };
 import config from '../config.json' with { type: 'json' };

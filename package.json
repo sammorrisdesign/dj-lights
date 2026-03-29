@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/sammorrisdesign/dj-lights#readme",
   "dependencies": {
-    "@xenova/transformers": "^2.17.2",
+    "@huggingface/transformers": "^3.8.1",
     "chroma-js": "^3.2.0",
     "disconnect": "^1.2.2",
     "input-event": "^1.2.6",
