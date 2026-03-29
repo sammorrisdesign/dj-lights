@@ -4,7 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "sudo pm2 start ~/Repos/dj-lights/app.js",
+    "logs": "sudo pm2 logs app",
+    "kill": "sudo pm2 kill",
+    "restart": "npm run kill && npm run start",
+    "connect": "ssh pi@raspberrypi.local",
+    "download": "scp pi@raspberrypi.local:~/Repos/dj-lights/capture.jpg ./",
     "discogs": "node src/discogs.js",
     "extract": "node src/extract.js",
     "colors": "node src/colors.js",
