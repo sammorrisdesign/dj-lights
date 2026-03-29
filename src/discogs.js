@@ -1,11 +1,13 @@
 // This script makes API requests to Discogs to fetch all release's in a user's connection
 // It then downloads all album art + creates a releases json in the data folder
-const Discogs = require('disconnect').Client;
-const fs = require('fs');
-const { Readable } = require('stream');
-const { finished } = require('stream/promises');
 
-const config = require("../config.json");
+import disconnect from 'disconnect';
+import fs from 'fs';
+import { Readable } from 'stream';
+import { finished } from 'stream/promises';
+import config from '../config.json' with { type: 'json' };
+
+const Discogs = disconnect.Client;
 
 // fetch all releases from a discogs account
 const fetchReleasesFromDiscogs = async (page = 1, responses = new Array) => {
