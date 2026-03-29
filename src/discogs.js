@@ -14,7 +14,7 @@ const fetchReleasesFromDiscogs = async (page = 1, responses = new Array) => {
   console.log(`🪩 Fetching from Discogs – page ${page}`);
 
   const collection = new Discogs().user().collection();
-  const response = await collection.getReleases(config.discogs.username, 0, { page: page, per_page: 100 });
+  const response = await collection.getReleases(config.discogs, 0, { page: page, per_page: 100 });
 
   // add recent response to array
   responses.push(response.releases);

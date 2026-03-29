@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node src/app.js",
     "discogs": "node src/discogs.js",
     "extract": "node src/extract.js",
     "colors": "node src/colors.js",
+    "data": "node src/data.js",
     "compare": "node src/compare.js"
   },
   "repository": {
@@ -23,6 +25,10 @@
     "@xenova/transformers": "^2.17.2",
     "chroma-js": "^3.2.0",
     "disconnect": "^1.2.2",
-    "node-vibrant": "^4.0.4"
+    "input-event": "^1.2.6",
+    "node-vibrant": "^4.0.4",
+    "rainbowvis.js": "^1.1.1",
+    "rpi-ws281x-native": "^1.0.4",
+    "shelljs": "^0.10.0"
   }
 }

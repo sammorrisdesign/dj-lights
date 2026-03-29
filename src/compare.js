@@ -3,10 +3,11 @@
 import { pipeline, RawImage } from '@xenova/transformers';
 import fs from 'fs';
 import embedding from "../data/embedding.json" with { type: 'json' };
+import config from '../config.json' with { type: 'json' };
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  'Xenova/clip-vit-base-patch32'
+  config.model
 );
 
 const cosineSimilarity = (a,b) => {

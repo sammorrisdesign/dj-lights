@@ -2,10 +2,11 @@
 // It saves this in extractions json
 import { pipeline, RawImage } from '@xenova/transformers';
 import fs from 'fs';
+import config from '../config.json' with { type: 'json' };
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  'Xenova/clip-vit-base-patch32'
+  config.model
 );
 
 const extractImageData = async(release) => {
