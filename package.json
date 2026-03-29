@@ -6,6 +6,7 @@
   "scripts": {
     "discogs": "node src/discogs.js",
     "extract": "node src/extract.js",
+    "colors": "node src/colors.js",
     "compare": "node src/compare.js"
   },
   "repository": {

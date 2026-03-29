@@ -44,16 +44,16 @@ const fetchReleasesFromDiscogs = async (page = 1, responses = new Array) => {
         const image = fs.createWriteStream(`./data/covers/${release.id}.jpeg`);
         const { body } = await fetch(release.basic_information.cover_image);
         await finished(Readable.fromWeb(body).pipe(image));
+
+        // push to data object
+        data.push({
+          id: release.id,
+          artist: release.basic_information.artists[0].name,
+          title: release.basic_information.title,
+        });
       } else {
         console.log(`⛔️ Unable to fetch album cover – ${release.basic_information.artists[0].name}'s ${release.basic_information.title}`);
       }
-
-      // push to data object
-      data.push({
-        id: release.id,
-        artist: release.basic_information.artists[0].name,
-        title: release.basic_information.title,
-      });
     } catch (e) {
       console.log(release);
       console.log(e);
