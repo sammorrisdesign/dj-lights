@@ -6,6 +6,8 @@ import { pipeline, RawImage } from '@huggingface/transformers';
 import config from "../config.json" with { type: 'json' };
 import data from "../data/data.json" with { type: 'json' };
 
+console.log('starting app');
+
 let state = {
   color: '#000000',
   brightness: 120,
@@ -159,3 +161,5 @@ const takePhoto = () => {
 }
 
 console.log('starting script');
+
+takePhoto();
