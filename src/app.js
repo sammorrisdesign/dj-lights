@@ -149,25 +149,13 @@ const getColorFromImage = async() => {
   console.timeEnd("Getting color");
 }
 
-// set a different awb based on time of day (presuming overhead lights come on a certain time)
-const getAWBBasedOnTimeOfDay = () => {
-  const d = new Date();
-  let hour = d.getHours();
-
-  if (hour > 18) {
-    return config.calibration.night;
-  } else {
-    return config.calibration.day;
-  }
-}
-
 // take a photo with libcamera to be analysed
 const takePhoto = () => {
   console.log('taking photo');
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`rpicam-jpeg --width ${config.sizes.width} --height ${config.sizes.height} --mode ${config.sizes.width}:${config.sizes.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
+  shell.exec(`rpicam-jpeg --nopreview -t 10 --immediate --shutter 600000 --gain 1.0 --lens-position 10  --output capture.jpg`)
   console.timeEnd('taking photo');
 
   getColorFromImage();
