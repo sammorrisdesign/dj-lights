@@ -152,7 +152,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`libcamera-jpeg --width ${config.sizes.width} --height ${config.sizes.height} --mode ${config.sizes.width}:${config.sizes.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
+  shell.exec(`rpicam-jpeg --width ${config.sizes.width} --height ${config.sizes.height} --mode ${config.sizes.width}:${config.sizes.height} ${config.commands} --awb ${getAWBBasedOnTimeOfDay()} --output capture.jpg`)
   console.timeEnd('taking photo');
 
   getColorFromImage();
