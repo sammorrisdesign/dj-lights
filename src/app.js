@@ -105,7 +105,7 @@ const extractor = await pipeline(
 );
 
 // get color from an existing image. This can take ~5 seconds
-const getColorFromImage = async(image) => {
+const getColorFromImage = async() => {
   console.time("Getting color");
 
   const photo = await RawImage.read(`./capture.jpg`);
