@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "sudo -E env 'PATH=$PATH' pm2 start ~/Repos/dj-lights/src/app.js",
-    "logs": "sudo -E env 'PATH=$PATH' pm2 logs app",
-    "kill": "sudo -E env 'PATH=$PATH' pm2 kill",
+    "start": "sudo env PATH=$PATH pm2 start ~/Repos/dj-lights/src/app.js",
+    "logs": "sudo env PATH=$PATH pm2 logs app",
+    "kill": "sudo env PATH=$PATH pm2 kill",
     "restart": "npm run kill && npm run start",
     "connect": "ssh pi@raspberrypi.local",
     "download": "scp pi@raspberrypi.local:~/Repos/dj-lights/capture.jpg ./",
