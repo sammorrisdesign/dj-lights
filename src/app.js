@@ -2,7 +2,7 @@ import ws281x from 'rpi-ws281x-native';
 import shell from "shelljs";
 import Rainbow from 'rainbowvis.js';
 import InputEvent from "input-event";
-// import { pipeline, RawImage } from '@huggingface/transformers';
+import { pipeline, RawImage } from '@huggingface/transformers';
 import config from "../config.json" with { type: 'json' };
 import data from "../data/data.json" with { type: 'json' };
 
