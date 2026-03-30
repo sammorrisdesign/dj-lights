@@ -138,7 +138,7 @@ const getColorFromImage = async() => {
 
     if (score > bestScore) {
       bestScore = score;
-      bestMatch = `${release.id} = ${release.artist} – ${release.title}`
+      bestMatch = release;
     }
   }
 
