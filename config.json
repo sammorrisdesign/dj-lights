@@ -9,7 +9,7 @@
   },
 
   "input": {
-    "device": "/dev/input/event0",
+    "device": "/dev/input/event2",
     "mapping": {
       "hue": {
         "up": 10,
