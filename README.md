@@ -41,11 +41,10 @@ A DOIO KB03 Keyboard allows for...
 ## Development
 ### Requirements
 - Node v22 to run the script
-- `node-canvas` requirements...
-`sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
-<!-- - `pip install transformers==4.49.0 torch Pillow` -->
+- Requirements to use canvas: `sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+– Requirements to keep the script running: `npm install pm2 -g`
 - Sudo access for `rpi-ws281x-native`
-- `pm2` to permanently keep the script running
+<!-- - `pip install transformers==4.49.0 torch Pillow` -->
 
 ### Installation
 Once you have the requirements running `npm i` will get you the dependencies.
