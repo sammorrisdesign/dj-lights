@@ -155,7 +155,8 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  shell.exec(`rpicam-jpeg --nopreview -t 10 --immediate --shutter 600000 --gain 1.0 --lens-position 10  --output capture.jpg`)
+  shell.exec(`rpicam-jpeg --width 1920 --height 1080 --nopreview -t 10 --immediate --shutter 600000 --gain 1.0 --lens-position 10 --verbose 0 --output capture.jpg`)
+
   console.timeEnd('taking photo');
 
   getColorFromImage();
