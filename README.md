@@ -4,7 +4,7 @@ TK TK TK TK TK
 # DJ Lights
 A node script for a Raspberry Pi that controls and sets the color of WS281B LED light strip based on prominent colors on album art.
 
-![Six images in an animated gif showing the LED lights in action with different album covers](examples/examples.gif)
+![Six images in an animated gif showing the LED lights in action with different album covers](examples.gif)
 
 ## How it Works
 ### Dataset
