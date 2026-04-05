@@ -1,8 +1,5 @@
 # DJ Lights
-TK TK TK TK TK
-
-# DJ Lights
-A node script for a Raspberry Pi that controls and sets the color of WS281B LED light strip based on prominent colors on album art.
+A node script for a Raspberry Pi that controls and sets the color of WS281B LED light strip based on a match to a database of embeddings.
 
 ![Six images in an animated gif showing the LED lights in action with different album covers](examples.gif)
 
@@ -41,10 +38,8 @@ A DOIO KB03 Keyboard allows for...
 ## Development
 ### Requirements
 - Node v22 to run the script
-<!-- - Requirements to use canvas: `sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev` -->
 – Requirements to keep the script running: `npm install pm2 -g`
 - Sudo access for `rpi-ws281x-native`
-<!-- - `pip install transformers==4.49.0 torch Pillow` -->
 
 ### Installation
 Once you have the requirements running `npm i` will get you the dependencies.
