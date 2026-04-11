@@ -1,7 +1,9 @@
 {
-  "discogs": "sammorris12",
+  "discogs": "USERNAME",
 
   "model": "Xenova/clip-vit-base-patch32",
+
+  "pushover": "USER KEY",
 
   "lights": {
     "gpio": 21,

@@ -2,6 +2,7 @@
 capture.jpg
 capture--*.jpg
 .DS_Store
+config.json
 
 # Logs
 logs
