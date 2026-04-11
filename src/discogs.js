@@ -36,7 +36,6 @@ const fetchReleasesFromDiscogs = async (page = 1, responses = new Array) => {
   // create simple data object
   let data = new Array;
   for (const release of releases) {
-    
     try {
       // download image, if it exists
       if (release.basic_information.cover_image) {

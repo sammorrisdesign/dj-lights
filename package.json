@@ -31,6 +31,7 @@
     "chroma-js": "^3.2.0",
     "disconnect": "^1.2.2",
     "input-event": "^1.2.6",
+    "node-pushover": "^1.0.0",
     "node-vibrant": "^4.0.4",
     "rainbowvis.js": "^1.1.1",
     "rpi-ws281x-native": "^1.0.4",

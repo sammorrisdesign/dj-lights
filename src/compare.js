@@ -38,9 +38,9 @@ const cosineSimilarity = (a,b) => {
 
     if (score > bestScore) {
       bestScore = score;
-      bestMatch = `${embed.id} = ${embed.artist} – ${embed.title}`
+      bestMatch = embed;
     }
   }
 
-  console.log(bestMatch);
+  console.log(bestMatch.artist, bestMatch.title);
 })();

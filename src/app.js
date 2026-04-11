@@ -6,6 +6,7 @@ import chroma from 'chroma-js';
 import { pipeline, RawImage } from '@huggingface/transformers';
 import config from "../config.json" with { type: 'json' };
 import data from "../data/data.json" with { type: 'json' };
+import alert from "./alert.js";
 
 console.log('starting app');
 
@@ -144,7 +145,7 @@ const getColorFromImage = async() => {
   }
 
   console.log(bestMatch);
-
+  alert(bestMatch);
   setLights(bestMatch.color);
   console.timeEnd("Getting color");
 }
