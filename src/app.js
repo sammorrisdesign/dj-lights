@@ -105,7 +105,10 @@ const setLights = (color) => {
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  config.model
+  config.model,
+  {
+    dtype: 'fp8'
+  }
 );
 
 const cosineSimilarity = (a,b) => {
