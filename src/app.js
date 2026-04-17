@@ -31,38 +31,38 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    state.color = chroma(state.color).set('hsl.h', '+5').hex();
+    state.color = chroma(state.color).set('hsl.h', '+5').rgb();
     updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    state.color = chroma(state.color).set('hsl.h', '-5').hex();
+    state.color = chroma(state.color).set('hsl.h', '-5').rgb();
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
-    state.color = chroma(state.color).set('hsl.s', '+0.1').hex();
+    state.color = chroma(state.color).set('hsl.s', '+0.1').rgb();
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
-    state.color = chroma(state.color).set('hsl.s', '-0.1').hex();
+    state.color = chroma(state.color).set('hsl.s', '-0.1').rgb();
     updateLights();
   }
 
   if (e.code == config.input.mapping.brightness.down) {
-    state.brightness = Math.max(0, state.brightness - 10);
+    state.brightness = Math.max(0, state.brightness - 0.1);
     updateLights();
   }
 
   if (e.code == config.input.mapping.brightness.up) {
-    state.brightness = Math.min(200, state.brightness + 10);
+    state.brightness = Math.min(1, state.brightness + 0.1);
     updateLights();
   }
 
   if (e.code == config.input.mapping.lights) {
     if (state.isOn) {
-      updateLights('#000000');
+      updateLights([0, 0, 0]);
       state.isOn = false;
     } else {
       updateLights();
@@ -73,19 +73,9 @@ keyboard.on('keypress', e => {
 
 // change colour of the lights
 const updateLights = (color = null) => {
-  color = color ? color : state.color;
-  color = Number("0x" + color.replace('#', ''));
-  state.isOn = true;
+  console.log(color);
 
-  const pixels = new Uint32Array(config.lights.count);
-
-  for (let i = 0; i < config.lights.count; i++) {
-    pixels[i] = color;
-  }
-
-  ws281x.render(pixels);
-
-  // ws281x.channel[0].brightness = state.brightness;
+    shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
 }
 
 // fade color of the lights (used only for changing color on photos, not for manual color changes)
