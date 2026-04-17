@@ -73,19 +73,21 @@ const updateLights = (color = null) => {
 
 // fade color of the lights (used only for changing color on photos, not for manual color changes)
 const setLights = (color) => {
-  console.log('setting lights to', color);
+  // console.log('setting lights to', color);
 
-  const colors = new Rainbow();
-  colors.setNumberRange(0, 20);
-  colors.setSpectrum(state.color, color);
-  state.color = color;
+  // const colors = new Rainbow();
+  // colors.setNumberRange(0, 20);
+  // colors.setSpectrum(state.color, color);
+  // state.color = color;
 
-  let tick = 0;
+  // let tick = 0;
 
-  while (tick < 21) {
-    updateLights(colors.colourAt(tick));
-    tick++;
-  }
+  // while (tick < 21) {
+  //   updateLights(colors.colourAt(tick));
+  //   tick++;
+  // }
+
+  updateLights(color);
 }
 
 const extractor = await pipeline(
