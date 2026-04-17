@@ -1,4 +1,4 @@
-from rpi5_ws2812.ws2812 import Color, WS2812SpiDriver
+from pi5neo import Pi5Neo
 import time
 import argparse
 
@@ -9,8 +9,6 @@ parser.add_argument('--b', dest='b', type=int, help='Blue value of the colour yo
 parser.add_argument('--brightness', dest='brightness', default=0.4, type=float, help='Brightness')
 args = parser.parse_args()
 
-# Initialize the WS2812 strip with 100 leds and SPI channel 0, CE0
-strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
-strip.set_all_pixels(Color(args.r, args.g, args.b))
-strip.set_brightness(args.brightness)
-strip.show()
+with Pi5Neo('/dev/spidev0.0', num_leds=150, spi_speed_khz=800, quiet_mode=True) as neo:
+    neo.fill_strip(args.r, args.g, args.b)
+    neo.update_strip()
