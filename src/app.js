@@ -96,7 +96,7 @@ const setLights = (color) => {
   // const colors = new Rainbow();
   // colors.setNumberRange(0, 20);
   // colors.setSpectrum(state.color, color);
-  // state.color = color;
+  state.color = color;
 
   // let tick = 0;
 
