@@ -38,8 +38,8 @@ A DOIO KB03 Keyboard allows for...
 ## Development
 ### Requirements
 - Node v22 to run the script
+- Python package `rpi5_ws2812`
 – Requirements to keep the script running: `npm install pm2 -g`
-- Sudo access for `rpi-ws281x-native`
 
 ### Installation
 Once you have the requirements running `npm i` will get you the dependencies.
