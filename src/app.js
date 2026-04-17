@@ -68,8 +68,7 @@ keyboard.on('keypress', e => {
 // change colour of the lights
 const updateLights = (color = null) => {
   console.log(color);
-
-    shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
+  shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
 }
 
 // fade color of the lights (used only for changing color on photos, not for manual color changes)
@@ -91,10 +90,7 @@ const setLights = (color) => {
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  config.model,
-  {
-    dtype: 'fp8'
-  }
+  config.model
 );
 
 const cosineSimilarity = (a,b) => {
