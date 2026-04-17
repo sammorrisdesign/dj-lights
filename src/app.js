@@ -1,4 +1,4 @@
-import ws281x from "rpi-ws281x-node"
+import ws281x from "rpi-ws281x"
 import shell from "shelljs";
 import Rainbow from 'rainbowvis.js';
 import InputEvent from "input-event";
@@ -16,10 +16,11 @@ let state = {
   isOn: false
 }
 
-ws281x.channel[0].count = config.lights.count;
-ws281x.channel[0].gpionum = config.lights.gpio;
-ws281x.channel[0].brightness = state.brightness;
-ws281x.init();
+ws281x.configure({
+  leds: config.lights.count,
+  gpionum: config.lights.gpio,
+  brightness: state.brightness
+});
 
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
@@ -77,11 +78,15 @@ const updateLights = (color = null) => {
   color = Number("0x" + color.replace('#', ''));
   state.isOn = true;
 
+  const pixels = new Uint32Array(config.lights.count);
+
   for (let i = 0; i < config.lights.count; i++) {
-    ws281x.channel[0].leds[i] = color;
+    pixels[i] = color;
   }
 
-  ws281x.channel[0].brightness = state.brightness;
+  ws281x.render(pixels);
+
+  // ws281x.channel[0].brightness = state.brightness;
 }
 
 // fade color of the lights (used only for changing color on photos, not for manual color changes)
