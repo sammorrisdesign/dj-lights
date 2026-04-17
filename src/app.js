@@ -58,12 +58,12 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.brightness.down) {
-    state.brightness = Math.max(0, state.brightness - 0.1);
+    state.brightness = Math.max(0, parseFloat((state.brightness - 0.1).toFixed(1)));
     updateLights();
   }
 
   if (e.code == config.input.mapping.brightness.up) {
-    state.brightness = Math.min(1, state.brightness + 0.1);
+    state.brightness = Math.min(1, parseFloat((state.brightness + 0.1).toFixed(1)));
     updateLights();
   }
 
