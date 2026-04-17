@@ -1,4 +1,3 @@
-import ws281x from "rpi-ws281x"
 import shell from "shelljs";
 import Rainbow from 'rainbowvis.js';
 import InputEvent from "input-event";
