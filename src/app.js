@@ -11,7 +11,7 @@ console.log('starting app');
 
 let state = {
   color: [255, 255, 255],
-  brightness: 120,
+  brightness: 1,
   isOn: false
 }
 
@@ -43,6 +43,7 @@ keyboard.on('keypress', e => {
   if (e.code == config.input.mapping.saturation.up) {
     console.log(state.color);
     console.log(chroma(state.color));
+    console.log(chroma(state.color).set('hsl.s', '+0.1'));
     state.color = chroma(state.color).set('hsl.s', '+0.1').rgb();
     console.log(state.color);
     updateLights();
