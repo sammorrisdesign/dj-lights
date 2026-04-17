@@ -15,12 +15,6 @@ let state = {
   isOn: false
 }
 
-ws281x.configure({
-  leds: config.lights.count,
-  gpionum: config.lights.gpio,
-  brightness: state.brightness
-});
-
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
