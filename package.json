@@ -34,7 +34,7 @@
     "node-pushover": "^1.0.0",
     "node-vibrant": "^4.0.4",
     "rainbowvis.js": "^1.1.1",
-    "rpi-ws281x-node": "^1.0.2",
+    "rpi-ws281x": "^1.1.53",
     "shelljs": "^0.10.0"
   },
   "overrides": {
