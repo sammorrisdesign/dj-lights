@@ -13,10 +13,7 @@ print("hello")
 
 if __name__ == "__main__":
 
-    # Initialize the WS2812 strip with 100 leds and SPI channel 0, CE0
-    strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
-    while True:
-        strip.set_all_pixels(Color(args.r, args.g, args.b))
-        strip.show()
-
-exit()
+# Initialize the WS2812 strip with 100 leds and SPI channel 0, CE0
+strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
+strip.set_all_pixels(Color(args.r, args.g, args.b))
+strip.show()
