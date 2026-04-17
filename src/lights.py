@@ -7,7 +7,7 @@ parser.add_argument('--r', dest='r', type=int, help='Red value of the colour you
 parser.add_argument('--g', dest='g', type=int, help='Green value of the colour you want')
 parser.add_argument('--b', dest='b', type=int, help='Blue value of the colour you want')
 parser.add_argument('--count', dest='count', type=int, help='LED Count')
-parser.add_argument('--brightness', dest='count', default=60, type=int, help='LED Count')
+parser.add_argument('--brightness', dest='count', default=0.4, type=float, help='LED Count')
 args = parser.parse_args()
 
 print("hello")

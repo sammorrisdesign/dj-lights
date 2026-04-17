@@ -10,7 +10,7 @@ import alert from "./alert.js";
 console.log('starting app');
 
 let state = {
-  color: '#000000',
+  color: [255, 255, 255],
   brightness: 120,
   isOn: false
 }
