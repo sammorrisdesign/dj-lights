@@ -79,6 +79,10 @@ keyboard.on('keypress', e => {
 
 // change colour of the lights
 const updateLights = (color = null) => {
+  if (!color) {
+    color = state.color;
+  }
+
   console.log(color);
   console.log(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`);
   shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
