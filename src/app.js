@@ -25,22 +25,34 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
+    console.log(state.color);
+    console.log(chroma(state.color));
     state.color = chroma(state.color).set('hsl.h', '+5').rgb();
+    console.log(state.color);
     updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
+    console.log(state.color);
+    console.log(chroma(state.color));
     state.color = chroma(state.color).set('hsl.h', '-5').rgb();
+    console.log(state.color);
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
+    console.log(state.color);
+    console.log(chroma(state.color));
     state.color = chroma(state.color).set('hsl.s', '+0.1').rgb();
+    console.log(state.color);
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
+    console.log(state.color);
+    console.log(chroma(state.color));
     state.color = chroma(state.color).set('hsl.s', '-0.1').rgb();
+    console.log(state.color);
     updateLights();
   }
 
