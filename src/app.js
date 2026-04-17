@@ -85,7 +85,7 @@ const updateLights = (color = null) => {
 
   console.log(color);
   console.log(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`);
-  shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
+  // shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
 }
 
 // fade color of the lights (used only for changing color on photos, not for manual color changes)
