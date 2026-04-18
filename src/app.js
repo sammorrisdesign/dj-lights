@@ -72,7 +72,7 @@ const updateLights = (color = null) => {
 
   console.log('changing the color');
 
-  spawnSync(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]}`)
+  spawnSync('python', ['src/lights.py', '--r', color[0], '--g', color[1], '--b', color[2]])
 }
 
 const extractor = await pipeline(
@@ -127,7 +127,7 @@ const takePhoto = () => {
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
-  spawnSync(`rpicam-still --nopreview --width 1920 --height 1080 --roi 0.1,0.2,0.9,0.8 --verbose 0 --zsl -t 100  -o capture.jpg`);
+  spawnSync('rpicam-still', ['--nopreview', '--width', 1920, '--height', 1080, '--roi', '0.1,0.2,0.9,0.8', '--verbose', '0', '--zsl', '-t', '100', '-o', 'capture.jpg']);
 
   console.timeEnd('taking photo');
 
