@@ -70,7 +70,9 @@ const updateLights = (color = null) => {
     color = state.color;
   }
 
-  shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]} --brightness ${state.brightness}`)
+  console.log('changing the color');
+
+  shell.exec(`python src/lights.py --r ${color[0]} --g ${color[1]} --b ${color[2]}`)
 }
 
 const extractor = await pipeline(
