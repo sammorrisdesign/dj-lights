@@ -118,6 +118,7 @@ const getColorFromImage = async() => {
   });
 
   console.log('post extractor');
+
   let bestMatch = null;
   let bestScore = -Infinity;
 
@@ -133,6 +134,8 @@ const getColorFromImage = async() => {
   photoEmbedding.dispose();
 
   state.color = chroma(bestMatch.color).rgb();
+
+  alert(bestMatch)
 
   updateLights();
 }
