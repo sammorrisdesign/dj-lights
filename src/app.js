@@ -135,7 +135,7 @@ const getColorFromImage = async() => {
 
   state.color = chroma(bestMatch.color).rgb();
 
-  alert(bestMatch)
+  // alert(bestMatch);
 
   updateLights();
 }
