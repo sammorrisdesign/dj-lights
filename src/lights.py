@@ -1,15 +1,23 @@
-from pi5neo import Pi5Neo
-import time
-import argparse
+from rpi5_ws2812.ws2812 import Color, WS2812SpiDriver
+import sys
+import json
 
-print("lights")
+# Initialize the WS2812 strip with 100 leds and SPI channel 0, CE0
+strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--r', dest='r', type=int, help='Red value of the colour you want')
-parser.add_argument('--g', dest='g', type=int, help='Green value of the colour you want')
-parser.add_argument('--b', dest='b', type=int, help='Blue value of the colour you want')
-args = parser.parse_args()
+# Set color
+def set_lights(r, g, b):
+  strip.set_all_pixels(Color(r, g, b))
+  strip.show()
 
-neo = Pi5Neo('/dev/spidev0.0', num_leds=150, spi_speed_khz=800)
-neo.fill_strip(args.r, args.g, args.b)   # Red
-neo.update_strip()
+# Watches for input values
+for line in sys.stdin:
+    # console log it
+    print("PYTHON RECEIVED: %s" % line.strip())
+
+    # read input and convert to dict
+    color = json.loads(line.strip())
+    print(color)
+
+    # pass through to the lights
+    set_lights(color[0], color[1], color[2])

@@ -1,4 +1,4 @@
-import { spawnSync } from "child_process";
+import { spawn, spawnSync } from "child_process";
 import InputEvent from "input-event";
 import chroma from 'chroma-js';
 import { pipeline, RawImage } from '@huggingface/transformers';
@@ -13,6 +13,16 @@ let state = {
   brightness: 1,
   isOn: false
 }
+
+// Setup the lights python event
+let lights = spawn('python3', ['-u', 'src/lights.py'], {
+  stdio: 'pipe' 
+});
+
+// Returns console logs from Python
+lights.stdout.on('data', (data) => {
+  console.log(data.toString());
+});
 
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
@@ -66,18 +76,20 @@ keyboard.on('keypress', e => {
 
 // change colour of the lights
 const updateLights = (color = null) => {
+  console.log('were in the lights');
   if (!color) {
     color = state.color;
   }
 
-  console.log('changing the color');
-
-  spawnSync('python', ['src/lights.py', '--r', color[0], '--g', color[1], '--b', color[2]])
+  lights.stdin.write(JSON.stringify(color) + '\n');
 }
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  config.model
+  config.model, {
+    dtype: 'fp16',
+    device: 'cpu'
+  }
 );
 
 const cosineSimilarity = (a,b) => {
@@ -97,18 +109,20 @@ const getColorFromImage = async() => {
   console.time("Getting color");
 
   const photo = await RawImage.read(`./capture.jpg`);
+
+  console.log('pre-extractor');
+
   let photoEmbedding = await extractor(photo, {
     pooling: 'mean',
     normalize: true
   });
 
-  photoEmbedding = photoEmbedding.data;
-
+  console.log('post extractor');
   let bestMatch = null;
   let bestScore = -Infinity;
 
   for (const release of data) {
-    const score = cosineSimilarity(photoEmbedding, release.embedding);
+    const score = cosineSimilarity(photoEmbedding.data, release.embedding);
 
     if (score > bestScore) {
       bestScore = score;
@@ -116,14 +130,15 @@ const getColorFromImage = async() => {
     }
   }
 
+  photoEmbedding.dispose();
+
   state.color = chroma(bestMatch.color).rgb();
+
   updateLights();
-  console.timeEnd("Getting color");
 }
 
 // take a photo with libcamera to be analysed
 const takePhoto = () => {
-  console.log('taking photo');
   console.time('taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
@@ -133,7 +148,5 @@ const takePhoto = () => {
 
   getColorFromImage();
 }
-
-console.log('starting script');
 
 takePhoto();
