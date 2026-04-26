@@ -11,13 +11,14 @@ const ignoreList = [
 
 for (const release of releases) {
   const embeddingForRelease = embedding.find(embed => embed.id == release.id).embedding;
-  const colorForRelease = colors.find(color => color.id == release.id).color;
+  const { color, colorType } = colors.find(color => color.id == release.id);
 
   if (!ignoreList.includes(release.id)) {
    data.push({
       ...release,
       embedding: embeddingForRelease,
-      color: colorForRelease
+      color,
+      colorType
     });
   } else {
     console.log(`🫣 Ignoring ${release.title} – ${release.artist}`)

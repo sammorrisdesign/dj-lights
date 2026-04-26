@@ -9,8 +9,8 @@ import alert from "./alert.js";
 console.log('🎚️  Starting DJ Lights');
 
 let state = {
-  color: chroma([255, 255, 255]),
-  rgb: [255, 255, 255],
+  colorType: "solid",
+  colors: new Array(150).fill([255, 255, 255]),
   brightness: 1,
   isOn: true
 }
@@ -25,6 +25,11 @@ lights.stdout.on('data', (data) => {
   console.log(`🐍 ${data.toString()}`);
 });
 
+
+lights.stderr.on('data', (data) => {
+  console.log(`⛔️ ${data.toString()}`);
+});
+
 const input = new InputEvent(config.input.device);
 const keyboard = new InputEvent.Keyboard(input);
 
@@ -35,22 +40,26 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    state.color = chroma(state.color).set('hsl.h', '+5');
+    const colorToSet = chroma(state.colors[0]).set('hsl.h', '+5');
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
     updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    state.color = chroma(state.color).set('hsl.h', '-5');
+    const colorToSet = chroma(state.colors[0]).set('hsl.h', '-5');
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
-    state.color = chroma(state.color).set('hsl.s', '+0.1');
+    const colorToSet = chroma(state.colors[0]).set('hsl.s', '+0.1');
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
-    state.color = chroma(state.color).set('hsl.s', '-0.1');
+    const colorToSet = chroma(state.colors[0]).set('hsl.s', '-0.1');
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
     updateLights();
   }
 
@@ -66,24 +75,22 @@ keyboard.on('keypress', e => {
 
   if (e.code == config.input.mapping.lights) {
     if (state.isOn) {
-      updateLights([0, 0, 0]);
       state.isOn = false;
-    } else {
       updateLights();
+    } else {
       state.isOn = true;
+      updateLights();
     }
   }
 });
 
-// change colour of the lights
-const updateLights = (color = null) => {
-  if (!color) {
-    state.rgb = state.color.rgb();
-  } else {
-    state.rgb = color;
-  }
+const generateSolidLightsFromColor = (rgb) => {
+  return new Array(150).fill(rgb)
+}
 
-  console.log(`🖍️  Setting lights to ${state.rgb}`);
+// change colour of the lights
+const updateLights = () => {
+  console.log(`🖍️  Setting lights`);
   lights.stdin.write(JSON.stringify(state) + '\n');
 }
 
@@ -132,11 +139,11 @@ const getColorFromImage = async() => {
 
   photoEmbedding.dispose();
 
-  state.color = chroma(bestMatch.color);
+  if (bestMatch.colorType == "solid") {
+    state.colors = generateSolidLightsFromColor(bestMatch.color)
+  }
 
   console.log(`🤖 Best Match is ${bestMatch.title} by ${bestMatch.artist}`);
-
-  // alert(bestMatch);
 
   updateLights();
 }
