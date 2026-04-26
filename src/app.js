@@ -6,7 +6,7 @@ import config from "../config.json" with { type: 'json' };
 import data from "../data/data.json" with { type: 'json' };
 import alert from "./alert.js";
 
-console.log('starting app');
+console.log('🎚️  Starting DJ Lights');
 
 let state = {
   color: [255, 255, 255],
@@ -21,7 +21,7 @@ let lights = spawn('python3', ['-u', 'src/lights.py'], {
 
 // Returns console logs from Python
 lights.stdout.on('data', (data) => {
-  console.log(data.toString());
+  console.log(`🐍 ${data.toString()}`);
 });
 
 const input = new InputEvent(config.input.device);
@@ -76,10 +76,11 @@ keyboard.on('keypress', e => {
 
 // change colour of the lights
 const updateLights = (color = null) => {
-  console.log('were in the lights');
   if (!color) {
     color = state.color;
   }
+
+  console.log(`🖍️  Setting lights to ${color}`);
 
   lights.stdin.write(JSON.stringify(color) + '\n');
 }
@@ -110,14 +111,10 @@ const getColorFromImage = async() => {
 
   const photo = await RawImage.read(`./capture.jpg`);
 
-  console.log('pre-extractor');
-
   let photoEmbedding = await extractor(photo, {
     pooling: 'mean',
     normalize: true
   });
-
-  console.log('post extractor');
 
   let bestMatch = null;
   let bestScore = -Infinity;
@@ -135,6 +132,8 @@ const getColorFromImage = async() => {
 
   state.color = chroma(bestMatch.color).rgb();
 
+  console.log(`🤖 Best Match is ${bestMatch.title} by ${bestMatch.artist}`);
+
   // alert(bestMatch);
 
   updateLights();
@@ -142,12 +141,12 @@ const getColorFromImage = async() => {
 
 // take a photo with libcamera to be analysed
 const takePhoto = () => {
-  console.time('taking photo');
+  console.time('📸 Taking photo');
 
   // Options from: https://www.raspberrypi.com/documentation/computers/camera_software.html#common-command-line-options
   spawnSync('rpicam-still', ['--nopreview', '--width', 1920, '--height', 1080, '--roi', '0.1,0.2,0.9,0.8', '--verbose', '0', '--zsl', '-t', '100', '-o', 'capture.jpg']);
 
-  console.timeEnd('taking photo');
+  console.timeEnd('📸 Taking photo');
 
   getColorFromImage();
 }

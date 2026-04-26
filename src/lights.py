@@ -12,12 +12,8 @@ def set_lights(r, g, b):
 
 # Watches for input values
 for line in sys.stdin:
-    # console log it
-    print("PYTHON RECEIVED: %s" % line.strip())
-
     # read input and convert to dict
     color = json.loads(line.strip())
-    print(color)
 
     # pass through to the lights
     set_lights(color[0], color[1], color[2])
