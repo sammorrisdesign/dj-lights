@@ -162,8 +162,6 @@ const getColorFromImage = async() => {
     }
   }
 
-  bestMatch = data.find(release => release.id == 35526118);
-
   photoEmbedding.dispose();
 
   if (bestMatch.colorType == "solid") {
