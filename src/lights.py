@@ -9,14 +9,17 @@ strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
 def set_lights(state):
   # Check if lights are meant to be on or not
   if state["isOn"]:
+    # If they are let's loop through our colors array and set the pixels
     for i, color in enumerate(state["colors"]):
       strip.set_pixel_color(i, Color(color[0], color[1], color[2]))
   else:
+    # If not, set all to black
     strip.set_all_pixels(Color(0, 0, 0))
 
-
-
+  # Set pixel brightness
   strip.set_brightness(state["brightness"])
+
+  # Render the new lights
   strip.show()
 
 # Watches for input values
