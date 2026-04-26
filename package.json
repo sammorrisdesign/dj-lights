@@ -33,8 +33,7 @@
     "disconnect": "^1.2.2",
     "input-event": "^1.2.6",
     "node-pushover": "^1.0.0",
-    "node-vibrant": "^4.0.4",
-    "shelljs": "^0.10.0"
+    "node-vibrant": "^4.0.4"
   },
   "overrides": {
     "onnxruntime-node": "1.20.0"
