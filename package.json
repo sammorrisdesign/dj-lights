@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "pm2 start ~/Repos/dj-lights/src/app.js",
     "logs": "pm2 logs app",
