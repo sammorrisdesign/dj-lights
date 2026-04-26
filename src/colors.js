@@ -3,6 +3,7 @@ import { Vibrant } from "node-vibrant/node";
 import chroma from "chroma-js";
 import fs from "fs";
 import releases from "../data/releases.json" with { type: 'json' };
+import colors from "../data/colors.json" with { type: 'json' };
 
 // loop through it and use node-vibrant to get colors from it
 
@@ -70,17 +71,20 @@ const getColorFromImage = async(id) => {
 (async() => {
   let data = new Array;
   for (const release of releases) {
-    const color = await getColorFromImage(release.id);
+    const isNew = !colors.some(color => color.id == release.id);
 
-    data.push({
-      ...release,
-      color
-    })
+    if (isNew) {
+      const color = await getColorFromImage(release.id);
+
+      data.push({
+        ...release,
+        color,
+        colorType: "solid"
+      })
+    }
   }
+
+  data = data.concat(colors);
 
   fs.writeFileSync("./data/colors.json", JSON.stringify(data, null, 2));
 })();
-
-// recreate https://github.com/sammorrisdesign/dj-lights/blob/main/app.js
-
-// save out to colors.json
