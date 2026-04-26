@@ -9,9 +9,10 @@ import alert from "./alert.js";
 console.log('🎚️  Starting DJ Lights');
 
 let state = {
-  color: [255, 255, 255],
+  color: chroma([255, 255, 255]),
+  rgb: [255, 255, 255],
   brightness: 1,
-  isOn: false
+  isOn: true
 }
 
 // Setup the lights python event
@@ -34,22 +35,22 @@ keyboard.on('keypress', e => {
   }
 
   if (e.code == config.input.mapping.hue.up) {
-    state.color = chroma(state.color).set('hsl.h', '+5').rgb();
+    state.color = chroma(state.color).set('hsl.h', '+5');
     updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
-    state.color = chroma(state.color).set('hsl.h', '-5').rgb();
+    state.color = chroma(state.color).set('hsl.h', '-5');
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
-    state.color = chroma(state.color).set('hsl.s', '+0.1').rgb();
+    state.color = chroma(state.color).set('hsl.s', '+0.1');
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
-    state.color = chroma(state.color).set('hsl.s', '-0.1').rgb();
+    state.color = chroma(state.color).set('hsl.s', '-0.1');
     updateLights();
   }
 
@@ -77,12 +78,13 @@ keyboard.on('keypress', e => {
 // change colour of the lights
 const updateLights = (color = null) => {
   if (!color) {
-    color = state.color;
+    state.rgb = state.color.rgb();
+  } else {
+    state.rgb = color;
   }
 
-  console.log(`🖍️  Setting lights to ${color}`);
-
-  lights.stdin.write(JSON.stringify(color) + '\n');
+  console.log(`🖍️  Setting lights to ${state.rgb}`);
+  lights.stdin.write(JSON.stringify(state) + '\n');
 }
 
 const extractor = await pipeline(
@@ -130,7 +132,7 @@ const getColorFromImage = async() => {
 
   photoEmbedding.dispose();
 
-  state.color = chroma(bestMatch.color).rgb();
+  state.color = chroma(bestMatch.color);
 
   console.log(`🤖 Best Match is ${bestMatch.title} by ${bestMatch.artist}`);
 

@@ -6,14 +6,15 @@ import json
 strip = WS2812SpiDriver(spi_bus=0, spi_device=0, led_count=150).get_strip()
 
 # Set color
-def set_lights(r, g, b):
+def set_lights(r, g, b, brightness):
   strip.set_all_pixels(Color(r, g, b))
+  strip.set_brightness(brightness)
   strip.show()
 
 # Watches for input values
 for line in sys.stdin:
     # read input and convert to dict
-    color = json.loads(line.strip())
+    state = json.loads(line.strip())
 
     # pass through to the lights
-    set_lights(color[0], color[1], color[2])
+    set_lights(state["rgb"][0], state["rgb"][1], state["rgb"][2], state["brightness"])
