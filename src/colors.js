@@ -21,7 +21,7 @@ const getColorFromImage = async(id) => {
   const sortedPalette = Object.keys(palette).map(swatch => {
     return {
       type: swatch,
-      color: chroma(palette[swatch].hex),
+      color: chroma(palette[swatch].rgb),
       coverage: (palette[swatch].population / totalPopulation) * 100
     }
   }).sort((a, b) => b.coverage - a.coverage);
@@ -32,23 +32,23 @@ const getColorFromImage = async(id) => {
   if (swatch.coverage < 80 && swatch.type !== 'Vibrant') {
     const vibrantSwatch = sortedPalette.filter(swatch => swatch.type == 'Vibrant')[0];
     if (vibrantSwatch && vibrantSwatch.coverage > 3) {
-      console.log(`prominent ${swatch.type} swatch (${swatch.color.hex()}) lacks coverage at ${Math.round(swatch.coverage)}%. Switching to Vibrant swatch (${vibrantSwatch.color.hex()})`);
+      console.log(`prominent ${swatch.type} swatch (${swatch.color.rgb()}) lacks coverage at ${Math.round(swatch.coverage)}%. Switching to Vibrant swatch (${vibrantSwatch.color.rgb()})`);
       swatch = vibrantSwatch;
     }
   }
 
   // boost saturation
   if (swatch.type !== 'Vibrant') {
-    console.log(`boosting saturation on ${swatch.type} swatch (${swatch.color.hex()})`);
+    console.log(`boosting saturation on ${swatch.type} swatch (${swatch.color.rgb()})`);
     swatch.color = swatch.color.saturate(2);
   } else if (swatch.color.hsl()[1] < 40) {
-    console.log(`boosting saturation on Vibrant swatch (${swatch.color.hex()}) as it is low`);
+    console.log(`boosting saturation on Vibrant swatch (${swatch.color.rgb()}) as it is low`);
     swatch.color = swatch.color.saturate(2);
   }
 
   // if greenish hue push more towards green
   if (swatch.color.hsl()[0] > 140 && swatch.color.hsl()[0] < 160) {
-    console.log(`tilting swatch (${swatch.color.hex()}) to green to avoid turquoise output`);
+    console.log(`tilting swatch (${swatch.color.rgb()}) to green to avoid turquoise output`);
 
     swatch.color = swatch.color.set('rgb.b', '*0.25');
     swatch.color = swatch.color.set('rgb.g', '*1.5');
@@ -56,7 +56,7 @@ const getColorFromImage = async(id) => {
 
   // tilt red to prevent reds looking pink
   if (swatch.color.hsl()[0] >= 345 || swatch.color.hsl()[0] < 13) {
-    console.log(`tilting swatch (${swatch.color.hex()}) to red (${swatch.color.hsl()[0]} degrees of hue found) to avoid pink output`);
+    console.log(`tilting swatch (${swatch.color.rgb()}) to red (${swatch.color.hsl()[0]} degrees of hue found) to avoid pink output`);
 
     swatch.color = swatch.color.set('rgb.r', '*2');
     swatch.color = swatch.color.set('rgb.b', '*0.25');
@@ -65,7 +65,7 @@ const getColorFromImage = async(id) => {
 
   console.timeEnd('getting color');
 
-  return swatch.color.hex();
+  return swatch.color.rgb();
 }
 
 (async() => {
