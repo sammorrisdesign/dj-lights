@@ -10,7 +10,7 @@ console.log('🎚️  Starting DJ Lights');
 
 let state = {
   colorType: "solid",
-  colors: new Array(150).fill([255, 255, 255]),
+  colors: new Array(144).fill([255, 255, 255]),
   brightness: 1,
   isOn: true
 }
@@ -41,25 +41,29 @@ keyboard.on('keypress', e => {
 
   if (e.code == config.input.mapping.hue.up) {
     const colorToSet = chroma(state.colors[0]).set('hsl.h', '+5');
-    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb());
+    state.colorType = "solid";
     updateLights();
   }
 
   if (e.code == config.input.mapping.hue.down) {
     const colorToSet = chroma(state.colors[0]).set('hsl.h', '-5');
-    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb());
+    state.colorType = "solid";
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.up) {
     const colorToSet = chroma(state.colors[0]).set('hsl.s', '+0.1');
-    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb());
+    state.colorType = "solid";
     updateLights();
   }
 
   if (e.code == config.input.mapping.saturation.down) {
     const colorToSet = chroma(state.colors[0]).set('hsl.s', '-0.1');
-    state.colors = generateSolidLightsFromColor(colorToSet.rgb())
+    state.colors = generateSolidLightsFromColor(colorToSet.rgb());
+    state.colorType = "solid";
     updateLights();
   }
 
@@ -85,12 +89,12 @@ keyboard.on('keypress', e => {
 });
 
 const generateSolidLightsFromColor = (rgb) => {
-  return new Array(150).fill(rgb)
+  return new Array(144).fill(rgb)
 }
 
 const generateGradientedLightsFromColors = (colors) => {
-  const gradient = chroma.scale(colors).domain([0, 150]);
-  const colorsToReturn = Array.from({ length: 150 }, (_, i) => {
+  const gradient = chroma.scale(colors).domain([0, 144]);
+  const colorsToReturn = Array.from({ length: 144 }, (_, i) => {
     return gradient(i).rgb();
   });
 
@@ -99,9 +103,9 @@ const generateGradientedLightsFromColors = (colors) => {
 
 const generateSectionedLightsFromColors = (colors) => {
   const sections = colors.length;
-  const sectionLength = Math.ceil(150 / sections);
+  const sectionLength = Math.ceil(144 / sections);
 
-  const colorsToReturn = Array.from({ length: 150 }, (_, i) => {
+  const colorsToReturn = Array.from({ length: 144 }, (_, i) => {
     const currentSection = Math.floor(i / sectionLength);
     return colors[currentSection];
   });
@@ -157,6 +161,8 @@ const getColorFromImage = async() => {
       bestMatch = release;
     }
   }
+
+  bestMatch = data.find(release => release.id == 35526118);
 
   photoEmbedding.dispose();
 
