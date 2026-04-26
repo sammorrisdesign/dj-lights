@@ -1092,12 +1092,16 @@
     "id": 13082613,
     "artist": "Toro Y Moi",
     "title": "Outer Peace",
-    "color": [
+    "color": [[
       255,
       0,
       3
-    ],
-    "colorType": "solid"
+    ],[
+      255,
+      166,
+      0
+    ]],
+    "colorType": "gradient"
   },
   {
     "id": 31541356,
