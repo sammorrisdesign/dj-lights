@@ -90,9 +90,20 @@ const generateSolidLightsFromColor = (rgb) => {
 
 const generateGradientedLightsFromColors = (colors) => {
   const gradient = chroma.scale(colors).domain([0, 150]);
-
-  let colorsToReturn = Array.from({ length: 150 }, (_, i) => {
+  const colorsToReturn = Array.from({ length: 150 }, (_, i) => {
     return gradient(i).rgb();
+  });
+
+  return colorsToReturn
+}
+
+const generateSectionedLightsFromColors = (colors) => {
+  const sections = colors.length;
+  const sectionLength = Math.ceil(150 / sections);
+
+  const colorsToReturn = Array.from({ length: 150 }, (_, i) => {
+    const currentSection = Math.floor(i / sectionLength);
+    return colors[currentSection];
   });
 
   return colorsToReturn
@@ -100,7 +111,7 @@ const generateGradientedLightsFromColors = (colors) => {
 
 // change colour of the lights
 const updateLights = () => {
-  console.log(`🖍️  Setting lights`);
+  console.log(`🖍️  Setting lights: ${state.colorType == "solid" ? `solid rgb(${state.colors[0]})` : state.colorType}`);
   lights.stdin.write(JSON.stringify(state) + '\n');
 }
 
@@ -153,7 +164,11 @@ const getColorFromImage = async() => {
     state.colors = generateSolidLightsFromColor(bestMatch.color)
   } else if (bestMatch.colorType == "gradient") {
     state.colors = generateGradientedLightsFromColors(bestMatch.color)
+  } else if (bestMatch.colorType == "sections") {
+    state.colors = generateSectionedLightsFromColors(bestMatch.color);
   }
+
+  state.colorType = bestMatch.colorType;
 
   console.log(`🤖 Best Match is ${bestMatch.title} by ${bestMatch.artist}`);
 
