@@ -1,7 +1,7 @@
 {
   "discogs": "USERNAME",
 
-  "model": "Xenova/clip-vit-base-patch32",
+  "model": "Xenova/clip-vit-base-patch16",
 
   "pushover": "USER KEY",
 

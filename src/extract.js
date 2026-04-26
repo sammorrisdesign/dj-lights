@@ -6,7 +6,10 @@ import config from '../config.json' with { type: 'json' };
 
 const extractor = await pipeline(
   'image-feature-extraction',
-  config.model
+  config.model, {
+    dtype: 'fp16',
+    device: 'cpu'
+  }
 );
 
 const extractImageData = async(release) => {
