@@ -202,8 +202,8 @@
     "artist": "The Streets",
     "title": "Original Pirate Material",
     "color": [
-      245,
-      211,
+      255,
+      63,
       0
     ],
     "colorType": "solid"
@@ -2131,7 +2131,7 @@
     "color": [
       255,
       0,
-      10
+      0
     ],
     "colorType": "solid"
   },
@@ -3538,11 +3538,11 @@
     "artist": "Good Morning (3)",
     "title": "Barnyard",
     "color": [
-      234,
-      179,
-      0
+      [255, 255, 255],
+      [0,123,235],
+      [255, 255, 255]
     ],
-    "colorType": "solid"
+    "colorType": "sections"
   },
   {
     "id": 22845629,

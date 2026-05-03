@@ -174,6 +174,8 @@ const getColorFromImage = async() => {
 
   state.colorType = bestMatch.colorType;
 
+  console.timeEnd("Getting color")
+
   console.log(`🤖 Best Match is ${bestMatch.title} by ${bestMatch.artist}`);
 
   alert(bestMatch);
