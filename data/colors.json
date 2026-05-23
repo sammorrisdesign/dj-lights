@@ -1,5 +1,1347 @@
 [
   {
+    "id": 16729281,
+    "artist": "Deerhunter",
+    "title": "Halcyon Digest",
+    "color": [
+      63,
+      72,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2449546,
+    "artist": "Pixies",
+    "title": "Doolittle",
+    "color": [
+      159,
+      77,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2851639,
+    "artist": "Tune-Yards",
+    "title": "w h o k i l l",
+    "color": [
+      202,
+      0,
+      73
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 10554362,
+    "artist": "The Police",
+    "title": "Synchronicity",
+    "color": [
+      0,
+      110,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8595616,
+    "artist": "Steely Dan",
+    "title": "Greatest Hits",
+    "color": [
+      255,
+      0,
+      10
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6537092,
+    "artist": "The Beatles",
+    "title": "1967-1970",
+    "color": [
+      0,
+      126,
+      247
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4769867,
+    "artist": "The Beatles",
+    "title": "Hey Jude (The Beatles Again)",
+    "color": [
+      118,
+      61,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1682228,
+    "artist": "OutKast",
+    "title": "The Way You Move / Hey Ya!",
+    "color": [
+      255,
+      226,
+      142
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1623533,
+    "artist": "Los Campesinos!",
+    "title": "We Are Beautiful, We Are Doomed",
+    "color": [
+      214,
+      141,
+      44
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 547859,
+    "artist": "They Might Be Giants",
+    "title": "Lincoln",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 7432218,
+    "artist": "Bikini Kill",
+    "title": "Revolution Girl Style Now",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 35089718,
+    "artist": "Bobby Hutcherson",
+    "title": "Montara",
+    "color": [
+      244,
+      76,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 23296742,
+    "artist": "Ronnie Foster",
+    "title": "Two Headed Freap",
+    "color": [
+      219,
+      66,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1763305,
+    "artist": "The Beach Boys",
+    "title": "Pet Sounds",
+    "color": [
+      203,
+      150,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2925140,
+    "artist": "Beastie Boys",
+    "title": "Solid Gold Hits",
+    "color": [
+      223,
+      154,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 3239034,
+    "artist": "Ella Fitzgerald",
+    "title": "30 By Ella",
+    "color": [
+      255,
+      137,
+      185
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 13140610,
+    "artist": "The Beatles",
+    "title": "Revolver",
+    "color": [
+      118,
+      54,
+      32
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8028975,
+    "artist": "Wild Nothing",
+    "title": "Gemini",
+    "color": [
+      229,
+      183,
+      126
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8968931,
+    "artist": "Blondie",
+    "title": "The Best Of Blondie",
+    "color": [
+      255,
+      4,
+      5
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8178268,
+    "artist": "Bruce Springsteen",
+    "title": "Darkness On The Edge Of Town",
+    "color": [
+      255,
+      26,
+      24
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6367416,
+    "artist": "Bob Dylan",
+    "title": "Bob Dylan's Greatest Hits",
+    "color": [
+      0,
+      180,
+      219
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2582014,
+    "artist": "Bruce Springsteen",
+    "title": "The Wild, The Innocent & The E Street Shuffle",
+    "color": [
+      224,
+      101,
+      50
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 554495,
+    "artist": "Janis Joplin",
+    "title": "Janis Joplin's Greatest Hits",
+    "color": [
+      141,
+      155,
+      23
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4120828,
+    "artist": "Bruce Springsteen",
+    "title": "Born To Run",
+    "color": [
+      99,
+      64,
+      8
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 19484872,
+    "artist": "Bruce Springsteen",
+    "title": "Born In The U.S.A.",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 31899121,
+    "artist": "The Tex Morgan Orchestra",
+    "title": "Glenn Miller - A Musical Memory",
+    "color": [
+      208,
+      188,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 35079737,
+    "artist": "R.E.M.",
+    "title": "Radio Free Europe 2025",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 18890350,
+    "artist": "Sharon Jones & The Dap-Kings",
+    "title": "Naturally",
+    "color": [
+      82,
+      213,
+      202
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 3045969,
+    "artist": "The Rapture",
+    "title": "How Deep Is Your Love?",
+    "color": [
+      200,
+      119,
+      243
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2895252,
+    "artist": "Holy Ghost!",
+    "title": "Obsessive Compulsive Frequency Vol. 3: I Know, I Hear",
+    "color": [
+      255,
+      0,
+      10
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2395827,
+    "artist": "LCD Soundsystem",
+    "title": "This Is Happening",
+    "color": [
+      0,
+      206,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2610731,
+    "artist": "Weezer",
+    "title": "Pinkerton",
+    "color": [
+      221,
+      163,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2019745,
+    "artist": "Franz Ferdinand",
+    "title": "Tonight: Franz Ferdinand",
+    "color": [
+      89,
+      128,
+      191
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1081394,
+    "artist": "Animal Collective",
+    "title": "Strawberry Jam",
+    "color": [
+      129,
+      0,
+      46
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1834681,
+    "artist": "Dirty Projectors",
+    "title": "Bitte Orca",
+    "color": [
+      255,
+      0,
+      7
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1944456,
+    "artist": "Animal Collective",
+    "title": "Summertime Clothes",
+    "color": [
+      215,
+      115,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 3138841,
+    "artist": "Franz Ferdinand",
+    "title": "Franz Ferdinand",
+    "color": [
+      251,
+      106,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 10695783,
+    "artist": "Franz Ferdinand",
+    "title": "You Could Have It So Much Better",
+    "color": [
+      255,
+      0,
+      1
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4857258,
+    "artist": "Franz Ferdinand",
+    "title": "Right Thoughts Right Words Right Action",
+    "color": [
+      220,
+      111,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1592118,
+    "artist": "Animal Collective",
+    "title": "Merriweather Post Pavilion",
+    "color": [
+      41,
+      194,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6603518,
+    "artist": "All We Are",
+    "title": "All We Are",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2451342,
+    "artist": "The Drums (2)",
+    "title": "The Drums",
+    "color": [
+      192,
+      138,
+      6
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 504843,
+    "artist": "They Might Be Giants",
+    "title": "Birdhouse In Your Soul",
+    "color": [
+      183,
+      150,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 197163,
+    "artist": "Kate Bush",
+    "title": "Hounds Of Love",
+    "color": [
+      212,
+      49,
+      126
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1627556,
+    "artist": "Franz Ferdinand",
+    "title": "Ulysses",
+    "color": [
+      192,
+      197,
+      128
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1526528,
+    "artist": "The Clash",
+    "title": "London Calling",
+    "color": [
+      255,
+      42,
+      37
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2236929,
+    "artist": "Modest Mouse",
+    "title": "The Moon & Antarctica",
+    "color": [
+      55,
+      220,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 14997896,
+    "artist": "Joy Division",
+    "title": "Unknown Pleasures",
+    "color": [
+      176,
+      132,
+      31
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4270102,
+    "artist": "Turbo Fruits",
+    "title": "Echo Kid",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2386283,
+    "artist": "Wavves",
+    "title": "King Of The Beach",
+    "color": [
+      233,
+      60,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2999723,
+    "artist": "Animal Collective",
+    "title": "Sung Tongs",
+    "color": [
+      241,
+      225,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 27474201,
+    "artist": "Sweeping Promises",
+    "title": "Good Living Is Coming For You ",
+    "color": [
+      0,
+      161,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2238902,
+    "artist": "Phoenix",
+    "title": "Fences",
+    "color": [
+      255,
+      0,
+      146
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 3269684,
+    "artist": "Childish Gambino",
+    "title": "Camp",
+    "color": [
+      208,
+      192,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 145971,
+    "artist": "Beastie Boys",
+    "title": "Body Movin'",
+    "color": [
+      255,
+      13,
+      15
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1883123,
+    "artist": "Smith Westerns",
+    "title": "Smith Westerns",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 14583101,
+    "artist": "The Decemberists",
+    "title": "Castaways And Cutouts",
+    "color": [
+      246,
+      207,
+      84
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2455698,
+    "artist": "Ducktails",
+    "title": "Live On WFMU",
+    "color": [
+      255,
+      251,
+      173
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 27495036,
+    "artist": "Unknown Mortal Orchestra",
+    "title": "Multi-Love",
+    "color": [
+      255,
+      70,
+      172
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 9814276,
+    "artist": "Tim Darcy",
+    "title": "Saturday Night",
+    "color": [
+      200,
+      5,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 15689158,
+    "artist": "Crystal Castles",
+    "title": "Crystal Castles",
+    "color": [
+      122,
+      25,
+      53
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1089594,
+    "artist": "Le Tigre",
+    "title": "Le Tigre",
+    "color": [
+      218,
+      221,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1124321,
+    "artist": "Le Tigre",
+    "title": "Feminist Sweepstakes",
+    "color": [
+      0,
+      178,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1545967,
+    "artist": "Belle & Sebastian",
+    "title": "If You're Feeling Sinister",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4181247,
+    "artist": "Belle & Sebastian",
+    "title": "The Boy With The Arab Strap",
+    "color": [
+      0,
+      255,
+      19
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1599336,
+    "artist": "Interpol",
+    "title": "Antics",
+    "color": [
+      255,
+      0,
+      3
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2483952,
+    "artist": "Belle & Sebastian",
+    "title": "Write About Love",
+    "color": [
+      255,
+      107,
+      176
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 24040829,
+    "artist": "Pavement",
+    "title": "Crooked Rain Crooked Rain",
+    "color": [
+      232,
+      202,
+      119
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2193244,
+    "artist": "The Magnetic Fields",
+    "title": "69 Love Songs",
+    "color": [
+      255,
+      0,
+      3
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2093841,
+    "artist": "Arcade Fire",
+    "title": "Funeral",
+    "color": [
+      250,
+      106,
+      33
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2364771,
+    "artist": "Best Coast",
+    "title": "Crazy For You",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6056634,
+    "artist": "God Help The Girl",
+    "title": "God Help The Girl (Original Motion Picture Soundtrack)",
+    "color": [
+      93,
+      74,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 7911791,
+    "artist": "The Stone Roses",
+    "title": "The Stone Roses",
+    "color": [
+      0,
+      127,
+      232
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 5068065,
+    "artist": "Cut Copy",
+    "title": "Zonoscope",
+    "color": [
+      244,
+      195,
+      101
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 7554829,
+    "artist": "Hinds",
+    "title": "Very Best Of Hinds So Far",
+    "color": [
+      233,
+      239,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 13968876,
+    "artist": "Various",
+    "title": "Nonesuch Records Spring 2019",
+    "color": [
+      147,
+      73,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2928584,
+    "artist": "Clap Your Hands Say Yeah",
+    "title": "Clap Your Hands Say Yeah",
+    "color": [
+      255,
+      161,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 14279943,
+    "artist": "Carole King",
+    "title": "Tapestry",
+    "color": [
+      238,
+      9,
+      7
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8793497,
+    "artist": "The Fevers",
+    "title": "Fevers",
+    "color": [
+      215,
+      108,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 5681803,
+    "artist": "Sylvan Esso",
+    "title": "Sylvan Esso",
+    "color": [
+      251,
+      215,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 11327675,
+    "artist": "Dent May",
+    "title": "Do Things",
+    "color": [
+      255,
+      14,
+      6
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 13708886,
+    "artist": "The Beatles",
+    "title": "Early Years (1)",
+    "color": [
+      255,
+      0,
+      8
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 643399,
+    "artist": "Of Montreal",
+    "title": "The Sunlandic Twins",
+    "color": [
+      255,
+      5,
+      5
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 908958,
+    "artist": "Of Montreal",
+    "title": "Hissing Fauna, Are You The Destroyer?",
+    "color": [
+      255,
+      4,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1495929,
+    "artist": "Of Montreal",
+    "title": "Skeletal Lamping",
+    "color": [
+      195,
+      104,
+      34
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2451189,
+    "artist": "Of Montreal",
+    "title": "False Priest",
+    "color": [
+      255,
+      0,
+      5
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6925275,
+    "artist": "The Strokes",
+    "title": "Is This It",
+    "color": [
+      255,
+      194,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 30931686,
+    "artist": "Daryl Hall & John Oates",
+    "title": "Big Bam Boom",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2802777,
+    "artist": "Daryl Hall & John Oates",
+    "title": "Daryl Hall & John Oates Best",
+    "color": [
+      0,
+      174,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 503269,
+    "artist": "Neil Young",
+    "title": "Rust Never Sleeps",
+    "color": [
+      0,
+      145,
+      255
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1901255,
+    "artist": "The Smiths",
+    "title": "The Queen Is Dead",
+    "color": [
+      174,
+      210,
+      136
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4533429,
+    "artist": "Orquesta De La Luz",
+    "title": "Sin Fronteras (サルサに国境はない)",
+    "color": [
+      44,
+      36,
+      129
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2122894,
+    "artist": "Pantha Du Prince",
+    "title": "Black Noise",
+    "color": [
+      184,
+      139,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 6661408,
+    "artist": "Belle & Sebastian",
+    "title": "Dear Catastrophe Waitress",
+    "color": [
+      255,
+      160,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8361191,
+    "artist": "Parquet Courts",
+    "title": "Human Performance",
+    "color": [
+      0,
+      117,
+      205
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 11706302,
+    "artist": "U.S. Girls",
+    "title": "In A Poem Unlimited",
+    "color": [
+      255,
+      2,
+      13
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 4589662,
+    "artist": "Jason Anderson",
+    "title": "Omaha",
+    "color": [
+      229,
+      128,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 192870,
+    "artist": "Talking Heads",
+    "title": "Talking Heads: 77",
+    "color": [
+      255,
+      0,
+      8
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 9706021,
+    "artist": "Tom Tom Club",
+    "title": "Tom Tom Club",
+    "color": [
+      153,
+      0,
+      55
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 9706021,
+    "artist": "Tom Tom Club",
+    "title": "Tom Tom Club",
+    "color": [
+      153,
+      0,
+      55
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 7027316,
+    "artist": "Talking Heads",
+    "title": "More Songs About Buildings And Food",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 10695833,
+    "artist": "Talking Heads",
+    "title": "Fear Of Music",
+    "color": [
+      84,
+      67,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 8858783,
+    "artist": "Talking Heads",
+    "title": "Speaking In Tongues",
+    "color": [
+      230,
+      124,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 14421052,
+    "artist": "Talking Heads",
+    "title": "Stop Making Sense",
+    "color": [
+      255,
+      3,
+      2
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1657824,
+    "artist": "The Pains Of Being Pure At Heart",
+    "title": "The Pains Of Being Pure At Heart",
+    "color": [
+      64,
+      72,
+      7
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2052460,
+    "artist": "Lady Gaga",
+    "title": "The Fame Monster",
+    "color": [
+      175,
+      94,
+      120
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 12951409,
+    "artist": "The Shins",
+    "title": "Chutes Too Narrow",
+    "color": [
+      255,
+      175,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2553270,
+    "artist": "Dum Dum Girls",
+    "title": "I Will Be",
+    "color": [
+      206,
+      116,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 5608307,
+    "artist": "New York Islanders",
+    "title": "Home For The Holidays",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 32465034,
+    "artist": "Marvin Gaye",
+    "title": "Let's Get It On ",
+    "color": [
+      255,
+      12,
+      23
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 16949523,
+    "artist": "Marvin Gaye",
+    "title": "What's Going On",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 35270998,
+    "artist": "Snooper (3)",
+    "title": "Worldwide",
+    "color": [
+      255,
+      104,
+      142
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 473203,
+    "artist": "Patrick Wolf",
+    "title": "Wind In The Wires",
+    "color": [
+      221,
+      129,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 99532,
+    "artist": "RuPaul",
+    "title": "A Shade Shady (Now Prance)",
+    "color": [
+      237,
+      230,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 10755626,
+    "artist": "Fleetwood Mac",
+    "title": "Rumours",
+    "color": [
+      209,
+      150,
+      36
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 124992,
+    "artist": "Various",
+    "title": "Krush Groove (Music From The Original Motion Picture Soundtrack) ",
+    "color": [
+      255,
+      94,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1288373,
+    "artist": "Born Ruffians",
+    "title": "Red Yellow & Blue",
+    "color": [
+      200,
+      99,
+      30
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 1265268,
+    "artist": "Los Campesinos!",
+    "title": "Hold On Now, Youngster...",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2081382,
+    "artist": "Vampire Weekend",
+    "title": "Contra",
+    "color": [
+      255,
+      25,
+      23
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 24386138,
+    "artist": "Vampire Weekend",
+    "title": "Vampire Weekend",
+    "color": [
+      255,
+      10,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 2490699,
+    "artist": "El Guincho",
+    "title": "Pop Negro",
+    "color": [
+      196,
+      191,
+      0
+    ],
+    "colorType": "solid"
+  },
+  {
+    "id": 36620017,
+    "artist": "Twisted Teens",
+    "title": "Blame The Clown",
+    "color": [
+      126,
+      155,
+      48
+    ],
+    "colorType": "solid"
+  },
+  {
     "id": 24634691,
     "artist": "Courting",
     "title": "Guitar Music",
@@ -48,13 +1390,41 @@
     "artist": "Mike (408)",
     "title": "Burning Desire",
     "color": [
-      [255, 0, 0],
-      [255,44,0],
-      [255, 179, 0],
-      [255, 179, 0],
-      [255, 179, 0],
-      [255,44,0],
-      [255, 0, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -107,7 +1477,9 @@
     "artist": "Steve Lacy (4)",
     "title": "Apollo XXI",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -138,7 +1510,9 @@
     "artist": "Helado Negro",
     "title": "Far In",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -268,7 +1642,9 @@
     "artist": "Little Simz",
     "title": "Grey Area",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -288,7 +1664,9 @@
     "artist": "Tatsuro Yamashita",
     "title": "For You",
     "color": [
-      0, 167, 233
+      0,
+      167,
+      233
     ],
     "colorType": "solid"
   },
@@ -297,7 +1675,9 @@
     "artist": "Mike (408)",
     "title": "Faith Is A Rock",
     "color": [
-      255, 179, 0
+      255,
+      179,
+      0
     ],
     "colorType": "solid"
   },
@@ -328,11 +1708,31 @@
     "artist": "Art Brut",
     "title": "Bang Bang Rock & Roll",
     "color": [
-      [255, 0, 0],
-      [255, 179, 0],
-      [0, 255, 0],
-      [0, 150, 255],
-      [140, 9, 255]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        0,
+        150,
+        255
+      ],
+      [
+        140,
+        9,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -352,11 +1752,31 @@
     "artist": "Andy Shauf",
     "title": "Norm",
     "color": [
-      [255, 228, 153],
-      [255, 106, 56],
-      [255, 70, 8],
-      [255, 106, 56],
-      [255, 228, 153]
+      [
+        255,
+        228,
+        153
+      ],
+      [
+        255,
+        106,
+        56
+      ],
+      [
+        255,
+        70,
+        8
+      ],
+      [
+        255,
+        106,
+        56
+      ],
+      [
+        255,
+        228,
+        153
+      ]
     ],
     "colorType": "gradient"
   },
@@ -463,7 +1883,11 @@
     "id": 27409770,
     "artist": "Sufjan Stevens",
     "title": "Greetings From Michigan (The Great Lake State)",
-    "color": [255,0,0],
+    "color": [
+      255,
+      0,
+      0
+    ],
     "colorType": "solid"
   },
   {
@@ -482,8 +1906,16 @@
     "artist": "Sufjan Stevens",
     "title": "Songs For Christmas",
     "color": [
-      [255,0,0],
-      [0, 255, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -525,8 +1957,16 @@
     "artist": "The Velvet Underground",
     "title": "Loaded",
     "color": [
-      [255, 0, 50],
-      [255, 166, 182]
+      [
+        255,
+        0,
+        50
+      ],
+      [
+        255,
+        166,
+        182
+      ]
     ],
     "colorType": "gradient"
   },
@@ -623,7 +2063,9 @@
     "artist": "Open Mike Eagle",
     "title": "Anime Trauma + Divorce",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -665,7 +2107,9 @@
     "artist": "Billy Woods",
     "title": "Maps",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -762,11 +2206,31 @@
     "artist": "Metronomy",
     "title": "The English Riviera",
     "color": [
-      [10, 10, 255],
-      [10, 10, 255],
-      [82, 180, 255],
-      [10, 10, 255],
-      [255, 179, 0]
+      [
+        10,
+        10,
+        255
+      ],
+      [
+        10,
+        10,
+        255
+      ],
+      [
+        82,
+        180,
+        255
+      ],
+      [
+        10,
+        10,
+        255
+      ],
+      [
+        255,
+        179,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -852,9 +2316,21 @@
     "artist": "Young Fathers",
     "title": "White Men Are Black Men Too",
     "color": [
-      [255,0,0],
-      [0,0,255],
-      [255,0,0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -885,8 +2361,16 @@
     "artist": "Donald Byrd",
     "title": "Stepping Into Tomorrow",
     "color": [
-      [116, 11, 227],
-      [0,157,230]
+      [
+        116,
+        11,
+        227
+      ],
+      [
+        0,
+        157,
+        230
+      ]
     ],
     "colorType": "gradient"
   },
@@ -917,8 +2401,16 @@
     "artist": "Danger Mouse",
     "title": "Cheat Codes",
     "color": [
-      [255, 0, 5],
-      [0, 255, 20]
+      [
+        255,
+        0,
+        5
+      ],
+      [
+        0,
+        255,
+        20
+      ]
     ],
     "colorType": "sections"
   },
@@ -927,9 +2419,21 @@
     "artist": "Hélène Barbier",
     "title": "Panorama",
     "color": [
-      [255, 112, 23],
-      [0, 255, 10],
-      [255, 112, 23]
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        0,
+        255,
+        10
+      ],
+      [
+        255,
+        112,
+        23
+      ]
     ],
     "colorType": "gradient"
   },
@@ -971,12 +2475,36 @@
     "artist": "B Boys",
     "title": "Live At Rough Trade",
     "color": [
-      [236, 189, 0],
-      [0, 255, 0],
-      [255, 179, 0],
-      [255, 255, 255],
-      [255, 0, 0],
-      [0, 30, 255]
+      [
+        236,
+        189,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        30,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -1084,8 +2612,16 @@
     "artist": "Toro Y Moi",
     "title": "Outer Peace",
     "color": [
-      [255,0,3],
-      [255,44,0]
+      [
+        255,
+        0,
+        3
+      ],
+      [
+        255,
+        44,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -1094,10 +2630,26 @@
     "artist": "Fake Fruit",
     "title": "Mucho Mistrust",
     "color": [
-      [255, 112, 23],
-      [255, 30, 0],
-      [255, 180, 0],
-      [255, 112, 23]
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        255,
+        30,
+        0
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        255,
+        112,
+        23
+      ]
     ],
     "colorType": "sections"
   },
@@ -1161,10 +2713,26 @@
     "artist": "The Minneapolis Uranium Club",
     "title": "Live! At Arci Taun!",
     "color": [
-      [255, 255, 255],
-      [30,255,0],
-      [255,0,0],
-      [255, 255, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -1173,8 +2741,16 @@
     "artist": "Eddy Current Suppression Ring",
     "title": "All In Good Time",
     "color": [
-      [0,255,5],
-      [255, 112, 23]
+      [
+        0,
+        255,
+        5
+      ],
+      [
+        255,
+        112,
+        23
+      ]
     ],
     "colorType": "sections"
   },
@@ -1304,7 +2880,9 @@
     "artist": "Gang Starr",
     "title": "Hard To Earn",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -1313,7 +2891,9 @@
     "artist": "Sylvan Esso",
     "title": "Sylvan Esso",
     "color": [
-      224,108,0
+      224,
+      108,
+      0
     ],
     "colorType": "solid"
   },
@@ -1322,16 +2902,56 @@
     "artist": "Caribou",
     "title": "Our Love",
     "color": [
-      [0, 150, 255],
-      [255, 0, 0],
-      [0, 255, 0],
-      [140, 9, 255],
-      [0, 150, 255],
-      [255, 179, 0],
-      [255, 0, 0],
-      [255, 179, 0],
-      [0, 255, 0],
-      [140, 9, 255]
+      [
+        0,
+        150,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        140,
+        9,
+        255
+      ],
+      [
+        0,
+        150,
+        255
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        140,
+        9,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -1351,7 +2971,9 @@
     "artist": "Tyler, The Creator",
     "title": "Igor",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -1382,7 +3004,9 @@
     "artist": "Tyler, The Creator",
     "title": "Scum Fuck Flower Boy",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -1512,7 +3136,9 @@
     "artist": "Shame (19)",
     "title": "Drunk Tank Pink",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -1554,11 +3180,31 @@
     "artist": "Witch (3)",
     "title": "Zango",
     "color": [
-      [30,255,0],
-      [255,0,0],
-      [30,255,0],
-      [255,180, 0],
-      [255,0,0]
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -1754,8 +3400,16 @@
     "artist": "Flasher (4)",
     "title": "Constant Image",
     "color": [
-      [255,0,3],
-      [255,80,0]
+      [
+        255,
+        0,
+        3
+      ],
+      [
+        255,
+        80,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -1863,10 +3517,26 @@
     "artist": "Stereolab",
     "title": "Instant Holograms On Metal Film",
     "color": [
-      [255, 179, 0],
-      [255, 179, 0],
-      [255, 120, 244],
-      [224,108,0]
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        120,
+        244
+      ],
+      [
+        224,
+        108,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -1875,7 +3545,9 @@
     "artist": "Justice (3)",
     "title": "†",
     "color": [
-      224,108,0
+      224,
+      108,
+      0
     ],
     "colorType": "solid"
   },
@@ -1895,10 +3567,26 @@
     "artist": "A Tribe Called Quest",
     "title": "We Got It From Here…. Thank You 4 Your Service",
     "color": [
-      [30,255,0],
-      [255,0,0],
-      [30,255,0],
-      [255,0,0]
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -1962,10 +3650,26 @@
     "artist": "The Minneapolis Uranium Club",
     "title": "All Of Them Naturals",
     "color": [
-      [20, 0, 255],
-      [20, 0, 255],
-      [0, 255, 20],
-      [255, 0, 0]
+      [
+        20,
+        0,
+        255
+      ],
+      [
+        20,
+        0,
+        255
+      ],
+      [
+        0,
+        255,
+        20
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -2095,10 +3799,26 @@
     "artist": "Cola (19)",
     "title": "Deep In View",
     "color": [
-      [255, 255, 255],
-      [30,255,0],
-      [255,0,0],
-      [255, 255, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -2118,9 +3838,21 @@
     "artist": "Mick Jenkins",
     "title": "The Water[s]",
     "color": [
-      [255, 255, 255],
-      [82, 180, 255],
-      [10, 10, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        82,
+        180,
+        255
+      ],
+      [
+        10,
+        10,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2140,9 +3872,21 @@
     "artist": "Blackalicious",
     "title": "Blazing Arrow",
     "color": [
-      [255, 0, 0],
-      [255,44,0],
-      [255, 179, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2162,16 +3906,56 @@
     "artist": "DJ Format",
     "title": "If You Can't Join 'Em... Beat 'Em",
     "color": [
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0],
-      [255, 255, 255]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -2191,8 +3975,16 @@
     "artist": "Childish Gambino",
     "title": "Because The Internet",
     "color": [
-      [255,0,3],
-      [255,44,0]
+      [
+        255,
+        0,
+        3
+      ],
+      [
+        255,
+        44,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2234,12 +4026,36 @@
     "artist": "Ty Segall",
     "title": "Melted",
     "color": [
-      [255,0,0],
-      [255,44,0],
-      [255,0,0],
-      [255,160,0],
-      [255,0,0],
-      [255,44,0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        160,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -2281,8 +4097,16 @@
     "artist": "Joshua Idehen",
     "title": "I Know You’re Hurting, Everyone Is Hurting, Everyone Is Trying, You Have Got To Try",
     "color": [
-      [255, 255, 255],
-      [0,123,235]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        0,
+        123,
+        235
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2390,7 +4214,9 @@
     "artist": "BadBadNotGood",
     "title": "IV",
     "color": [
-      43, 255, 241
+      43,
+      255,
+      241
     ],
     "colorType": "solid"
   },
@@ -2399,10 +4225,26 @@
     "artist": "Tame Impala",
     "title": "Currents",
     "color": [
-      [255,0,0],
-      [255,0,0],
-      [255,0,0],
-      [255, 44, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2422,7 +4264,9 @@
     "artist": "Nick Drake",
     "title": "Bryter Layter",
     "color": [
-      140, 9, 255
+      140,
+      9,
+      255
     ],
     "colorType": "solid"
   },
@@ -2464,10 +4308,26 @@
     "artist": "A Tribe Called Quest",
     "title": "Midnight Marauders",
     "color": [
-      [30,255,0],
-      [255,0,0],
-      [30,255,0],
-      [255,0,0]
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -2487,10 +4347,26 @@
     "artist": "A Tribe Called Quest",
     "title": "The Low End Theory",
     "color": [
-      [30,255,0],
-      [255,0,0],
-      [30,255,0],
-      [255,0,0]
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        30,
+        255,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -2686,11 +4562,31 @@
     "artist": "Various",
     "title": "Pacific Breeze 2: Japanese City Pop, AOR And Boogie 1972-1986",
     "color": [
-      [255,161,250],
-      [252, 53, 242],
-      [50, 0, 255],
-      [50, 0, 255],
-      [50, 0, 255]
+      [
+        255,
+        161,
+        250
+      ],
+      [
+        252,
+        53,
+        242
+      ],
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        50,
+        0,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2699,9 +4595,21 @@
     "artist": "Various",
     "title": "Pacific Breeze: Japanese City Pop, AOR And Boogie 1976-1986",
     "color": [
-      [10, 10, 255],
-      [82, 180, 255],
-      [255, 255, 255]
+      [
+        10,
+        10,
+        255
+      ],
+      [
+        82,
+        180,
+        255
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2710,11 +4618,31 @@
     "artist": "Various",
     "title": "Pacific Breeze 3: Japanese City Pop, AOR And Boogie 1975-1987",
     "color": [
-      [50, 0, 255],
-      [50, 0, 255],
-      [252, 53, 242],
-      [255,161,250],
-      [255, 255, 255]
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        252,
+        53,
+        242
+      ],
+      [
+        255,
+        161,
+        250
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2800,10 +4728,26 @@
     "artist": "King Krule",
     "title": "Space Heavy",
     "color": [
-      [50, 0, 255],
-      [50, 0, 255],
-      [255, 15, 120],
-      [255, 50, 200]
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        50,
+        0,
+        255
+      ],
+      [
+        255,
+        15,
+        120
+      ],
+      [
+        255,
+        50,
+        200
+      ]
     ],
     "colorType": "gradient"
   },
@@ -2834,13 +4778,41 @@
     "artist": "Childish Gambino",
     "title": "Kauai",
     "color": [
-      [246, 210, 52],
-      [246, 210, 52],
-      [246, 210, 52],
-      [255, 30, 0],
-      [53, 245, 250],
-      [53, 245, 250],
-      [53, 245, 250]
+      [
+        246,
+        210,
+        52
+      ],
+      [
+        246,
+        210,
+        52
+      ],
+      [
+        246,
+        210,
+        52
+      ],
+      [
+        255,
+        30,
+        0
+      ],
+      [
+        53,
+        245,
+        250
+      ],
+      [
+        53,
+        245,
+        250
+      ],
+      [
+        53,
+        245,
+        250
+      ]
     ],
     "colorType": "sections"
   },
@@ -2904,7 +4876,9 @@
     "artist": "Quelle Chris",
     "title": "Guns",
     "color": [
-      224,108,0
+      224,
+      108,
+      0
     ],
     "colorType": "solid"
   },
@@ -2990,11 +4964,31 @@
     "artist": "Field Music",
     "title": "Field Music",
     "color": [
-      [255, 40, 0],
-      [140, 9, 255],
-      [150, 150, 150],
-      [255, 180, 0],
-      [30, 255, 0]
+      [
+        255,
+        40,
+        0
+      ],
+      [
+        140,
+        9,
+        255
+      ],
+      [
+        150,
+        150,
+        150
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        30,
+        255,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -3036,9 +5030,21 @@
     "artist": "Caribou",
     "title": "Suddenly",
     "color": [
-      [255, 255, 255],
-      [82, 180, 255],
-      [10, 10, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        82,
+        180,
+        255
+      ],
+      [
+        10,
+        10,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3047,9 +5053,17 @@
     "artist": "Caribou",
     "title": "Honey",
     "color": [
-      [255, 166, 0],
-      [0, 170, 255
-    ]],
+      [
+        255,
+        166,
+        0
+      ],
+      [
+        0,
+        170,
+        255
+      ]
+    ],
     "colorType": "sections"
   },
   {
@@ -3112,7 +5126,9 @@
     "artist": "Tame Impala",
     "title": "Lonerism",
     "color": [
-      66, 237, 231
+      66,
+      237,
+      231
     ],
     "colorType": "solid"
   },
@@ -3187,9 +5203,17 @@
     "artist": "Your Old Droog",
     "title": "Dump YOD: Krutoy Edition",
     "color": [
-      [255, 166, 0],
-      [0, 170, 255
-    ]],
+      [
+        255,
+        166,
+        0
+      ],
+      [
+        0,
+        170,
+        255
+      ]
+    ],
     "colorType": "sections"
   },
   {
@@ -3252,8 +5276,16 @@
     "artist": "Young Fathers",
     "title": "Heavy Heavy",
     "color": [
-      [255,44,0],
-      [255, 179, 0]
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3306,11 +5338,31 @@
     "artist": "Chance The Rapper",
     "title": "Acid Rap",
     "color": [
-      [116, 7, 240],
-      [116, 7, 240],
-      [227, 52, 163],
-      [255,44,0],
-      [250, 187, 100]
+      [
+        116,
+        7,
+        240
+      ],
+      [
+        116,
+        7,
+        240
+      ],
+      [
+        227,
+        52,
+        163
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        250,
+        187,
+        100
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3330,8 +5382,16 @@
     "artist": "Injury Reserve",
     "title": "Live From The Dentist Office",
     "color": [
-      [255, 179, 0],
-      [0, 250, 211]
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        0,
+        250,
+        211
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3362,7 +5422,9 @@
     "artist": "Noname (18)",
     "title": "Telefone",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -3426,11 +5488,31 @@
     "artist": "Jurassic 5",
     "title": "Jurassic 5",
     "color": [
-      [0, 45, 255],
-      [255, 140, 0],
-      [255, 140, 0],
-      [255, 140, 0],
-      [0, 45, 255]
+      [
+        0,
+        45,
+        255
+      ],
+      [
+        255,
+        140,
+        0
+      ],
+      [
+        255,
+        140,
+        0
+      ],
+      [
+        255,
+        140,
+        0
+      ],
+      [
+        0,
+        45,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -3439,11 +5521,31 @@
     "artist": "Daft Punk",
     "title": "Discovery",
     "color": [
-      [255, 0, 0],
-      [255, 179, 0],
-      [0, 255, 0],
-      [0, 0, 255],
-      [140, 9, 255]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        0,
+        0,
+        255
+      ],
+      [
+        140,
+        9,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3452,11 +5554,31 @@
     "artist": "Fontaines D.C.",
     "title": "Dogrel",
     "color": [
-      [255,0,16],
-      [255,0,16],
-      [255,0,16],
-      [255, 180, 0],
-      [255, 180, 0]
+      [
+        255,
+        0,
+        16
+      ],
+      [
+        255,
+        0,
+        16
+      ],
+      [
+        255,
+        0,
+        16
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        255,
+        180,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -3487,16 +5609,56 @@
     "artist": "People Under The Stairs",
     "title": "12 Step Program",
     "color": [
-      [255,44,0],
-      [0,184,255],
-      [255,44,0],
-      [0,184,255],
-      [255,44,0],
-      [0,184,255],
-      [255,44,0],
-      [0,184,255],
-      [255,44,0],
-      [0,184,255]
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        0,
+        184,
+        255
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        0,
+        184,
+        255
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        0,
+        184,
+        255
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        0,
+        184,
+        255
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        0,
+        184,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -3538,9 +5700,21 @@
     "artist": "Good Morning (3)",
     "title": "Barnyard",
     "color": [
-      [255, 255, 255],
-      [0,123,235],
-      [255, 255, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        0,
+        123,
+        235
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -3604,9 +5778,21 @@
     "artist": "Daryl Hall & John Oates",
     "title": "Rock 'N Soul Part 1",
     "color": [
-      [0, 255, 2],
-      [255, 180, 0],
-      [255, 0, 0]
+      [
+        0,
+        255,
+        2
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -3714,9 +5900,21 @@
     "artist": "Parquet Courts",
     "title": "Wide Awake!",
     "color": [
-      [0, 50, 255],
-      [255, 180, 0],
-      [255, 0, 0]
+      [
+        0,
+        50,
+        255
+      ],
+      [
+        255,
+        180,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -3758,22 +5956,86 @@
     "artist": "Andrew Savage (3)",
     "title": "Several Songs About Fire",
     "color": [
-      [255,0,0],
-      [255,44,0],
-      [255,0,0],
-      [255,160,0],
-      [255,0,0],
-      [255,44,0],
-      [255,0,0],
-      [255,160,0],
-      [255,0,0],
-      [255,44,0],
-      [255,0,0],
-      [255,160,0],
-      [255,0,0],
-      [255,44,0],
-      [255,0,0],
-      [255,160,0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        160,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        160,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        160,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        160,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -3848,7 +6110,9 @@
     "artist": "R.A.P. Ferreira",
     "title": "Purple Moonlight Pages",
     "color": [
-      69, 0, 243
+      69,
+      0,
+      243
     ],
     "colorType": "solid"
   },
@@ -3879,13 +6143,41 @@
     "artist": "The Holydrug Couple",
     "title": "Moonlust",
     "color": [
-      [255, 255, 255],
-      [0, 0, 0],
-      [0, 30, 255],
-      [0, 230, 211],
-      [0, 230, 10],
-      [255, 161, 250],
-      [50, 0, 255]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        30,
+        255
+      ],
+      [
+        0,
+        230,
+        211
+      ],
+      [
+        0,
+        230,
+        10
+      ],
+      [
+        255,
+        161,
+        250
+      ],
+      [
+        50,
+        0,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -3938,8 +6230,16 @@
     "artist": "Czarface",
     "title": "Czarface Meets Metal Face",
     "color": [
-      [0, 255, 20],
-      [5, 182, 252]
+      [
+        0,
+        255,
+        20
+      ],
+      [
+        5,
+        182,
+        252
+      ]
     ],
     "colorType": "sections"
   },
@@ -4025,7 +6325,9 @@
     "artist": "MF Doom",
     "title": "Madvillainy",
     "color": [
-      255,44,0
+      255,
+      44,
+      0
     ],
     "colorType": "solid"
   },
@@ -4034,9 +6336,21 @@
     "artist": "Homeboy Sandman",
     "title": "Subject: Matter",
     "color": [
-      [120, 255, 100],
-      [255, 180, 16],
-      [255, 100, 80]
+      [
+        120,
+        255,
+        100
+      ],
+      [
+        255,
+        180,
+        16
+      ],
+      [
+        255,
+        100,
+        80
+      ]
     ],
     "colorType": "sections"
   },
@@ -4265,11 +6579,31 @@
     "artist": "The Fall",
     "title": "Perverted By Language",
     "color": [
-      [255, 120, 244],
-      [255, 120, 244],
-      [255, 120, 244],
-      [255, 0, 20],
-      [255, 120, 244]
+      [
+        255,
+        120,
+        244
+      ],
+      [
+        255,
+        120,
+        244
+      ],
+      [
+        255,
+        120,
+        244
+      ],
+      [
+        255,
+        0,
+        20
+      ],
+      [
+        255,
+        120,
+        244
+      ]
     ],
     "colorType": "sections"
   },
@@ -4333,9 +6667,21 @@
     "artist": "The White Stripes",
     "title": "De Stijl",
     "color": [
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -4355,9 +6701,21 @@
     "artist": "The White Stripes",
     "title": "Elephant",
     "color": [
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -4366,9 +6724,21 @@
     "artist": "The White Stripes",
     "title": "White Blood Cells",
     "color": [
-      [255, 0, 0],
-      [255, 255, 255],
-      [255, 0, 0]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        0,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -4465,8 +6835,16 @@
     "artist": "Mikal Cronin",
     "title": "Mikal Cronin",
     "color": [
-      [160, 255, 0],
-      [255, 30, 30]
+      [
+        160,
+        255,
+        0
+      ],
+      [
+        255,
+        30,
+        30
+      ]
     ],
     "colorType": "gradient"
   },
@@ -4508,8 +6886,16 @@
     "artist": "King Krule",
     "title": "Man Alive!",
     "color": [
-      [0, 199, 255],
-      [150, 230, 255]
+      [
+        0,
+        199,
+        255
+      ],
+      [
+        150,
+        230,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -4529,13 +6915,41 @@
     "artist": "King Krule",
     "title": "The Ooz",
     "color": [
-      [10, 50, 232],
-      [10, 50, 232],
-      [255, 120, 244],
-      [10, 50, 232],
-      [10, 50, 232],
-      [10, 50, 232],
-      [10, 50, 232]
+      [
+        10,
+        50,
+        232
+      ],
+      [
+        10,
+        50,
+        232
+      ],
+      [
+        255,
+        120,
+        244
+      ],
+      [
+        10,
+        50,
+        232
+      ],
+      [
+        10,
+        50,
+        232
+      ],
+      [
+        10,
+        50,
+        232
+      ],
+      [
+        10,
+        50,
+        232
+      ]
     ],
     "colorType": "sections"
   },
@@ -4720,7 +7134,9 @@
     "artist": "Devo",
     "title": "Q: Are We Not Men? A: We Are Devo!",
     "color": [
-      255, 180, 0
+      255,
+      180,
+      0
     ],
     "colorType": "solid"
   },
@@ -4773,16 +7189,56 @@
     "artist": "Mount Kimbie",
     "title": "Cold Spring Fault Less Youth",
     "color": [
-      [255, 112, 23],
-      [255, 112, 23],
-      [255, 112, 23],
-      [0, 120, 255],
-      [255, 179, 0],
-      [255, 0, 0],
-      [0, 255, 0],
-      [255, 112, 23],
-      [255, 112, 23],
-      [255, 112, 23]
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        0,
+        120,
+        255
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        255,
+        112,
+        23
+      ],
+      [
+        255,
+        112,
+        23
+      ]
     ],
     "colorType": "sections"
   },
@@ -4802,18 +7258,66 @@
     "artist": "Danny Brown (2)",
     "title": "uknowhatimsayin¿",
     "color": [
-      [12,28,224],
-      [12,28,224],
-      [248,170,90],
-      [12,28,224],
-      [80,215,90],
-      [201,20,224],
-      [255,44,0],
-      [255,44,0],
-      [255,44,0],
-      [255,44,0],
-      [80,215,90],
-      [150,80,89]
+      [
+        12,
+        28,
+        224
+      ],
+      [
+        12,
+        28,
+        224
+      ],
+      [
+        248,
+        170,
+        90
+      ],
+      [
+        12,
+        28,
+        224
+      ],
+      [
+        80,
+        215,
+        90
+      ],
+      [
+        201,
+        20,
+        224
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        255,
+        44,
+        0
+      ],
+      [
+        80,
+        215,
+        90
+      ],
+      [
+        150,
+        80,
+        89
+      ]
     ],
     "colorType": "gradient"
   },
@@ -4822,18 +7326,66 @@
     "artist": "Stereolab",
     "title": "Dots And Loops (Expanded Edition)",
     "color": [
-      [170, 255, 0],
-      [0, 255, 157],
-      [170, 255, 0],
-      [0, 255, 157],
-      [170, 255, 0],
-      [0, 255, 157],
-      [170, 255, 0],
-      [0, 255, 157],
-      [170, 255, 0],
-      [0, 255, 157],
-      [170, 255, 0],
-      [0, 255, 157]
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ],
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ],
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ],
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ],
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ],
+      [
+        170,
+        255,
+        0
+      ],
+      [
+        0,
+        255,
+        157
+      ]
     ],
     "colorType": "sections"
   },
@@ -4853,9 +7405,21 @@
     "artist": "Squid (29)",
     "title": "Bright Green Field",
     "color": [
-      [0, 199, 255],
-      [28, 207, 0],
-      [28, 207, 0]
+      [
+        0,
+        199,
+        255
+      ],
+      [
+        28,
+        207,
+        0
+      ],
+      [
+        28,
+        207,
+        0
+      ]
     ],
     "colorType": "sections"
   },
@@ -4941,9 +7505,21 @@
     "artist": "Divino Niño",
     "title": "Foam",
     "color": [
-      [10, 10, 255],
-      [82, 180, 255],
-      [255, 255, 255]
+      [
+        10,
+        10,
+        255
+      ],
+      [
+        82,
+        180,
+        255
+      ],
+      [
+        255,
+        255,
+        255
+      ]
     ],
     "colorType": "gradient"
   },
@@ -4963,8 +7539,16 @@
     "artist": "Real Estate (2)",
     "title": "Real Estate",
     "color": [
-      [255, 255, 255],
-      [0,123,235]
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        0,
+        123,
+        235
+      ]
     ],
     "colorType": "gradient"
   },
@@ -5017,8 +7601,16 @@
     "artist": "Kaytranada",
     "title": "99.9%",
     "color": [
-      [255, 173, 0],
-      [140, 9, 255]
+      [
+        255,
+        173,
+        0
+      ],
+      [
+        140,
+        9,
+        255
+      ]
     ],
     "colorType": "sections"
   },
@@ -5049,7 +7641,9 @@
     "artist": "Viagra Boys",
     "title": "Cave World",
     "color": [
-      255, 48, 244
+      255,
+      48,
+      244
     ],
     "colorType": "solid"
   },
@@ -5069,11 +7663,31 @@
     "artist": "Jamie XX",
     "title": "In Colour",
     "color": [
-      [255, 0, 0],
-      [255, 179, 0],
-      [0, 255, 0],
-      [0, 0, 255],
-      [140, 9, 255]
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        255,
+        179,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ],
+      [
+        0,
+        0,
+        255
+      ],
+      [
+        140,
+        9,
+        255
+      ]
     ],
     "colorType": "gradient"
   },

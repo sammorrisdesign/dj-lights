@@ -65,6 +65,21 @@
     "title": "Far In"
   },
   {
+    "id": 16729281,
+    "artist": "Deerhunter",
+    "title": "Halcyon Digest"
+  },
+  {
+    "id": 2449546,
+    "artist": "Pixies",
+    "title": "Doolittle"
+  },
+  {
+    "id": 2851639,
+    "artist": "Tune-Yards",
+    "title": "w h o k i l l"
+  },
+  {
     "id": 19110946,
     "artist": "Tune-Yards",
     "title": "w h o k i l l"
@@ -108,6 +123,16 @@
     "id": 500366,
     "artist": "Cut Chemist",
     "title": "The Litmus Test EP"
+  },
+  {
+    "id": 10554362,
+    "artist": "The Police",
+    "title": "Synchronicity"
+  },
+  {
+    "id": 8595616,
+    "artist": "Steely Dan",
+    "title": "Greatest Hits"
   },
   {
     "id": 13892796,
@@ -200,6 +225,21 @@
     "title": "Buhloone Mind State"
   },
   {
+    "id": 6537092,
+    "artist": "The Beatles",
+    "title": "1967-1970"
+  },
+  {
+    "id": 4769867,
+    "artist": "The Beatles",
+    "title": "Hey Jude (The Beatles Again)"
+  },
+  {
+    "id": 1682228,
+    "artist": "OutKast",
+    "title": "The Way You Move / Hey Ya!"
+  },
+  {
     "id": 5022944,
     "artist": "Ray Parker Jr.",
     "title": "Ghostbusters"
@@ -208,6 +248,11 @@
     "id": 35944138,
     "artist": "Saba (14)",
     "title": "From The Private Collection Of Saba & No ID"
+  },
+  {
+    "id": 1623533,
+    "artist": "Los Campesinos!",
+    "title": "We Are Beautiful, We Are Doomed"
   },
   {
     "id": 27409770,
@@ -345,6 +390,11 @@
     "title": "Johann Sebastian Bachlava The Doctor"
   },
   {
+    "id": 547859,
+    "artist": "They Might Be Giants",
+    "title": "Lincoln"
+  },
+  {
     "id": 10348767,
     "artist": "Beach Fossils",
     "title": "Somersault"
@@ -395,6 +445,11 @@
     "title": "White Men Are Black Men Too"
   },
   {
+    "id": 7432218,
+    "artist": "Bikini Kill",
+    "title": "Revolution Girl Style Now"
+  },
+  {
     "id": 28588285,
     "artist": "Clint Mansell",
     "title": "Moon"
@@ -408,6 +463,16 @@
     "id": 8156700,
     "artist": "Donald Byrd",
     "title": "Stepping Into Tomorrow"
+  },
+  {
+    "id": 35089718,
+    "artist": "Bobby Hutcherson",
+    "title": "Montara"
+  },
+  {
+    "id": 23296742,
+    "artist": "Ronnie Foster",
+    "title": "Two Headed Freap"
   },
   {
     "id": 20828257,
@@ -440,9 +505,29 @@
     "title": "Sinatra Sings Music For Pleasure"
   },
   {
+    "id": 1763305,
+    "artist": "The Beach Boys",
+    "title": "Pet Sounds"
+  },
+  {
     "id": 1026691,
     "artist": "Beastie Boys",
     "title": "The Mix-Up"
+  },
+  {
+    "id": 2925140,
+    "artist": "Beastie Boys",
+    "title": "Solid Gold Hits"
+  },
+  {
+    "id": 3239034,
+    "artist": "Ella Fitzgerald",
+    "title": "30 By Ella"
+  },
+  {
+    "id": 13140610,
+    "artist": "The Beatles",
+    "title": "Revolver"
   },
   {
     "id": 12979071,
@@ -468,6 +553,11 @@
     "id": 10449564,
     "artist": "B Boys",
     "title": "Dada"
+  },
+  {
+    "id": 8028975,
+    "artist": "Wild Nothing",
+    "title": "Gemini"
   },
   {
     "id": 12402033,
@@ -585,9 +675,19 @@
     "title": "Rockit b/w I Thought It Was You"
   },
   {
+    "id": 36620017,
+    "artist": "Twisted Teens",
+    "title": "Blame The Clown"
+  },
+  {
     "id": 13650124,
     "artist": "The Fall",
     "title": "Dragnet"
+  },
+  {
+    "id": 8968931,
+    "artist": "Blondie",
+    "title": "The Best Of Blondie"
   },
   {
     "id": 26633132,
@@ -625,14 +725,44 @@
     "title": "Don't Tap The Glass"
   },
   {
+    "id": 8178268,
+    "artist": "Bruce Springsteen",
+    "title": "Darkness On The Edge Of Town"
+  },
+  {
+    "id": 6367416,
+    "artist": "Bob Dylan",
+    "title": "Bob Dylan's Greatest Hits"
+  },
+  {
+    "id": 2582014,
+    "artist": "Bruce Springsteen",
+    "title": "The Wild, The Innocent & The E Street Shuffle"
+  },
+  {
     "id": 9664187,
     "artist": "Herbie Hancock",
     "title": "Head Hunters"
   },
   {
+    "id": 554495,
+    "artist": "Janis Joplin",
+    "title": "Janis Joplin's Greatest Hits"
+  },
+  {
+    "id": 4120828,
+    "artist": "Bruce Springsteen",
+    "title": "Born To Run"
+  },
+  {
     "id": 10728109,
     "artist": "Tyler, The Creator",
     "title": "Scum Fuck Flower Boy"
+  },
+  {
+    "id": 19484872,
+    "artist": "Bruce Springsteen",
+    "title": "Born In The U.S.A."
   },
   {
     "id": 28058949,
@@ -660,6 +790,16 @@
     "title": "Daily Operation"
   },
   {
+    "id": 31899121,
+    "artist": "The Tex Morgan Orchestra",
+    "title": "Glenn Miller - A Musical Memory"
+  },
+  {
+    "id": 35079737,
+    "artist": "R.E.M.",
+    "title": "Radio Free Europe 2025"
+  },
+  {
     "id": 253843,
     "artist": "Curtis Mayfield",
     "title": "Super Fly"
@@ -668,6 +808,11 @@
     "id": 4674728,
     "artist": "Hooded Fang",
     "title": "Gravez"
+  },
+  {
+    "id": 18890350,
+    "artist": "Sharon Jones & The Dap-Kings",
+    "title": "Naturally"
   },
   {
     "id": 20349475,
@@ -725,6 +870,11 @@
     "title": "LCD Soundsystem"
   },
   {
+    "id": 472821,
+    "artist": "LCD Soundsystem",
+    "title": "LCD Soundsystem"
+  },
+  {
     "id": 2889712,
     "artist": "LCD Soundsystem",
     "title": "London Sessions"
@@ -733,6 +883,11 @@
     "id": 1162074,
     "artist": "LCD Soundsystem",
     "title": "45:33"
+  },
+  {
+    "id": 3045969,
+    "artist": "The Rapture",
+    "title": "How Deep Is Your Love?"
   },
   {
     "id": 13185878,
@@ -745,6 +900,11 @@
     "title": "Sound Of Silver"
   },
   {
+    "id": 2895252,
+    "artist": "Holy Ghost!",
+    "title": "Obsessive Compulsive Frequency Vol. 3: I Know, I Hear"
+  },
+  {
     "id": 2276921,
     "artist": "LCD Soundsystem",
     "title": "This Is Happening"
@@ -753,6 +913,46 @@
     "id": 5731386,
     "artist": "LCD Soundsystem",
     "title": "The Long Goodbye: LCD Soundsystem Live At Madison Square Garden"
+  },
+  {
+    "id": 2395827,
+    "artist": "LCD Soundsystem",
+    "title": "This Is Happening"
+  },
+  {
+    "id": 2610731,
+    "artist": "Weezer",
+    "title": "Pinkerton"
+  },
+  {
+    "id": 2019745,
+    "artist": "Franz Ferdinand",
+    "title": "Tonight: Franz Ferdinand"
+  },
+  {
+    "id": 1081394,
+    "artist": "Animal Collective",
+    "title": "Strawberry Jam"
+  },
+  {
+    "id": 1834681,
+    "artist": "Dirty Projectors",
+    "title": "Bitte Orca"
+  },
+  {
+    "id": 1944456,
+    "artist": "Animal Collective",
+    "title": "Summertime Clothes"
+  },
+  {
+    "id": 3138841,
+    "artist": "Franz Ferdinand",
+    "title": "Franz Ferdinand"
+  },
+  {
+    "id": 10695783,
+    "artist": "Franz Ferdinand",
+    "title": "You Could Have It So Much Better"
   },
   {
     "id": 1217932,
@@ -768,6 +968,11 @@
     "id": 612972,
     "artist": "Arctic Monkeys",
     "title": "Whatever People Say I Am, That's What I'm Not"
+  },
+  {
+    "id": 4857258,
+    "artist": "Franz Ferdinand",
+    "title": "Right Thoughts Right Words Right Action"
   },
   {
     "id": 3170382,
@@ -800,6 +1005,11 @@
     "title": "Joy In Repetition"
   },
   {
+    "id": 1592118,
+    "artist": "Animal Collective",
+    "title": "Merriweather Post Pavilion"
+  },
+  {
     "id": 12046120,
     "artist": "Flasher (4)",
     "title": "Constant Image"
@@ -818,6 +1028,16 @@
     "id": 22731014,
     "artist": "Wet Leg",
     "title": "Wet Leg"
+  },
+  {
+    "id": 6603518,
+    "artist": "All We Are",
+    "title": "All We Are"
+  },
+  {
+    "id": 2451342,
+    "artist": "The Drums (2)",
+    "title": "The Drums"
   },
   {
     "id": 2937580,
@@ -860,14 +1080,34 @@
     "title": "†"
   },
   {
+    "id": 504843,
+    "artist": "They Might Be Giants",
+    "title": "Birdhouse In Your Soul"
+  },
+  {
     "id": 2379398,
     "artist": "Gang Of Four",
     "title": "Entertainment!"
   },
   {
+    "id": 197163,
+    "artist": "Kate Bush",
+    "title": "Hounds Of Love"
+  },
+  {
+    "id": 1627556,
+    "artist": "Franz Ferdinand",
+    "title": "Ulysses"
+  },
+  {
     "id": 9437902,
     "artist": "A Tribe Called Quest",
     "title": "We Got It From Here…. Thank You 4 Your Service"
+  },
+  {
+    "id": 1526528,
+    "artist": "The Clash",
+    "title": "London Calling"
   },
   {
     "id": 2957805,
@@ -885,9 +1125,19 @@
     "title": "Combat Rock"
   },
   {
+    "id": 2236929,
+    "artist": "Modest Mouse",
+    "title": "The Moon & Antarctica"
+  },
+  {
     "id": 30548935,
     "artist": "Various",
     "title": "Grand Theft Auto Vice City O.S.T. - Volume 4 : Flash FM"
+  },
+  {
+    "id": 14997896,
+    "artist": "Joy Division",
+    "title": "Unknown Pleasures"
   },
   {
     "id": 28518340,
@@ -920,6 +1170,16 @@
     "title": "Tha YOD Fahim"
   },
   {
+    "id": 4270102,
+    "artist": "Turbo Fruits",
+    "title": "Echo Kid"
+  },
+  {
+    "id": 2386283,
+    "artist": "Wavves",
+    "title": "King Of The Beach"
+  },
+  {
     "id": 12618368,
     "artist": "EL-P",
     "title": "Cancer 4 Cure"
@@ -935,6 +1195,16 @@
     "title": "We Buy Diabetic Test Strips"
   },
   {
+    "id": 2999723,
+    "artist": "Animal Collective",
+    "title": "Sung Tongs"
+  },
+  {
+    "id": 7529975,
+    "artist": "Shopping (3)",
+    "title": "Why Choose"
+  },
+  {
     "id": 7529975,
     "artist": "Shopping (3)",
     "title": "Why Choose"
@@ -948,6 +1218,11 @@
     "id": 24935851,
     "artist": "Delivery (6)",
     "title": "Forever Giving Handshakes"
+  },
+  {
+    "id": 27474201,
+    "artist": "Sweeping Promises",
+    "title": "Good Living Is Coming For You "
   },
   {
     "id": 12306875,
@@ -995,6 +1270,11 @@
     "title": "Illmatic"
   },
   {
+    "id": 2238902,
+    "artist": "Phoenix",
+    "title": "Fences"
+  },
+  {
     "id": 5595031,
     "artist": "Childish Gambino",
     "title": "Because The Internet"
@@ -1008,6 +1288,11 @@
     "id": 11379467,
     "artist": "Childish Gambino",
     "title": "Awaken, My Love!"
+  },
+  {
+    "id": 3269684,
+    "artist": "Childish Gambino",
+    "title": "Camp"
   },
   {
     "id": 1574348,
@@ -1028,6 +1313,11 @@
     "id": 22997840,
     "artist": "Good Morning (3)",
     "title": "Glory"
+  },
+  {
+    "id": 145971,
+    "artist": "Beastie Boys",
+    "title": "Body Movin'"
   },
   {
     "id": 6918788,
@@ -1060,6 +1350,16 @@
     "title": "The Double EP: A Sea Of Split Peas"
   },
   {
+    "id": 1883123,
+    "artist": "Smith Westerns",
+    "title": "Smith Westerns"
+  },
+  {
+    "id": 14583101,
+    "artist": "The Decemberists",
+    "title": "Castaways And Cutouts"
+  },
+  {
     "id": 5584880,
     "artist": "Ratking (2)",
     "title": "So It Goes"
@@ -1083,6 +1383,11 @@
     "id": 3839822,
     "artist": "Thee Oh Sees",
     "title": "Putrifiers II EP"
+  },
+  {
+    "id": 2455698,
+    "artist": "Ducktails",
+    "title": "Live On WFMU"
   },
   {
     "id": 23550026,
@@ -1118,6 +1423,16 @@
     "id": 14789856,
     "artist": "Tame Impala",
     "title": "The Slow Rush"
+  },
+  {
+    "id": 27495036,
+    "artist": "Unknown Mortal Orchestra",
+    "title": "Multi-Love"
+  },
+  {
+    "id": 9814276,
+    "artist": "Tim Darcy",
+    "title": "Saturday Night"
   },
   {
     "id": 3429382,
@@ -1195,6 +1510,21 @@
     "title": "Stankonia"
   },
   {
+    "id": 15689158,
+    "artist": "Crystal Castles",
+    "title": "Crystal Castles"
+  },
+  {
+    "id": 1089594,
+    "artist": "Le Tigre",
+    "title": "Le Tigre"
+  },
+  {
+    "id": 1124321,
+    "artist": "Le Tigre",
+    "title": "Feminist Sweepstakes"
+  },
+  {
     "id": 13047988,
     "artist": "Snapped Ankles",
     "title": "Come Play The Trees"
@@ -1260,9 +1590,29 @@
     "title": "Run The Jewels 2"
   },
   {
+    "id": 1545967,
+    "artist": "Belle & Sebastian",
+    "title": "If You're Feeling Sinister"
+  },
+  {
+    "id": 4181247,
+    "artist": "Belle & Sebastian",
+    "title": "The Boy With The Arab Strap"
+  },
+  {
+    "id": 1599336,
+    "artist": "Interpol",
+    "title": "Antics"
+  },
+  {
     "id": 12006346,
     "artist": "Stephen Malkmus & The Jicks",
     "title": "Sparkle Hard"
+  },
+  {
+    "id": 2483952,
+    "artist": "Belle & Sebastian",
+    "title": "Write About Love"
   },
   {
     "id": 16295288,
@@ -1273,6 +1623,11 @@
     "id": 27335568,
     "artist": "King Krule",
     "title": "Space Heavy"
+  },
+  {
+    "id": 24040829,
+    "artist": "Pavement",
+    "title": "Crooked Rain Crooked Rain"
   },
   {
     "id": 7365304,
@@ -1375,6 +1730,16 @@
     "title": "Lines Redacted "
   },
   {
+    "id": 2193244,
+    "artist": "The Magnetic Fields",
+    "title": "69 Love Songs"
+  },
+  {
+    "id": 2093841,
+    "artist": "Arcade Fire",
+    "title": "Funeral"
+  },
+  {
     "id": 14910092,
     "artist": "Caribou",
     "title": "Suddenly"
@@ -1390,6 +1755,11 @@
     "title": "Nothing Great About Britain"
   },
   {
+    "id": 2364771,
+    "artist": "Best Coast",
+    "title": "Crazy For You"
+  },
+  {
     "id": 8008438,
     "artist": "Quilt (2)",
     "title": "Plaza"
@@ -1398,6 +1768,16 @@
     "id": 23464706,
     "artist": "Cate Le Bon",
     "title": "Reward"
+  },
+  {
+    "id": 6056634,
+    "artist": "God Help The Girl",
+    "title": "God Help The Girl (Original Motion Picture Soundtrack)"
+  },
+  {
+    "id": 5506472,
+    "artist": "Shopping (3)",
+    "title": "Consumer Complaints"
   },
   {
     "id": 5506472,
@@ -1410,9 +1790,24 @@
     "title": "Pray 4 Tomorrow"
   },
   {
+    "id": 7911791,
+    "artist": "The Stone Roses",
+    "title": "The Stone Roses"
+  },
+  {
     "id": 3975669,
     "artist": "Tame Impala",
     "title": "Lonerism"
+  },
+  {
+    "id": 5068065,
+    "artist": "Cut Copy",
+    "title": "Zonoscope"
+  },
+  {
+    "id": 7554829,
+    "artist": "Hinds",
+    "title": "Very Best Of Hinds So Far"
   },
   {
     "id": 12628470,
@@ -1480,6 +1875,11 @@
     "title": "Heavy Heavy"
   },
   {
+    "id": 13968876,
+    "artist": "Various",
+    "title": "Nonesuch Records Spring 2019"
+  },
+  {
     "id": 23935724,
     "artist": "Various",
     "title": "Tony Hawk’s Pro Skater 2"
@@ -1503,6 +1903,11 @@
     "id": 14602654,
     "artist": "Chance The Rapper",
     "title": "Acid Rap"
+  },
+  {
+    "id": 2928584,
+    "artist": "Clap Your Hands Say Yeah",
+    "title": "Clap Your Hands Say Yeah"
   },
   {
     "id": 22848896,
@@ -1540,6 +1945,16 @@
     "title": "Malibu "
   },
   {
+    "id": 14279943,
+    "artist": "Carole King",
+    "title": "Tapestry"
+  },
+  {
+    "id": 8793497,
+    "artist": "The Fevers",
+    "title": "Fevers"
+  },
+  {
     "id": 31596955,
     "artist": "Serengeti",
     "title": "KDIV"
@@ -1575,9 +1990,24 @@
     "title": "Ultra Mono"
   },
   {
+    "id": 5681803,
+    "artist": "Sylvan Esso",
+    "title": "Sylvan Esso"
+  },
+  {
+    "id": 11327675,
+    "artist": "Dent May",
+    "title": "Do Things"
+  },
+  {
     "id": 24301901,
     "artist": "Kendrick Lamar",
     "title": "Mr. Morale & The Big Steppers"
+  },
+  {
+    "id": 13708886,
+    "artist": "The Beatles",
+    "title": "Early Years (1)"
   },
   {
     "id": 5650350,
@@ -1598,6 +2028,26 @@
     "id": 7782991,
     "artist": "Disasterpeace",
     "title": "FEZ"
+  },
+  {
+    "id": 643399,
+    "artist": "Of Montreal",
+    "title": "The Sunlandic Twins"
+  },
+  {
+    "id": 908958,
+    "artist": "Of Montreal",
+    "title": "Hissing Fauna, Are You The Destroyer?"
+  },
+  {
+    "id": 1495929,
+    "artist": "Of Montreal",
+    "title": "Skeletal Lamping"
+  },
+  {
+    "id": 2451189,
+    "artist": "Of Montreal",
+    "title": "False Priest"
   },
   {
     "id": 20828065,
@@ -1625,6 +2075,11 @@
     "title": "Hot Shot Tottenham"
   },
   {
+    "id": 6925275,
+    "artist": "The Strokes",
+    "title": "Is This It"
+  },
+  {
     "id": 24709877,
     "artist": "Steve Lacy (4)",
     "title": "Gemini Rights"
@@ -1635,14 +2090,34 @@
     "title": "Rock 'N Soul Part 1"
   },
   {
+    "id": 30931686,
+    "artist": "Daryl Hall & John Oates",
+    "title": "Big Bam Boom"
+  },
+  {
     "id": 2975734,
     "artist": "Louis Armstrong",
     "title": "Fantastic Louis Armstrong"
   },
   {
+    "id": 2802777,
+    "artist": "Daryl Hall & John Oates",
+    "title": "Daryl Hall & John Oates Best"
+  },
+  {
     "id": 17262997,
     "artist": "The Strokes",
     "title": "Room On Fire"
+  },
+  {
+    "id": 503269,
+    "artist": "Neil Young",
+    "title": "Rust Never Sleeps"
+  },
+  {
+    "id": 1901255,
+    "artist": "The Smiths",
+    "title": "The Queen Is Dead"
   },
   {
     "id": 16799757,
@@ -1670,6 +2145,11 @@
     "title": "The Impossible Kid"
   },
   {
+    "id": 4533429,
+    "artist": "Orquesta De La Luz",
+    "title": "Sin Fronteras (サルサに国境はない)"
+  },
+  {
     "id": 17870380,
     "artist": "Fake Fruit",
     "title": "Fake Fruit"
@@ -1685,7 +2165,22 @@
     "title": "Wide Awake!"
   },
   {
+    "id": 2122894,
+    "artist": "Pantha Du Prince",
+    "title": "Black Noise"
+  },
+  {
+    "id": 6661408,
+    "artist": "Belle & Sebastian",
+    "title": "Dear Catastrophe Waitress"
+  },
+  {
     "id": 15699191,
+    "artist": "Parquet Courts",
+    "title": "Human Performance"
+  },
+  {
+    "id": 8361191,
     "artist": "Parquet Courts",
     "title": "Human Performance"
   },
@@ -1708,6 +2203,11 @@
     "id": 2811177,
     "artist": "Stardust",
     "title": "Music Sounds Better With You"
+  },
+  {
+    "id": 11706302,
+    "artist": "U.S. Girls",
+    "title": "In A Poem Unlimited"
   },
   {
     "id": 26049373,
@@ -1755,6 +2255,11 @@
     "title": "Moonlust"
   },
   {
+    "id": 4589662,
+    "artist": "Jason Anderson",
+    "title": "Omaha"
+  },
+  {
     "id": 20382049,
     "artist": "Shad (5)",
     "title": "Tao"
@@ -1785,9 +2290,44 @@
     "title": "Fear Of Music"
   },
   {
+    "id": 192870,
+    "artist": "Talking Heads",
+    "title": "Talking Heads: 77"
+  },
+  {
+    "id": 9706021,
+    "artist": "Tom Tom Club",
+    "title": "Tom Tom Club"
+  },
+  {
+    "id": 9706021,
+    "artist": "Tom Tom Club",
+    "title": "Tom Tom Club"
+  },
+  {
+    "id": 7027316,
+    "artist": "Talking Heads",
+    "title": "More Songs About Buildings And Food"
+  },
+  {
+    "id": 10695833,
+    "artist": "Talking Heads",
+    "title": "Fear Of Music"
+  },
+  {
     "id": 4472725,
     "artist": "Talking Heads",
     "title": "Remain In Light"
+  },
+  {
+    "id": 8858783,
+    "artist": "Talking Heads",
+    "title": "Speaking In Tongues"
+  },
+  {
+    "id": 14421052,
+    "artist": "Talking Heads",
+    "title": "Stop Making Sense"
   },
   {
     "id": 13900918,
@@ -1798,6 +2338,11 @@
     "id": 11189254,
     "artist": "Fatboy Slim",
     "title": "The Greatest Hits (Why Try Harder)"
+  },
+  {
+    "id": 1657824,
+    "artist": "The Pains Of Being Pure At Heart",
+    "title": "The Pains Of Being Pure At Heart"
   },
   {
     "id": 7251550,
@@ -1860,6 +2405,11 @@
     "title": "Coast 2 Coast"
   },
   {
+    "id": 2052460,
+    "artist": "Lady Gaga",
+    "title": "The Fame Monster"
+  },
+  {
     "id": 10271950,
     "artist": "Bob's Burgers",
     "title": "The Bob's Burgers Music Album"
@@ -1873,6 +2423,16 @@
     "id": 17228518,
     "artist": "TV Priest",
     "title": "Uppers"
+  },
+  {
+    "id": 12951409,
+    "artist": "The Shins",
+    "title": "Chutes Too Narrow"
+  },
+  {
+    "id": 2553270,
+    "artist": "Dum Dum Girls",
+    "title": "I Will Be"
   },
   {
     "id": 15596582,
@@ -1945,6 +2505,21 @@
     "title": "It Takes Two"
   },
   {
+    "id": 5608307,
+    "artist": "New York Islanders",
+    "title": "Home For The Holidays"
+  },
+  {
+    "id": 32465034,
+    "artist": "Marvin Gaye",
+    "title": "Let's Get It On "
+  },
+  {
+    "id": 16949523,
+    "artist": "Marvin Gaye",
+    "title": "What's Going On"
+  },
+  {
     "id": 13113660,
     "artist": "Earl Sweatshirt",
     "title": "Some Rap Songs"
@@ -1970,14 +2545,29 @@
     "title": "Elephant"
   },
   {
+    "id": 35270998,
+    "artist": "Snooper (3)",
+    "title": "Worldwide"
+  },
+  {
     "id": 20679346,
     "artist": "The White Stripes",
     "title": "White Blood Cells"
   },
   {
+    "id": 473203,
+    "artist": "Patrick Wolf",
+    "title": "Wind In The Wires"
+  },
+  {
     "id": 15752829,
     "artist": "Lord Finesse",
     "title": "The Awakening"
+  },
+  {
+    "id": 99532,
+    "artist": "RuPaul",
+    "title": "A Shade Shady (Now Prance)"
   },
   {
     "id": 19722,
@@ -2125,6 +2715,11 @@
     "title": "Married Life / Carl Goes Up"
   },
   {
+    "id": 10755626,
+    "artist": "Fleetwood Mac",
+    "title": "Rumours"
+  },
+  {
     "id": 475153,
     "artist": "Funkadelic",
     "title": "One Nation Under A Groove"
@@ -2133,6 +2728,11 @@
     "id": 12834339,
     "artist": "Devo",
     "title": "Q: Are We Not Men? A: We Are Devo!"
+  },
+  {
+    "id": 124992,
+    "artist": "Various",
+    "title": "Krush Groove (Music From The Original Motion Picture Soundtrack) "
   },
   {
     "id": 35669839,
@@ -2153,6 +2753,11 @@
     "id": 7665720,
     "artist": "Maxïmo Park",
     "title": "Missing Songs"
+  },
+  {
+    "id": 1288373,
+    "artist": "Born Ruffians",
+    "title": "Red Yellow & Blue"
   },
   {
     "id": 4617557,
@@ -2220,6 +2825,11 @@
     "title": "Content Nausea"
   },
   {
+    "id": 1265268,
+    "artist": "Los Campesinos!",
+    "title": "Hold On Now, Youngster..."
+  },
+  {
     "id": 13776871,
     "artist": "Divino Niño",
     "title": "Foam"
@@ -2238,6 +2848,11 @@
     "id": 2709980,
     "artist": "Ducktails",
     "title": "III: Arcade Dynamics"
+  },
+  {
+    "id": 2081382,
+    "artist": "Vampire Weekend",
+    "title": "Contra"
   },
   {
     "id": 11239901,
@@ -2270,9 +2885,24 @@
     "title": "Rag And Bone"
   },
   {
+    "id": 24386138,
+    "artist": "Vampire Weekend",
+    "title": "Vampire Weekend"
+  },
+  {
     "id": 23822363,
     "artist": "Viagra Boys",
     "title": "Cave World"
+  },
+  {
+    "id": 2490699,
+    "artist": "El Guincho",
+    "title": "Pop Negro"
+  },
+  {
+    "id": 2959170,
+    "artist": "Sbtrkt",
+    "title": "SBTRKT"
   },
   {
     "id": 2959170,
